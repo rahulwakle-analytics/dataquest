@@ -60,12 +60,13 @@ export function EditableGrid({ spec, targets, overrides, onChange, caption }: Pr
                       <button
                         type="button"
                         onClick={() => setSelected(addr)}
+                        aria-label={`Cell ${addr}${isTarget ? ", answer cell" : ""}: ${display || "empty"}`}
                         className={cn(
                           "block w-full whitespace-nowrap px-2 py-1.5 text-left focus-visible:outline-none",
                           numeric ? "text-right tabular-nums" : "text-left",
                           r === 0 && typeof v === "string" && "font-semibold",
                           isTarget && "bg-primary/10",
-                          isTarget && !overrides.has(addr) && "text-muted/50",
+                          isTarget && !overrides.has(addr) && "text-muted",
                           selected === addr && "outline outline-2 -outline-offset-1 outline-primary",
                           isErr(v) && "text-danger",
                         )}
