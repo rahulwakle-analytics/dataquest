@@ -136,9 +136,9 @@ export function DashboardView({ paths }: { paths: DashboardPath[] }) {
                 <ToolIcon tool={p.slug} className="size-9" />
                 {p.name}
               </Link>
-              <Progress value={(p.done / p.totalTopics) * 100} label={`${p.name} progress`} />
+              <Progress value={(p.topics.length ? p.done / p.topics.length : 0) * 100} label={`${p.name} progress`} />
               <span className="text-sm tabular-nums text-muted">
-                {p.done} of {p.totalTopics} topics
+                {p.done} of {p.topics.length} lessons
               </span>
             </div>
           ))}

@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { ArrowRight, BookOpen, CheckCircle2, Code2, Database, FolderKanban, Gauge, ListChecks, Save, Sparkles, Table2 } from "lucide-react";
+import { ArrowRight, BookOpen, Briefcase, Compass, Route, CheckCircle2, Code2, Database, FolderKanban, Gauge, ListChecks, Save, Sparkles, Table2 } from "lucide-react";
 import { Faq } from "@/components/home/faq";
 import { ProductPreview } from "@/components/home/product-preview";
 import { PricingTable } from "@/components/pricing-table";
@@ -102,8 +102,40 @@ export default function HomePage() {
         </div>
       </section>
 
+      {/* Career route */}
+      <Section
+        id="start"
+        eyebrow="New to data analytics?"
+        title="Learn the job, not just the tools"
+        lead="DataQuest takes you from understanding what an analyst does to being ready for your first role."
+      >
+        <ol className="grid gap-4 md:grid-cols-3">
+          {[
+            { href: "/explore", icon: Compass, step: "1. Explore", title: "Understand the profession", body: "What analysts do each day, the skills employers want, role types, career paths and salary ranges, with four worked workplace scenarios." },
+            { href: "/roadmap", icon: Route, step: "2. Follow the roadmap", title: "Nine stages, in order", body: "Fundamentals, Excel, SQL, statistics, Power BI, Python, projects, interviews and job readiness, with your progress tracked." },
+            { href: "/career", icon: Briefcase, step: "3. Get hired", title: "Career centre", body: "Resume, portfolio and LinkedIn checklists, an interview question bank, mock interviews and business case studies." },
+          ].map((c) => (
+            <li key={c.href}>
+              <Link href={c.href} className="group block h-full focus-visible:outline-none">
+                <Card className="flex h-full flex-col p-6 transition-all duration-200 group-hover:-translate-y-0.5 group-hover:border-primary/50 group-focus-visible:ring-2 group-focus-visible:ring-primary">
+                  <span className="inline-flex size-10 items-center justify-center rounded-xl bg-primary/10 text-primary">
+                    <c.icon className="size-5" aria-hidden="true" />
+                  </span>
+                  <p className="mt-5 text-sm font-medium text-primary">{c.step}</p>
+                  <h3 className="mt-1 text-lg font-semibold">{c.title}</h3>
+                  <p className="mt-2 flex-1 text-sm leading-relaxed text-muted">{c.body}</p>
+                  <span className="mt-4 inline-flex items-center gap-1 text-sm font-medium text-primary">
+                    Open <ArrowRight className="size-4 transition-transform group-hover:translate-x-0.5" />
+                  </span>
+                </Card>
+              </Link>
+            </li>
+          ))}
+        </ol>
+      </Section>
+
       {/* Tools */}
-      <Section id="tools" eyebrow="Learning paths" title="Five tools analysts are hired for" lead="Pick a path and work through it topic by topic.">
+      <Section id="tools" className="bg-surface/50" eyebrow="Learning paths" title="Five tools analysts are hired for" lead="Pick a path and work through it topic by topic.">
         <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-5">
           {stats.map(({ tool, topics, lessons }) => (
             <Link key={tool.slug} href={`/paths/${tool.slug}`} className="group focus-visible:outline-none">
@@ -112,7 +144,7 @@ export default function HomePage() {
                 <h3 className="mt-4 font-semibold">{tool.name}</h3>
                 <p className="mt-1 text-sm leading-relaxed text-muted">{tool.tagline}</p>
                 <p className="mt-4 text-xs text-muted">
-                  {topics} topics · {lessons} {lessons === 1 ? "lesson" : "lessons"} available
+                  {lessons} {lessons === 1 ? "lesson" : "lessons"}{topics > lessons ? ` · ${topics - lessons} more planned` : ""}
                 </p>
               </Card>
             </Link>
@@ -121,7 +153,7 @@ export default function HomePage() {
       </Section>
 
       {/* How it works */}
-      <Section id="how-it-works" eyebrow="How DataQuest works" title="Learn it, use it, prove it" className="bg-surface/50">
+      <Section id="how-it-works" eyebrow="How DataQuest works" title="Learn it, use it, prove it">
         <ol className="grid gap-6 md:grid-cols-3">
           {steps.map((s, i) => (
             <li key={s.title}>

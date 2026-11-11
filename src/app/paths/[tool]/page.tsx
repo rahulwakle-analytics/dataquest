@@ -82,8 +82,7 @@ export default async function ToolPage({ params }: Props) {
 
       {stats.lessons < stats.topics && (
         <p className="mt-8 rounded-xl border border-border bg-surface px-4 py-3 text-sm text-muted">
-          This path is being written. {stats.lessons} of {stats.topics} topics have a full lesson; the rest show their
-          outline and are marked “In development”.
+          This path is being written. {stats.lessons} of {stats.topics} topics have a full lesson so far. The rest are listed under “Planned next” below.
         </p>
       )}
 

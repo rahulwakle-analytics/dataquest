@@ -23,7 +23,9 @@ export type PathCardData = {
 export function PathCard({ path }: { path: PathCardData }) {
   const progress = useProgress();
   const done = path.lessonIds.filter((id) => isComplete(progress, id)).length;
-  const pct = path.topics ? (done / path.topics) * 100 : 0;
+  const total = path.lessonIds.length;
+  const planned = path.topics - total;
+  const pct = total ? (done / total) * 100 : 0;
   const nextId = path.lessonIds.find((id) => !isComplete(progress, id));
   const href = nextId ? `/paths/${nextId}` : path.firstHref;
 
@@ -43,12 +45,12 @@ export function PathCard({ path }: { path: PathCardData }) {
 
       <dl className="mt-5 flex gap-6 text-sm">
         <div>
-          <dt className="text-muted">Topics</dt>
-          <dd className="font-semibold">{path.topics}</dd>
+          <dt className="text-muted">Lessons</dt>
+          <dd className="font-semibold">{total}</dd>
         </div>
         <div>
-          <dt className="text-muted">Lessons available</dt>
-          <dd className="font-semibold">{path.lessonIds.length}</dd>
+          <dt className="text-muted">Planned next</dt>
+          <dd className="font-semibold">{planned > 0 ? `${planned} topics` : "Complete"}</dd>
         </div>
       </dl>
 
@@ -56,7 +58,7 @@ export function PathCard({ path }: { path: PathCardData }) {
         <div className="mb-2 flex items-center justify-between text-xs text-muted">
           <span>Your progress</span>
           <span>
-            {done} of {path.topics} topics
+            {done} of {total} lessons
           </span>
         </div>
         <Progress value={pct} label={`${path.name} progress`} />

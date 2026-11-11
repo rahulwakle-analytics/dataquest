@@ -17,9 +17,11 @@ export const site = {
     { label: "GitHub", href: "" },
   ],
   nav: [
+    { label: "Explore", href: "/explore" },
+    { label: "Roadmap", href: "/roadmap" },
     { label: "Learning Paths", href: "/paths" },
     { label: "Projects", href: "/projects" },
-    { label: "Pricing", href: "/pricing" },
+    { label: "Career", href: "/career" },
     { label: "Dashboard", href: "/dashboard" },
   ],
 };

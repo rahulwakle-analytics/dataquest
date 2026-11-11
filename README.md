@@ -52,7 +52,11 @@ Working:
 - **Sort and filter exercises** (`src/lib/table-practice.ts`): the table the learner produces is compared with the goal view
 - Progressive hints, solutions on request, knowledge checks; one lesson template for every path
 - Dashboard at `/dashboard`: topics completed, exercises solved, learning history
-- Progress saved in `localStorage`
+- **Career layer**: `/explore` (the profession, four workplace scenarios, sourced salary ranges), `/roadmap`
+  (nine stages with completion tracking) and `/career` (resume, portfolio and LinkedIn checklists, interview
+  question bank, self-assessed mock interview, case studies, role profiles). Content lives in `src/content/career.ts`.
+  Salary figures carry their source and the date checked; update them there.
+- Progress saved in `localStorage` (validated lesson progress and self-ticked checklists are stored separately)
 - Per-page metadata, canonical URLs, JSON-LD, sitemap, robots.txt, Open Graph image
 
 ## Content checks

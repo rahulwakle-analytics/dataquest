@@ -18,9 +18,9 @@ export function SiteHeader() {
   return (
     <header className="sticky top-0 z-40 border-b border-border bg-background/85 backdrop-blur">
       <div className="container flex h-16 items-center justify-between gap-4">
-        <div className="flex items-center gap-8">
+        <div className="flex items-center gap-6">
           <Logo />
-          <nav aria-label="Main" className="hidden items-center gap-1 md:flex">
+          <nav aria-label="Main" className="hidden items-center gap-0.5 lg:flex">
             {site.nav.map((item) => {
               const active = pathname === item.href || pathname.startsWith(item.href + "/");
               return (
@@ -41,13 +41,13 @@ export function SiteHeader() {
         </div>
         <div className="flex items-center gap-2">
           <ThemeToggle />
-          <Button asChild size="sm" className="hidden sm:inline-flex">
+          <Button asChild size="sm" className="hidden sm:inline-flex lg:hidden xl:inline-flex">
             <Link href="/paths/sql/select">Start Practising Free</Link>
           </Button>
           <Button
             variant="ghost"
             size="icon"
-            className="md:hidden"
+            className="lg:hidden"
             aria-label={open ? "Close menu" : "Open menu"}
             aria-expanded={open}
             aria-controls="mobile-nav"
@@ -58,7 +58,7 @@ export function SiteHeader() {
         </div>
       </div>
       {open && (
-        <nav id="mobile-nav" aria-label="Mobile" className="border-t border-border bg-background md:hidden">
+        <nav id="mobile-nav" aria-label="Mobile" className="border-t border-border bg-background lg:hidden">
           <div className="container flex flex-col gap-1 py-4">
             {site.nav.map((item) => (
               <Link key={item.href} href={item.href} className="rounded-md px-3 py-3 text-base font-medium hover:bg-surface">

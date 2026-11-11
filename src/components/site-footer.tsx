@@ -10,8 +10,11 @@ export function SiteFooter() {
     {
       title: "Platform",
       links: [
+        { label: "Explore Data Analytics", href: "/explore" },
+        { label: "Career Roadmap", href: "/roadmap" },
         { label: "Learning Paths", href: "/paths" },
         { label: "Projects", href: "/projects" },
+        { label: "Career Centre", href: "/career" },
         { label: "Pricing", href: "/pricing" },
         { label: "Dashboard", href: "/dashboard" },
         { label: "FAQ", href: "/#faq" },
