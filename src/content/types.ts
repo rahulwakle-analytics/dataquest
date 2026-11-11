@@ -65,13 +65,27 @@ export type Tool = {
   levels: Level[];
 };
 
+export type ProjectTask = {
+  instruction: string;
+  /** A nudge, shown before the solution. */
+  hint: string;
+  /** What a correct result looks like — concrete enough to self-check against. */
+  expectedOutput: string;
+  /** A worked solution: a formula, query or short walkthrough. */
+  solution: string;
+};
+
 export type Project = {
   slug: string;
   title: string;
   tools: string[];
   problem: string;
   objectives: string[];
+  /** Dataset slug in content/datasets.ts, for the downloadable-data link. */
+  datasetSlug: string;
   dataset: string;
-  tasks: string[];
+  tasks: ProjectTask[];
   deliverables: string[];
+  /** Polished, shareable artifacts a finished run of this project leaves you with. */
+  portfolioDeliverables: string[];
 };

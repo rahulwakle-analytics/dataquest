@@ -32,7 +32,12 @@ const features = [
   { icon: Gauge, title: "Power BI Practice Lab", body: "Guided data-modelling, DAX and dashboard-design exercises, clearly marked as simulated rather than a Power BI Desktop replica.", live: true },
   { icon: FolderKanban, title: "Dataset library", body: "Eight sample datasets with column descriptions, previews and CSV downloads.", live: true },
   { icon: Gauge, title: "XP, streaks and leaderboards", body: "Earn XP for verified solutions and keep a daily streak going.", live: false },
-  { icon: FolderKanban, title: "Guided projects with tracking", body: "Step-by-step projects with solution walkthroughs and milestone tracking.", live: false },
+  {
+    icon: FolderKanban,
+    title: "Guided projects with tracking",
+    body: "Step-by-step tasks with hints, expected outputs and worked solutions, a downloadable dataset, and completion tracking for every task.",
+    live: true,
+  },
 ];
 
 export default function HomePage() {
