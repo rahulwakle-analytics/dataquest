@@ -246,7 +246,7 @@ export const roadmap: RoadmapStage[] = [
     objectives: ["Select, filter and sort data", "Aggregate with GROUP BY and combine tables with joins", "Use CTEs and window functions for multi-step questions"],
     skills: ["Querying", "Joins", "Aggregation", "Window functions"],
     path: "sql",
-    practice: { label: "SQL practice questions", href: "/paths/sql/group-by#practice" },
+    practice: { label: "SQL challenges with a real query engine", href: "/practice" },
     project: { label: "Retail Sales Analysis", href: "/projects#retail-sales-analysis" },
   },
   {

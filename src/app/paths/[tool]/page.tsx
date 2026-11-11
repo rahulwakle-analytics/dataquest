@@ -91,7 +91,17 @@ export default async function ToolPage({ params }: Props) {
           <h2 id="schema" className="text-xl font-semibold tracking-tight">
             The practice database
           </h2>
-          <p className="mt-2 max-w-2xl text-muted">Every SQL lesson and question uses the same four retail tables.</p>
+          <p className="mt-2 max-w-2xl text-muted">
+            Every SQL lesson and question uses the same four retail tables. You can{" "}
+            <Link href="/practice" className="font-medium text-primary underline-offset-4 hover:underline">
+              run queries against them in the SQL practice editor
+            </Link>{" "}
+            or{" "}
+            <Link href="/datasets/retail-sales" className="font-medium text-primary underline-offset-4 hover:underline">
+              download them as CSV
+            </Link>
+            .
+          </p>
           <div className="mt-4 grid gap-3 sm:grid-cols-2">
             {sqlSchema.map((t) => (
               <div key={t.table} className="rounded-xl border border-border bg-card p-4">

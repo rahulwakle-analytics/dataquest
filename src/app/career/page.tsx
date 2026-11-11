@@ -135,7 +135,13 @@ export default function CareerPage() {
               </li>
             ))}
           </ul>
-          <p className="mt-3 text-sm text-muted">These SQL questions are not checked automatically yet. Write your query, then compare it with the model solution.</p>
+          <p className="mt-3 text-sm text-muted">
+            These lesson questions are compared against a model solution. To have your query run and checked automatically, use the{" "}
+            <Link href="/practice" className="font-medium text-primary underline-offset-4 hover:underline">
+              SQL practice challenges
+            </Link>
+            .
+          </p>
         </Block>
 
         <Block id="cases" title="Business case studies" lead="Case questions test how you think, not whether you reach one right answer. Read the prompt, plan your approach, then compare.">

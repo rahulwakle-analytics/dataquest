@@ -1,7 +1,8 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import { notFound } from "next/navigation";
-import { AlertTriangle, ArrowLeft, ArrowRight, Briefcase, ChevronRight, Hammer } from "lucide-react";
+import { Reveal } from "@/components/career/reveal";
+import { AlertTriangle, GraduationCap, Target, ArrowLeft, ArrowRight, Briefcase, ChevronRight, Hammer } from "lucide-react";
 import { CodeBlock } from "@/components/learn/code-block";
 import { KnowledgeCheck } from "@/components/learn/knowledge-check";
 import { PracticeQuestion } from "@/components/learn/practice-question";
@@ -54,6 +55,7 @@ const sections = [
   { id: "scenario", label: "Business scenario" },
   { id: "mistakes", label: "Common mistakes" },
   { id: "practice", label: "Practice questions" },
+  { id: "interview", label: "Interview questions" },
   { id: "checks", label: "Knowledge check" },
 ];
 
@@ -69,6 +71,7 @@ export default async function TopicPage({ params }: Props) {
   const data = await load(params);
   if (!data) notFound();
   const { tool, topic, prev, next, lesson, all } = data;
+  const nextLesson = all.slice(all.findIndex((t) => t.id === topic.id) + 1).find((t) => t.hasLesson);
 
   const crumbs = (
     <nav aria-label="Breadcrumb" className="mb-8 flex flex-wrap items-center gap-1.5 text-sm text-muted">
@@ -164,6 +167,22 @@ export default async function TopicPage({ params }: Props) {
             <p className="mt-4 text-xl leading-relaxed text-muted">{lesson.summary}</p>
           </header>
 
+          {lesson.objectives && (
+            <section aria-labelledby="objectives" className="mt-8 rounded-2xl border border-border bg-card p-5">
+              <h2 id="objectives" className="flex items-center gap-2 font-semibold">
+                <Target className="size-4 text-primary" aria-hidden="true" /> After this lesson you can
+              </h2>
+              <ul className="mt-3 space-y-1.5">
+                {lesson.objectives.map((o) => (
+                  <li key={o} className="flex items-start gap-3 text-muted">
+                    <span className="mt-2 size-1.5 shrink-0 rounded-full bg-primary" aria-hidden="true" />
+                    {o}
+                  </li>
+                ))}
+              </ul>
+            </section>
+          )}
+
           <div className="mt-12 space-y-14">
             <section aria-labelledby="explanation">
               <H2 id="explanation">Explanation</H2>
@@ -254,12 +273,60 @@ export default async function TopicPage({ params }: Props) {
               </div>
             </section>
 
+            {lesson.interview && (
+              <section aria-labelledby="interview">
+                <H2 id="interview">Interview questions</H2>
+                <p className="mt-2 text-muted">Questions an interviewer might ask on this topic. Answer aloud first, then compare.</p>
+                <ul className="mt-4 space-y-3">
+                  {lesson.interview.map((iq) => (
+                    <li key={iq.q} className="rounded-2xl border border-border bg-card p-5">
+                      <p className="font-medium">{iq.q}</p>
+                      <div className="mt-3">
+                        <Reveal label="model answer">
+                          <p className="rounded-lg border border-border bg-surface p-4 text-sm leading-relaxed">{iq.a}</p>
+                        </Reveal>
+                      </div>
+                    </li>
+                  ))}
+                </ul>
+              </section>
+            )}
+
             <section aria-labelledby="checks">
               <H2 id="checks">Knowledge check</H2>
               <p className="mb-4 mt-2 text-muted">Answer every question correctly to complete this topic.</p>
               <KnowledgeCheck topicId={topic.id} checks={lesson.checks} />
             </section>
           </div>
+
+          {nextLesson ? (
+            <Link
+              href={`/paths/${nextLesson.id}`}
+              className="mt-12 flex items-center justify-between gap-4 rounded-2xl border border-primary/30 bg-gradient-to-br from-primary/10 to-violet/10 p-6 transition-colors hover:border-primary/60 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary"
+            >
+              <span>
+                <span className="flex items-center gap-2 text-sm font-medium text-primary">
+                  <GraduationCap className="size-4" aria-hidden="true" /> Recommended next lesson
+                </span>
+                <span className="mt-1 block text-xl font-semibold tracking-tight">{nextLesson.title}</span>
+                <span className="mt-1 block text-sm text-muted">{nextLesson.blurb}</span>
+              </span>
+              <ArrowRight className="size-5 shrink-0 text-primary" aria-hidden="true" />
+            </Link>
+          ) : (
+            <Link
+              href="/roadmap"
+              className="mt-12 flex items-center justify-between gap-4 rounded-2xl border border-primary/30 bg-gradient-to-br from-primary/10 to-violet/10 p-6 transition-colors hover:border-primary/60 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary"
+            >
+              <span>
+                <span className="flex items-center gap-2 text-sm font-medium text-primary">
+                  <GraduationCap className="size-4" aria-hidden="true" /> You have reached the last written {tool.name} lesson
+                </span>
+                <span className="mt-1 block text-xl font-semibold tracking-tight">See what comes next on the roadmap</span>
+              </span>
+              <ArrowRight className="size-5 shrink-0 text-primary" aria-hidden="true" />
+            </Link>
+          )}
 
           {pager}
         </article>

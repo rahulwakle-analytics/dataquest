@@ -1,0 +1,801 @@
+order_id,order_date,customer_id,channel,device,category,items,discount,order_value,shipping_fee,payment_method,status,country
+20129,2024-07-01,2,Referral,Mobile,Fashion,1,0,63.73,0,Card,delivered,United Kingdom
+20256,2024-07-01,64,Paid Search,Mobile,Sports,1,0,53.45,0,Card,delivered,France
+20739,2024-07-01,124,Direct,Mobile,Electronics,2,0,50.89,0,Card,delivered,United Kingdom
+20061,2024-07-02,309,Referral,Desktop,Home,6,0,340.03,0,Card,delivered,United Kingdom
+20351,2024-07-02,4,Social,Tablet,Home,3,0,185.12,0,Card,delivered,France
+20447,2024-07-02,120,Direct,Tablet,Fashion,1,4.53,40.78,4.99,Card,returned,United Kingdom
+20506,2024-07-03,354,Paid Search,Mobile,Fashion,1,0,77.4,0,Pay Later,cancelled,Ireland
+20567,2024-07-03,392,Email,Desktop,Home,1,4.1,77.94,0,Card,delivered,Ireland
+20677,2024-07-03,97,Direct,Mobile,Home,1,0,65.03,0,Card,delivered,United Kingdom
+20202,2024-07-04,416,Referral,Desktop,Beauty,1,0,79.21,0,Card,delivered,United Kingdom
+20232,2024-07-04,387,Organic Search,Mobile,Fashion,1,4.64,26.32,4.99,Card,delivered,United Kingdom
+20538,2024-07-04,352,Organic Search,Mobile,Beauty,1,0,43.72,4.99,Card,delivered,France
+20779,2024-07-04,312,Email,Desktop,Fashion,1,4.5,40.53,4.99,Card,delivered,Germany
+20022,2024-07-05,32,Referral,Desktop,Home,2,2.99,56.9,0,Card,delivered,United Kingdom
+20423,2024-07-05,354,Email,Desktop,Fashion,3,14.05,126.4,0,Card,delivered,United Kingdom
+20730,2024-07-05,298,Paid Search,Desktop,Home,1,0,35.06,4.99,Digital Wallet,cancelled,Ireland
+20184,2024-07-06,330,Direct,Mobile,Home,1,0,49.64,4.99,Card,delivered,United Kingdom
+20255,2024-07-06,338,Organic Search,Desktop,Electronics,3,0,85.75,0,Digital Wallet,delivered,United Kingdom
+20271,2024-07-06,368,Social,Desktop,Fashion,4,0,354.22,0,Card,delivered,United Kingdom
+20451,2024-07-07,353,Paid Search,Mobile,Fashion,1,0,33.2,4.99,Card,delivered,Ireland
+20221,2024-07-08,279,Social,Desktop,Home,2,0,70.26,0,Card,delivered,United Kingdom
+20058,2024-07-09,80,Paid Search,Mobile,Beauty,2,0,48.53,4.99,Card,delivered,United Kingdom
+20138,2024-07-09,168,Organic Search,Mobile,Electronics,3,0,118.74,0,Digital Wallet,cancelled,United Kingdom
+20700,2024-07-09,124,Direct,Mobile,Home,3,0,63.77,0,Digital Wallet,delivered,United Kingdom
+20335,2024-07-10,90,Email,Desktop,Sports,1,1.58,29.97,4.99,Card,delivered,United Kingdom
+20219,2024-07-11,38,Email,Mobile,Fashion,2,4.09,77.71,0,Card,delivered,Ireland
+20741,2024-07-11,362,Paid Search,Mobile,Fashion,1,0,59.44,0,Digital Wallet,delivered,United Kingdom
+20074,2024-07-12,316,Email,Mobile,Beauty,3,17.49,157.41,0,Pay Later,delivered,United Kingdom
+20158,2024-07-12,289,Referral,Mobile,Home,1,0,43.05,4.99,Card,delivered,Ireland
+20732,2024-07-13,322,Social,Mobile,Fashion,2,18.92,107.21,0,Digital Wallet,delivered,United Kingdom
+20737,2024-07-13,282,Direct,Desktop,Home,4,0,208.75,0,Card,delivered,United Kingdom
+20327,2024-07-14,266,Referral,Desktop,Home,6,0,514.46,0,Pay Later,delivered,United Kingdom
+20507,2024-07-15,337,Organic Search,Desktop,Home,1,12.15,68.84,0,Card,returned,France
+20716,2024-07-15,155,Organic Search,Mobile,Beauty,1,0,69.52,0,Card,cancelled,United Kingdom
+20179,2024-07-16,217,Social,Desktop,Fashion,3,0,139.3,0,Card,delivered,Ireland
+20678,2024-07-16,265,Email,Tablet,Fashion,3,6.06,115.17,0,Card,delivered,United Kingdom
+20753,2024-07-16,133,Social,Desktop,Fashion,1,0,48.07,4.99,Card,delivered,Germany
+20787,2024-07-16,416,Direct,Mobile,Fashion,4,0,183.21,0,Digital Wallet,cancelled,United Kingdom
+20162,2024-07-18,409,Social,Desktop,Home,4,0,176.31,0,Card,returned,United Kingdom
+20602,2024-07-18,341,Social,Mobile,Beauty,3,0,176.33,0,Card,delivered,United Kingdom
+20067,2024-07-19,356,Social,Desktop,Fashion,2,0,79.35,0,Pay Later,delivered,United Kingdom
+20264,2024-07-19,189,Email,Desktop,Beauty,1,5.53,49.8,4.99,Digital Wallet,delivered,United Kingdom
+20527,2024-07-19,323,Paid Search,Mobile,Beauty,1,0,74.69,0,Pay Later,delivered,Ireland
+20595,2024-07-19,231,Paid Search,Mobile,Electronics,2,0,122.43,0,Card,delivered,United Kingdom
+20679,2024-07-19,320,Paid Search,Desktop,Sports,1,0,39.79,4.99,Digital Wallet,delivered,France
+20744,2024-07-19,176,Referral,Mobile,Fashion,1,0,69.34,0,Card,delivered,United Kingdom
+20116,2024-07-20,361,Email,Desktop,Fashion,3,8.33,158.33,0,Card,delivered,Germany
+20534,2024-07-20,110,Organic Search,Mobile,Beauty,1,0,40.37,4.99,Card,delivered,United Kingdom
+20571,2024-07-20,167,Direct,Desktop,Beauty,1,0,32.09,4.99,Digital Wallet,delivered,Germany
+20607,2024-07-20,118,Paid Search,Mobile,Fashion,1,0,22.43,4.99,Card,delivered,United Kingdom
+20147,2024-07-21,378,Paid Search,Mobile,Beauty,3,0,229.53,0,Card,cancelled,Ireland
+20341,2024-07-21,262,Referral,Mobile,Fashion,2,0,52.87,0,Card,delivered,United Kingdom
+20578,2024-07-21,85,Organic Search,Mobile,Home,4,0,277.95,0,Card,delivered,United Kingdom
+20699,2024-07-22,253,Email,Desktop,Home,4,6.6,125.31,0,Card,delivered,Netherlands
+20738,2024-07-22,403,Organic Search,Desktop,Electronics,1,0,58.88,0,Card,returned,United Kingdom
+20731,2024-07-23,100,Social,Mobile,Fashion,3,0,186.36,0,Pay Later,delivered,United Kingdom
+20796,2024-07-24,70,Paid Search,Desktop,Electronics,2,0,139.44,0,Digital Wallet,delivered,Ireland
+20188,2024-07-25,222,Email,Desktop,Fashion,2,23.94,135.64,0,Card,returned,United Kingdom
+20226,2024-07-26,408,Email,Mobile,Home,1,1.01,19.27,4.99,Card,delivered,United Kingdom
+20237,2024-07-26,157,Direct,Mobile,Fashion,2,0,101.28,0,Card,delivered,United Kingdom
+20366,2024-07-26,221,Email,Mobile,Fashion,2,4.39,39.52,4.99,Digital Wallet,delivered,Ireland
+20461,2024-07-26,348,Organic Search,Mobile,Home,1,0,70.8,0,Card,delivered,Germany
+20599,2024-07-26,179,Organic Search,Tablet,Fashion,4,0,288.26,0,Digital Wallet,delivered,United Kingdom
+20646,2024-07-26,257,Paid Search,Desktop,Beauty,3,0,68.72,0,Card,returned,United Kingdom
+20186,2024-07-27,204,Referral,Mobile,Electronics,4,29.48,265.27,0,Pay Later,delivered,United Kingdom
+20348,2024-07-27,388,Paid Search,Mobile,Electronics,1,0,51.15,0,Card,delivered,United Kingdom
+20307,2024-07-28,263,Organic Search,Desktop,Sports,2,0,93.53,0,Card,delivered,United Kingdom
+20751,2024-07-28,347,Email,Desktop,Fashion,1,1.94,36.78,4.99,Digital Wallet,delivered,United Kingdom
+20140,2024-07-29,312,Organic Search,Tablet,Electronics,2,0,152.97,0,Card,delivered,United Kingdom
+20332,2024-07-29,69,Organic Search,Mobile,Beauty,3,0,173.03,0,Card,delivered,United Kingdom
+20636,2024-07-29,100,Organic Search,Mobile,Beauty,3,25.13,142.38,0,Card,delivered,Germany
+20435,2024-07-30,236,Paid Search,Mobile,Home,3,0,152.65,0,Card,delivered,United Kingdom
+20041,2024-07-31,109,Social,Desktop,Home,2,0,158.76,0,Digital Wallet,delivered,United Kingdom
+20056,2024-07-31,21,Paid Search,Mobile,Fashion,3,0,170.04,0,Card,delivered,United Kingdom
+20706,2024-07-31,406,Paid Search,Mobile,Beauty,1,3.94,35.42,4.99,Digital Wallet,delivered,United Kingdom
+20392,2024-08-01,92,Paid Search,Desktop,Home,1,0,62.83,0,Card,delivered,United Kingdom
+20516,2024-08-01,162,Organic Search,Mobile,Home,1,0,39.48,4.99,Digital Wallet,delivered,United Kingdom
+20790,2024-08-01,77,Social,Mobile,Beauty,1,1.64,31.21,4.99,Card,delivered,United Kingdom
+20770,2024-08-02,223,Paid Search,Desktop,Beauty,1,0,49.14,4.99,Card,delivered,United Kingdom
+20789,2024-08-02,54,Paid Search,Mobile,Fashion,1,0,72.25,0,Card,delivered,United Kingdom
+20350,2024-08-04,7,Direct,Mobile,Home,2,0,70.93,0,Digital Wallet,returned,Germany
+20460,2024-08-06,22,Organic Search,Desktop,Electronics,1,0,69.25,0,Card,delivered,United Kingdom
+20098,2024-08-07,220,Paid Search,Mobile,Fashion,1,0,53.75,0,Card,delivered,France
+20492,2024-08-07,122,Email,Desktop,Beauty,2,7.52,142.81,0,Card,cancelled,United Kingdom
+20546,2024-08-07,92,Referral,Desktop,Sports,4,0,117.8,0,Card,cancelled,United Kingdom
+20193,2024-08-08,317,Paid Search,Desktop,Fashion,1,0,72.51,0,Digital Wallet,returned,France
+20455,2024-08-08,401,Organic Search,Mobile,Electronics,2,0,61.14,0,Card,delivered,United Kingdom
+20590,2024-08-08,107,Organic Search,Tablet,Home,1,0,74.39,0,Digital Wallet,returned,United Kingdom
+20426,2024-08-09,315,Referral,Tablet,Fashion,2,0,129.12,0,Pay Later,cancelled,United Kingdom
+20727,2024-08-09,153,Organic Search,Mobile,Fashion,2,0,46.66,4.99,Digital Wallet,delivered,Ireland
+20213,2024-08-10,212,Paid Search,Mobile,Home,2,6.32,120.15,0,Digital Wallet,delivered,United Kingdom
+20442,2024-08-10,122,Organic Search,Mobile,Sports,2,0,127.21,0,Digital Wallet,delivered,Germany
+20270,2024-08-11,22,Social,Mobile,Fashion,2,0,36.23,4.99,Pay Later,returned,United Kingdom
+20448,2024-08-11,82,Organic Search,Mobile,Beauty,3,0,150.11,0,Card,delivered,Germany
+20476,2024-08-11,32,Organic Search,Mobile,Beauty,1,0,69.36,0,Card,delivered,Ireland
+20328,2024-08-12,68,Email,Mobile,Fashion,3,13.47,76.33,0,Card,delivered,United Kingdom
+20144,2024-08-13,288,Organic Search,Desktop,Beauty,1,0,22.16,4.99,Card,delivered,United Kingdom
+20621,2024-08-13,62,Social,Mobile,Fashion,1,0,55.69,0,Digital Wallet,delivered,United Kingdom
+20774,2024-08-13,370,Email,Desktop,Fashion,1,2.71,51.41,0,Digital Wallet,delivered,United Kingdom
+20371,2024-08-14,290,Email,Mobile,Home,1,2.01,18.05,4.99,Card,returned,United Kingdom
+20217,2024-08-15,235,Direct,Mobile,Beauty,1,0,61.53,0,Pay Later,delivered,Ireland
+20414,2024-08-16,298,Paid Search,Mobile,Home,2,0,73.2,0,Card,delivered,United Kingdom
+20274,2024-08-17,118,Social,Mobile,Fashion,4,0,186.66,0,Card,delivered,Germany
+20343,2024-08-18,205,Paid Search,Mobile,Beauty,3,0,75.2,0,Card,delivered,France
+20248,2024-08-19,87,Paid Search,Desktop,Home,1,0,41.79,4.99,Digital Wallet,delivered,France
+20154,2024-08-20,228,Social,Desktop,Home,4,0,194.02,0,Card,delivered,United Kingdom
+20570,2024-08-22,244,Email,Mobile,Electronics,3,7.56,68,0,Card,delivered,United Kingdom
+20603,2024-08-22,52,Paid Search,Desktop,Sports,1,0,64.11,0,Digital Wallet,delivered,United Kingdom
+20421,2024-08-23,187,Referral,Mobile,Electronics,2,2.75,52.24,0,Card,delivered,United Kingdom
+20338,2024-08-24,69,Direct,Tablet,Fashion,1,0,50.06,0,Pay Later,returned,Germany
+20644,2024-08-24,30,Referral,Mobile,Electronics,1,0,65.35,0,Pay Later,delivered,France
+20039,2024-08-25,197,Paid Search,Mobile,Fashion,1,0,60.45,0,Card,delivered,United Kingdom
+20318,2024-08-25,394,Email,Mobile,Sports,1,2.95,16.71,4.99,Card,delivered,United Kingdom
+20305,2024-08-26,311,Paid Search,Mobile,Fashion,2,0,122.42,0,Card,delivered,France
+20502,2024-08-26,205,Social,Mobile,Fashion,1,0,35.2,4.99,Card,delivered,United Kingdom
+20762,2024-08-26,356,Email,Mobile,Beauty,6,27.53,155.97,0,Card,delivered,Germany
+20102,2024-08-27,407,Paid Search,Mobile,Electronics,2,0,116.44,0,Card,delivered,Ireland
+20112,2024-08-27,380,Organic Search,Desktop,Home,2,0,164.2,0,Card,delivered,United Kingdom
+20182,2024-08-27,390,Paid Search,Mobile,Beauty,1,0,27.3,4.99,Digital Wallet,returned,United Kingdom
+20187,2024-08-28,53,Organic Search,Mobile,Fashion,1,0,67.41,0,Card,delivered,France
+20580,2024-08-28,327,Referral,Desktop,Electronics,1,0,32.78,4.99,Card,delivered,France
+20045,2024-08-29,139,Direct,Desktop,Fashion,3,0,194.35,0,Card,delivered,United Kingdom
+20150,2024-08-29,410,Email,Mobile,Beauty,3,5.91,112.36,0,Card,delivered,United Kingdom
+20282,2024-08-29,373,Organic Search,Desktop,Electronics,3,0,186.38,0,Card,returned,United Kingdom
+20561,2024-08-29,141,Organic Search,Tablet,Electronics,1,0,27.35,4.99,Pay Later,delivered,France
+20616,2024-08-29,78,Email,Desktop,Home,3,11.28,63.94,0,Pay Later,delivered,Ireland
+20651,2024-08-29,328,Social,Tablet,Fashion,3,9.66,183.46,0,Digital Wallet,delivered,United Kingdom
+20224,2024-08-30,52,Paid Search,Tablet,Home,3,0,197.7,0,Card,delivered,United Kingdom
+20107,2024-08-31,283,Referral,Desktop,Home,1,0,53.4,0,Digital Wallet,cancelled,United Kingdom
+20718,2024-08-31,235,Email,Desktop,Home,1,3.97,35.71,4.99,Card,delivered,United Kingdom
+20029,2024-09-01,355,Email,Desktop,Home,1,4.1,36.88,4.99,Card,delivered,United Kingdom
+20386,2024-09-01,244,Direct,Desktop,Home,2,10.59,60,0,Card,delivered,United Kingdom
+20131,2024-09-02,252,Paid Search,Mobile,Fashion,3,0,212.6,0,Card,delivered,United Kingdom
+20260,2024-09-02,308,Social,Mobile,Fashion,1,0,22.52,4.99,Pay Later,delivered,Germany
+20020,2024-09-03,182,Email,Desktop,Home,2,6.43,57.84,0,Card,delivered,Ireland
+20038,2024-09-03,227,Organic Search,Mobile,Electronics,2,0,131.27,0,Digital Wallet,delivered,Ireland
+20075,2024-09-03,335,Referral,Mobile,Home,6,0,401.12,0,Card,delivered,United Kingdom
+20120,2024-09-03,397,Organic Search,Mobile,Beauty,1,0,67.32,0,Card,delivered,United Kingdom
+20155,2024-09-03,242,Social,Tablet,Beauty,1,0,20.79,4.99,Card,delivered,United Kingdom
+20326,2024-09-03,108,Paid Search,Desktop,Home,2,2.56,48.71,4.99,Card,delivered,United Kingdom
+20436,2024-09-03,108,Social,Desktop,Electronics,1,6.6,37.43,4.99,Digital Wallet,cancelled,United Kingdom
+20139,2024-09-04,85,Organic Search,Desktop,Fashion,3,0,236.41,0,Card,delivered,France
+20401,2024-09-04,194,Social,Mobile,Beauty,1,0,58.77,0,Card,delivered,France
+20095,2024-09-05,193,Email,Mobile,Beauty,1,4.58,41.24,4.99,Card,delivered,Netherlands
+20189,2024-09-06,165,Paid Search,Mobile,Electronics,4,0,155.62,0,Card,delivered,United Kingdom
+20030,2024-09-07,364,Email,Desktop,Fashion,2,5.78,109.78,0,Digital Wallet,delivered,United Kingdom
+20522,2024-09-07,302,Email,Mobile,Beauty,2,14.54,130.82,0,Card,delivered,United Kingdom
+20082,2024-09-08,273,Referral,Mobile,Fashion,4,0,174.82,0,Digital Wallet,delivered,France
+20519,2024-09-08,64,Organic Search,Desktop,Fashion,2,0,138.7,0,Card,delivered,Ireland
+20171,2024-09-10,279,Paid Search,Desktop,Fashion,1,0,38.43,4.99,Card,cancelled,United Kingdom
+20046,2024-09-12,374,Paid Search,Mobile,Home,6,10.45,198.61,0,Card,delivered,Netherlands
+20344,2024-09-12,384,Organic Search,Mobile,Home,2,12.38,111.38,0,Card,delivered,United Kingdom
+20786,2024-09-12,95,Organic Search,Mobile,Beauty,1,0,43.94,4.99,Card,delivered,Ireland
+20489,2024-09-13,204,Email,Desktop,Beauty,1,4.22,80.21,0,Card,returned,France
+20513,2024-09-13,47,Organic Search,Mobile,Fashion,1,0,34.1,4.99,Card,delivered,Ireland
+20736,2024-09-13,415,Organic Search,Desktop,Beauty,4,0,136.32,0,Card,returned,Ireland
+20002,2024-09-14,233,Paid Search,Desktop,Electronics,1,0,27.39,4.99,Card,delivered,United Kingdom
+20251,2024-09-14,47,Paid Search,Desktop,Sports,2,0,105.25,0,Digital Wallet,delivered,Ireland
+20299,2024-09-14,228,Email,Mobile,Home,1,2.69,51.08,0,Digital Wallet,delivered,France
+20540,2024-09-15,413,Organic Search,Tablet,Fashion,1,0,43.16,4.99,Card,returned,United Kingdom
+20173,2024-09-16,255,Organic Search,Mobile,Electronics,2,0,122.78,0,Card,delivered,United Kingdom
+20321,2024-09-16,88,Social,Tablet,Electronics,4,0,225.38,0,Card,returned,United Kingdom
+20364,2024-09-16,29,Referral,Desktop,Fashion,1,0,86.87,0,Card,delivered,France
+20334,2024-09-17,229,Paid Search,Tablet,Electronics,2,0,131.61,0,Pay Later,delivered,United Kingdom
+20514,2024-09-17,205,Paid Search,Mobile,Fashion,2,0,102.9,0,Digital Wallet,delivered,United Kingdom
+20619,2024-09-17,47,Paid Search,Mobile,Fashion,2,0,74.6,0,Card,delivered,Ireland
+20542,2024-09-18,237,Direct,Mobile,Sports,2,0,63.99,0,Digital Wallet,delivered,France
+20544,2024-09-18,259,Paid Search,Desktop,Fashion,1,8.59,77.28,0,Pay Later,delivered,United Kingdom
+20136,2024-09-19,402,Direct,Mobile,Beauty,1,0,39.89,4.99,Digital Wallet,delivered,United Kingdom
+20225,2024-09-19,279,Organic Search,Mobile,Home,3,0,127.57,0,Card,delivered,Netherlands
+20482,2024-09-20,226,Organic Search,Mobile,Beauty,2,0,71.82,0,Card,returned,United Kingdom
+20614,2024-09-20,74,Paid Search,Mobile,Home,1,0,45.88,4.99,Pay Later,delivered,United Kingdom
+20628,2024-09-20,155,Organic Search,Mobile,Sports,1,0,76.18,0,Card,returned,United Kingdom
+20672,2024-09-20,23,Email,Desktop,Electronics,4,23.83,214.5,0,Card,delivered,United Kingdom
+20222,2024-09-21,408,Referral,Tablet,Beauty,2,0,145.35,0,Pay Later,returned,Ireland
+20051,2024-09-22,265,Organic Search,Tablet,Fashion,2,0,125.01,0,Pay Later,delivered,Ireland
+20363,2024-09-22,211,Email,Mobile,Sports,6,20.38,183.41,0,Pay Later,delivered,Germany
+20686,2024-09-22,66,Email,Mobile,Home,2,5.95,53.54,0,Digital Wallet,delivered,Netherlands
+20765,2024-09-22,232,Email,Desktop,Home,1,4.3,81.67,0,Card,delivered,United Kingdom
+20099,2024-09-23,107,Email,Tablet,Fashion,4,27.41,155.34,0,Card,delivered,United Kingdom
+20143,2024-09-24,51,Paid Search,Desktop,Home,3,0,263.22,0,Digital Wallet,delivered,United Kingdom
+20201,2024-09-24,173,Paid Search,Desktop,Home,2,7,133.02,0,Pay Later,delivered,United Kingdom
+20645,2024-09-24,46,Paid Search,Mobile,Home,1,0,65.78,0,Pay Later,delivered,United Kingdom
+20128,2024-09-26,49,Paid Search,Mobile,Home,2,0,111.59,0,Digital Wallet,delivered,United Kingdom
+20340,2024-09-26,147,Social,Mobile,Fashion,1,0,28.88,4.99,Card,returned,United Kingdom
+20012,2024-09-27,275,Paid Search,Desktop,Fashion,1,0,24.69,4.99,Digital Wallet,delivered,Netherlands
+20292,2024-09-27,130,Paid Search,Mobile,Beauty,1,0,27.36,4.99,Digital Wallet,delivered,Ireland
+20369,2024-09-27,208,Paid Search,Mobile,Electronics,1,0,59.03,0,Pay Later,delivered,United Kingdom
+20668,2024-09-27,42,Referral,Mobile,Home,2,5.63,106.93,0,Pay Later,returned,United Kingdom
+20084,2024-09-28,329,Paid Search,Tablet,Sports,3,0,89.3,0,Card,delivered,France
+20130,2024-09-28,356,Social,Mobile,Beauty,4,0,187.16,0,Card,delivered,Netherlands
+20323,2024-09-28,334,Social,Mobile,Fashion,2,0,75.76,0,Digital Wallet,delivered,United Kingdom
+20412,2024-09-28,350,Organic Search,Desktop,Fashion,2,0,136.62,0,Card,delivered,United Kingdom
+20559,2024-09-28,264,Paid Search,Mobile,Beauty,1,0,69.17,0,Digital Wallet,delivered,France
+20702,2024-09-29,6,Referral,Mobile,Fashion,2,7.39,41.85,4.99,Card,returned,United Kingdom
+20604,2024-09-30,321,Paid Search,Desktop,Fashion,3,0,122.65,0,Card,delivered,Germany
+20301,2024-10-01,75,Social,Tablet,Home,2,0,135.94,0,Digital Wallet,delivered,Ireland
+20313,2024-10-01,312,Referral,Mobile,Fashion,1,0,20.4,4.99,Card,delivered,United Kingdom
+20387,2024-10-01,96,Paid Search,Mobile,Beauty,1,1.07,20.28,4.99,Card,delivered,United Kingdom
+20413,2024-10-01,141,Paid Search,Mobile,Home,4,0,262.19,0,Digital Wallet,delivered,United Kingdom
+20391,2024-10-02,294,Organic Search,Mobile,Fashion,3,0,122.72,0,Pay Later,delivered,United Kingdom
+20523,2024-10-02,162,Social,Desktop,Electronics,2,0,163.65,0,Card,delivered,Netherlands
+20156,2024-10-03,246,Organic Search,Mobile,Home,2,0,89.09,0,Card,delivered,Ireland
+20539,2024-10-04,371,Organic Search,Mobile,Fashion,3,31.86,180.53,0,Card,delivered,France
+20745,2024-10-04,54,Organic Search,Mobile,Fashion,1,7.2,64.84,0,Card,returned,United Kingdom
+20031,2024-10-05,158,Paid Search,Desktop,Fashion,2,0,72.92,0,Card,delivered,United Kingdom
+20705,2024-10-05,80,Email,Mobile,Fashion,1,10.25,58.09,0,Card,delivered,United Kingdom
+20093,2024-10-06,12,Paid Search,Mobile,Sports,1,0,76.62,0,Card,cancelled,Germany
+20272,2024-10-06,107,Referral,Mobile,Home,2,0,55.21,0,Pay Later,cancelled,United Kingdom
+20562,2024-10-06,42,Email,Desktop,Sports,4,9.44,179.29,0,Card,delivered,United Kingdom
+20433,2024-10-07,315,Organic Search,Desktop,Sports,1,0,54.98,0,Card,cancelled,France
+20440,2024-10-07,365,Paid Search,Mobile,Home,1,5.32,30.14,4.99,Digital Wallet,delivered,United Kingdom
+20557,2024-10-07,365,Organic Search,Tablet,Fashion,3,0,202.9,0,Pay Later,delivered,Germany
+20709,2024-10-07,121,Direct,Desktop,Beauty,6,0,128.3,0,Card,delivered,United Kingdom
+20420,2024-10-08,394,Referral,Mobile,Beauty,3,0,88.24,0,Digital Wallet,delivered,United Kingdom
+20501,2024-10-08,139,Organic Search,Mobile,Fashion,3,0,169.6,0,Card,delivered,United Kingdom
+20520,2024-10-08,145,Email,Mobile,Home,6,32.83,295.48,0,Card,delivered,Germany
+20596,2024-10-08,315,Organic Search,Desktop,Home,1,0,32.92,4.99,Card,delivered,United Kingdom
+20758,2024-10-08,376,Referral,Mobile,Beauty,3,0,135.2,0,Card,delivered,United Kingdom
+20133,2024-10-09,308,Organic Search,Mobile,Home,2,0,43.74,4.99,Card,returned,United Kingdom
+20185,2024-10-09,34,Email,Tablet,Beauty,3,3.05,58.02,0,Digital Wallet,delivered,United Kingdom
+20541,2024-10-09,294,Email,Mobile,Fashion,4,13.44,120.98,0,Card,returned,France
+20402,2024-10-10,401,Paid Search,Mobile,Fashion,2,0,75.88,0,Pay Later,delivered,Netherlands
+20717,2024-10-10,128,Social,Mobile,Beauty,3,0,167.85,0,Card,delivered,Germany
+20728,2024-10-10,61,Referral,Mobile,Home,2,1.93,36.73,4.99,Card,delivered,United Kingdom
+20398,2024-10-11,205,Organic Search,Mobile,Fashion,1,0,42.67,4.99,Card,delivered,Germany
+20456,2024-10-11,212,Social,Mobile,Fashion,1,0,66.17,0,Digital Wallet,delivered,Ireland
+20652,2024-10-12,334,Organic Search,Mobile,Electronics,2,0,54.02,0,Card,delivered,United Kingdom
+20081,2024-10-14,69,Paid Search,Mobile,Beauty,1,0,41.37,4.99,Card,delivered,Germany
+20355,2024-10-14,320,Paid Search,Desktop,Fashion,2,0,56.09,0,Card,delivered,Ireland
+20464,2024-10-14,209,Organic Search,Mobile,Beauty,2,0,154.19,0,Pay Later,delivered,Germany
+20735,2024-10-14,119,Paid Search,Mobile,Home,3,0,105.92,0,Digital Wallet,returned,Ireland
+20586,2024-10-15,251,Organic Search,Desktop,Fashion,1,0,34.81,4.99,Card,delivered,Netherlands
+20781,2024-10-15,344,Organic Search,Mobile,Electronics,2,0,56.82,0,Pay Later,returned,France
+20209,2024-10-16,379,Organic Search,Mobile,Fashion,3,0,173.96,0,Card,delivered,France
+20216,2024-10-16,263,Paid Search,Desktop,Home,1,0,60.18,0,Card,delivered,Ireland
+20283,2024-10-16,121,Email,Desktop,Home,4,32.25,290.29,0,Card,delivered,Ireland
+20367,2024-10-16,260,Direct,Mobile,Sports,1,0,58.75,0,Card,delivered,United Kingdom
+20624,2024-10-17,50,Direct,Desktop,Home,3,0,159.05,0,Card,delivered,Germany
+20230,2024-10-18,51,Organic Search,Desktop,Fashion,1,0,75.64,0,Card,delivered,Germany
+20311,2024-10-18,4,Paid Search,Desktop,Fashion,1,0,34.63,4.99,Card,delivered,United Kingdom
+20014,2024-10-19,167,Direct,Desktop,Fashion,4,0,206.68,0,Card,delivered,United Kingdom
+20257,2024-10-19,148,Email,Mobile,Fashion,1,7.11,64.03,0,Card,delivered,United Kingdom
+20428,2024-10-19,70,Organic Search,Mobile,Beauty,1,0,46.73,4.99,Digital Wallet,delivered,United Kingdom
+20491,2024-10-19,196,Email,Mobile,Fashion,3,3.51,66.7,0,Pay Later,delivered,United Kingdom
+20427,2024-10-20,370,Organic Search,Mobile,Home,3,20.53,184.78,0,Digital Wallet,delivered,Ireland
+20548,2024-10-20,277,Paid Search,Mobile,Fashion,1,0,72.14,0,Card,delivered,United Kingdom
+20573,2024-10-20,61,Social,Mobile,Sports,2,0,82.4,0,Card,delivered,United Kingdom
+20681,2024-10-20,208,Social,Desktop,Fashion,4,0,110.59,0,Pay Later,delivered,United Kingdom
+20688,2024-10-20,284,Organic Search,Desktop,Fashion,1,2.51,47.75,4.99,Card,delivered,United Kingdom
+20265,2024-10-21,393,Organic Search,Mobile,Home,1,0,74.11,0,Card,delivered,United Kingdom
+20453,2024-10-21,19,Email,Tablet,Home,1,4.23,23.96,4.99,Digital Wallet,delivered,United Kingdom
+20572,2024-10-21,114,Organic Search,Mobile,Sports,6,0,159.21,0,Digital Wallet,delivered,Netherlands
+20370,2024-10-22,98,Email,Mobile,Fashion,1,5.28,47.56,4.99,Digital Wallet,delivered,United Kingdom
+20563,2024-10-22,260,Referral,Mobile,Home,1,0,70.13,0,Card,returned,United Kingdom
+20405,2024-10-24,232,Organic Search,Tablet,Beauty,2,21.81,123.62,0,Pay Later,delivered,United Kingdom
+20509,2024-10-24,371,Organic Search,Mobile,Fashion,1,0,74.36,0,Card,delivered,United Kingdom
+20650,2024-10-24,132,Referral,Mobile,Fashion,1,0,67.56,0,Card,delivered,Germany
+20701,2024-10-25,325,Social,Mobile,Fashion,1,0,33.72,4.99,Digital Wallet,delivered,United Kingdom
+20268,2024-10-26,198,Email,Desktop,Fashion,1,9.66,54.76,0,Digital Wallet,delivered,United Kingdom
+20410,2024-10-26,108,Paid Search,Desktop,Beauty,3,0,103.64,0,Digital Wallet,delivered,United Kingdom
+20468,2024-10-27,325,Organic Search,Mobile,Fashion,2,0,137.64,0,Pay Later,delivered,Germany
+20658,2024-10-27,415,Paid Search,Desktop,Fashion,4,0,202.95,0,Digital Wallet,delivered,United Kingdom
+20788,2024-10-27,413,Referral,Mobile,Sports,4,0,135.04,0,Card,delivered,United Kingdom
+20085,2024-10-28,26,Social,Mobile,Electronics,1,0,30.72,4.99,Card,delivered,Netherlands
+20296,2024-10-28,70,Email,Mobile,Fashion,1,4.59,26.04,4.99,Digital Wallet,delivered,Germany
+20726,2024-10-28,236,Referral,Desktop,Fashion,6,0,318.87,0,Pay Later,returned,United Kingdom
+20032,2024-10-29,83,Organic Search,Mobile,Fashion,4,0,237.46,0,Card,returned,Germany
+20322,2024-10-30,62,Organic Search,Mobile,Beauty,2,0,132.01,0,Digital Wallet,delivered,Ireland
+20443,2024-10-31,173,Paid Search,Desktop,Electronics,1,5.34,30.29,4.99,Digital Wallet,delivered,Germany
+20505,2024-10-31,412,Organic Search,Desktop,Sports,1,0,57.01,0,Card,returned,Ireland
+20090,2024-11-01,97,Referral,Desktop,Home,1,0,72.39,0,Digital Wallet,returned,United Kingdom
+20122,2024-11-01,120,Email,Mobile,Beauty,6,26.42,237.76,0,Card,delivered,Germany
+20277,2024-11-01,177,Social,Desktop,Fashion,2,8.11,154.06,0,Digital Wallet,delivered,United Kingdom
+20449,2024-11-01,232,Email,Tablet,Home,1,3.95,22.39,4.99,Card,cancelled,United Kingdom
+20521,2024-11-01,262,Social,Mobile,Beauty,3,0,206.93,0,Digital Wallet,delivered,United Kingdom
+20622,2024-11-01,320,Social,Mobile,Home,1,0,43.19,4.99,Digital Wallet,delivered,Ireland
+20733,2024-11-01,77,Organic Search,Mobile,Fashion,1,0,37.39,4.99,Card,cancelled,United Kingdom
+20694,2024-11-02,146,Organic Search,Mobile,Sports,3,0,176.3,0,Card,delivered,Germany
+20798,2024-11-02,354,Social,Mobile,Fashion,2,0,89.68,0,Card,delivered,United Kingdom
+20261,2024-11-03,400,Paid Search,Mobile,Fashion,3,0,55.77,0,Card,delivered,United Kingdom
+20353,2024-11-03,15,Referral,Desktop,Home,3,0,125.32,0,Digital Wallet,delivered,United Kingdom
+20665,2024-11-03,257,Referral,Mobile,Fashion,2,0,128.48,0,Card,delivered,United Kingdom
+20400,2024-11-04,271,Organic Search,Desktop,Home,3,9.28,176.29,0,Card,cancelled,United Kingdom
+20766,2024-11-04,352,Paid Search,Tablet,Beauty,1,0,55.56,0,Pay Later,returned,Netherlands
+20117,2024-11-05,134,Paid Search,Tablet,Fashion,2,0,37.88,4.99,Pay Later,delivered,United Kingdom
+20656,2024-11-05,15,Organic Search,Mobile,Beauty,2,0,56.58,0,Card,delivered,United Kingdom
+20550,2024-11-06,60,Direct,Desktop,Fashion,2,0,64,0,Digital Wallet,delivered,Ireland
+20684,2024-11-06,20,Organic Search,Mobile,Home,1,0,42.7,4.99,Card,delivered,France
+20734,2024-11-07,347,Email,Desktop,Home,3,27.81,157.61,0,Card,delivered,United Kingdom
+20792,2024-11-07,208,Paid Search,Mobile,Home,2,8.92,80.23,0,Card,delivered,United Kingdom
+20445,2024-11-08,109,Referral,Mobile,Home,1,2.49,22.42,4.99,Digital Wallet,delivered,Germany
+20486,2024-11-08,122,Email,Mobile,Electronics,2,22.57,127.88,0,Card,delivered,United Kingdom
+20503,2024-11-09,329,Referral,Desktop,Beauty,1,0,69.21,0,Card,delivered,Netherlands
+20330,2024-11-10,151,Social,Tablet,Sports,3,0,149.17,0,Digital Wallet,delivered,United Kingdom
+20342,2024-11-10,363,Social,Mobile,Fashion,1,0,66.09,0,Card,delivered,Netherlands
+20057,2024-11-11,77,Paid Search,Desktop,Fashion,1,4.74,26.89,4.99,Card,delivered,Ireland
+20086,2024-11-11,61,Email,Desktop,Electronics,1,5.41,30.65,4.99,Pay Later,delivered,United Kingdom
+20183,2024-11-11,372,Social,Desktop,Electronics,3,0,170.73,0,Card,delivered,Germany
+20048,2024-11-12,61,Email,Tablet,Beauty,2,7.72,43.74,4.99,Card,delivered,United Kingdom
+20407,2024-11-12,57,Social,Mobile,Fashion,1,0,61.59,0,Digital Wallet,delivered,United Kingdom
+20471,2024-11-13,327,Organic Search,Tablet,Sports,6,32.3,183.04,0,Digital Wallet,returned,United Kingdom
+20756,2024-11-13,389,Referral,Desktop,Home,2,0,135.46,0,Card,delivered,United Kingdom
+20469,2024-11-14,202,Social,Mobile,Fashion,2,10.46,94.12,0,Pay Later,delivered,United Kingdom
+20611,2024-11-14,310,Social,Desktop,Home,4,0,237.31,0,Card,delivered,Netherlands
+20629,2024-11-14,236,Email,Desktop,Home,1,6.73,60.59,0,Digital Wallet,delivered,United Kingdom
+20757,2024-11-14,59,Paid Search,Tablet,Electronics,2,0,45.92,4.99,Card,delivered,Ireland
+20244,2024-11-15,189,Direct,Mobile,Home,1,0,53.74,0,Card,delivered,Netherlands
+20749,2024-11-15,116,Organic Search,Mobile,Home,3,0,105.64,0,Digital Wallet,delivered,Ireland
+20767,2024-11-15,86,Organic Search,Mobile,Home,1,0,50.89,0,Digital Wallet,delivered,Ireland
+20062,2024-11-16,176,Organic Search,Mobile,Beauty,3,0,87.81,0,Card,delivered,United Kingdom
+20747,2024-11-16,73,Organic Search,Desktop,Sports,2,7.24,137.57,0,Card,delivered,United Kingdom
+20024,2024-11-17,235,Organic Search,Mobile,Beauty,4,25.87,232.86,0,Digital Wallet,delivered,United Kingdom
+20784,2024-11-17,192,Social,Desktop,Electronics,2,0,115.09,0,Card,delivered,Ireland
+20050,2024-11-19,249,Organic Search,Mobile,Electronics,2,0,77.21,0,Digital Wallet,delivered,United Kingdom
+20119,2024-11-19,225,Social,Tablet,Electronics,1,0,42.86,4.99,Card,delivered,France
+20480,2024-11-20,117,Paid Search,Mobile,Home,1,0,52.44,0,Card,delivered,United Kingdom
+20618,2024-11-20,212,Email,Desktop,Electronics,1,6.79,61.12,0,Card,delivered,Netherlands
+20703,2024-11-20,331,Organic Search,Desktop,Fashion,1,0,41.45,4.99,Digital Wallet,returned,Netherlands
+20719,2024-11-20,150,Organic Search,Mobile,Electronics,1,0,30.79,4.99,Card,cancelled,Germany
+20210,2024-11-21,77,Paid Search,Mobile,Home,1,0,56.64,0,Card,delivered,France
+20472,2024-11-21,243,Social,Mobile,Fashion,1,9.48,53.72,0,Pay Later,delivered,France
+20547,2024-11-21,255,Organic Search,Desktop,Electronics,4,0,318.55,0,Digital Wallet,delivered,United Kingdom
+20605,2024-11-21,178,Email,Desktop,Fashion,2,4.89,44,4.99,Card,returned,Germany
+20008,2024-11-22,23,Social,Mobile,Home,1,0,27.71,4.99,Pay Later,delivered,United Kingdom
+20769,2024-11-22,244,Paid Search,Mobile,Electronics,1,0,28.98,4.99,Card,delivered,United Kingdom
+20795,2024-11-22,49,Organic Search,Mobile,Beauty,1,0,33.99,4.99,Card,delivered,United Kingdom
+20064,2024-11-25,394,Email,Desktop,Beauty,2,10.57,59.92,0,Card,delivered,United Kingdom
+20160,2024-11-27,186,Organic Search,Mobile,Fashion,1,0,31.05,4.99,Card,delivered,United Kingdom
+20399,2024-11-27,361,Social,Mobile,Fashion,1,0,42.75,4.99,Card,delivered,Ireland
+20431,2024-11-27,396,Social,Mobile,Beauty,1,0,40.65,4.99,Card,delivered,Netherlands
+20608,2024-11-27,54,Email,Mobile,Beauty,1,6.6,37.43,4.99,Digital Wallet,delivered,France
+20689,2024-11-27,194,Organic Search,Mobile,Electronics,3,0,149.72,0,Digital Wallet,delivered,Ireland
+20473,2024-11-29,82,Organic Search,Mobile,Home,4,0,225.14,0,Pay Later,delivered,United Kingdom
+20794,2024-11-29,406,Paid Search,Mobile,Beauty,1,0,30.52,4.99,Card,delivered,United Kingdom
+20667,2024-11-30,297,Paid Search,Desktop,Fashion,1,0,86.38,0,Card,delivered,United Kingdom
+20200,2024-12-01,181,Paid Search,Mobile,Electronics,1,0,55.41,0,Card,returned,United Kingdom
+20383,2024-12-01,69,Social,Mobile,Electronics,1,0,70.24,0,Card,delivered,United Kingdom
+20692,2024-12-02,105,Referral,Mobile,Electronics,3,0,135.74,0,Card,delivered,United Kingdom
+20740,2024-12-02,257,Email,Mobile,Fashion,2,10.5,94.54,0,Card,cancelled,United Kingdom
+20659,2024-12-03,376,Social,Mobile,Fashion,1,0,54.04,0,Digital Wallet,delivered,Germany
+20704,2024-12-03,44,Social,Desktop,Home,2,0,148.56,0,Card,cancelled,United Kingdom
+20722,2024-12-03,409,Organic Search,Desktop,Electronics,2,8.72,49.4,4.99,Card,delivered,United Kingdom
+20028,2024-12-04,88,Paid Search,Mobile,Home,6,0,326.66,0,Card,delivered,United Kingdom
+20458,2024-12-04,320,Paid Search,Desktop,Fashion,3,0,222.77,0,Card,returned,United Kingdom
+20060,2024-12-07,401,Email,Mobile,Beauty,1,7.49,67.45,0,Card,delivered,Germany
+20113,2024-12-07,141,Paid Search,Mobile,Electronics,1,0,67.62,0,Digital Wallet,delivered,Ireland
+20721,2024-12-07,287,Paid Search,Mobile,Sports,4,0,206.63,0,Digital Wallet,delivered,United Kingdom
+20793,2024-12-07,88,Email,Mobile,Electronics,1,1.38,26.16,4.99,Card,delivered,United Kingdom
+20194,2024-12-08,41,Organic Search,Mobile,Fashion,1,0,70.03,0,Card,delivered,France
+20297,2024-12-08,4,Social,Mobile,Home,2,0,141.13,0,Card,delivered,France
+20613,2024-12-08,5,Organic Search,Mobile,Sports,2,0,128.22,0,Digital Wallet,delivered,Netherlands
+20720,2024-12-08,289,Organic Search,Desktop,Fashion,1,0,39.67,4.99,Card,delivered,Germany
+20164,2024-12-09,125,Referral,Mobile,Beauty,3,0,133.78,0,Card,cancelled,Germany
+20228,2024-12-09,43,Organic Search,Tablet,Fashion,2,0,121.91,0,Digital Wallet,delivered,United Kingdom
+20316,2024-12-10,299,Social,Tablet,Fashion,3,0,112.34,0,Digital Wallet,delivered,Germany
+20345,2024-12-10,228,Email,Mobile,Fashion,1,2.44,46.35,4.99,Card,delivered,United Kingdom
+20352,2024-12-10,7,Paid Search,Mobile,Beauty,1,0,34.83,4.99,Card,delivered,United Kingdom
+20581,2024-12-10,9,Social,Mobile,Beauty,2,0,97.35,0,Card,delivered,United Kingdom
+20582,2024-12-10,241,Organic Search,Mobile,Home,1,0,56.08,0,Digital Wallet,delivered,United Kingdom
+20637,2024-12-10,117,Email,Tablet,Sports,3,13.87,124.81,0,Digital Wallet,returned,United Kingdom
+20097,2024-12-11,372,Email,Mobile,Home,1,3.98,35.86,4.99,Card,delivered,United Kingdom
+20494,2024-12-11,405,Email,Mobile,Sports,6,39.82,358.37,0,Digital Wallet,delivered,France
+20579,2024-12-13,154,Referral,Mobile,Fashion,1,0,72.29,0,Digital Wallet,cancelled,Germany
+20752,2024-12-14,188,Referral,Desktop,Home,1,0,46.4,4.99,Digital Wallet,delivered,Ireland
+20610,2024-12-15,128,Organic Search,Desktop,Fashion,2,0,123.16,0,Card,delivered,France
+20239,2024-12-17,360,Organic Search,Desktop,Home,2,0,136.61,0,Card,delivered,United Kingdom
+20163,2024-12-18,49,Referral,Tablet,Home,1,0,73.48,0,Card,returned,United Kingdom
+20207,2024-12-18,262,Referral,Mobile,Fashion,3,18.75,106.23,0,Card,delivered,United Kingdom
+20047,2024-12-20,52,Email,Desktop,Home,1,4.01,36.12,4.99,Card,delivered,France
+20111,2024-12-20,304,Organic Search,Mobile,Home,3,17.73,159.53,0,Card,delivered,United Kingdom
+20247,2024-12-20,242,Email,Mobile,Electronics,1,2.47,46.87,4.99,Card,delivered,Ireland
+20287,2024-12-21,324,Organic Search,Mobile,Fashion,1,0,45.96,4.99,Card,delivered,Germany
+20361,2024-12-21,118,Email,Mobile,Electronics,1,3.69,70.15,0,Digital Wallet,delivered,United Kingdom
+20660,2024-12-21,170,Email,Mobile,Fashion,4,12.6,113.36,0,Card,delivered,United Kingdom
+20515,2024-12-22,120,Organic Search,Desktop,Fashion,2,0,109.03,0,Digital Wallet,delivered,Ireland
+20071,2024-12-23,171,Email,Tablet,Electronics,3,11.46,64.92,0,Card,cancelled,United Kingdom
+20190,2024-12-24,241,Email,Mobile,Home,2,6.66,59.96,0,Pay Later,delivered,United Kingdom
+20231,2024-12-24,276,Organic Search,Desktop,Beauty,4,0,258.7,0,Card,delivered,Germany
+20598,2024-12-24,385,Paid Search,Mobile,Electronics,2,0,98.46,0,Card,delivered,France
+20609,2024-12-24,141,Paid Search,Mobile,Fashion,1,0,37.83,4.99,Card,delivered,United Kingdom
+20663,2024-12-24,136,Social,Desktop,Sports,3,0,174.02,0,Card,delivered,France
+20104,2024-12-25,379,Organic Search,Mobile,Fashion,2,0,150.78,0,Digital Wallet,delivered,France
+20105,2024-12-25,67,Social,Mobile,Sports,1,0,48.91,4.99,Card,delivered,Netherlands
+20347,2024-12-25,153,Organic Search,Mobile,Sports,1,0,37.69,4.99,Card,delivered,United Kingdom
+20760,2024-12-25,177,Organic Search,Desktop,Fashion,3,0,235.97,0,Digital Wallet,delivered,United Kingdom
+20419,2024-12-26,245,Email,Desktop,Sports,1,3.4,64.56,0,Digital Wallet,returned,France
+20425,2024-12-26,174,Email,Desktop,Fashion,2,20.8,117.87,0,Card,delivered,France
+20530,2024-12-26,146,Referral,Mobile,Fashion,2,0,52.98,0,Pay Later,delivered,United Kingdom
+20555,2024-12-26,64,Paid Search,Mobile,Fashion,1,0,67.5,0,Card,returned,United Kingdom
+20617,2024-12-26,369,Paid Search,Mobile,Fashion,1,0,53.22,0,Card,delivered,United Kingdom
+20568,2024-12-27,179,Organic Search,Mobile,Home,1,0,64.45,0,Pay Later,returned,United Kingdom
+20223,2024-12-28,141,Organic Search,Mobile,Fashion,1,0,18.45,4.99,Card,delivered,Germany
+20376,2024-12-28,225,Paid Search,Desktop,Fashion,2,0,90.1,0,Pay Later,delivered,United Kingdom
+20589,2024-12-28,68,Social,Mobile,Electronics,1,0,34.92,4.99,Card,delivered,United Kingdom
+20715,2024-12-28,241,Paid Search,Desktop,Fashion,1,0,28.16,4.99,Card,delivered,United Kingdom
+20161,2024-12-29,359,Referral,Mobile,Home,1,0,26.18,4.99,Card,cancelled,Germany
+20205,2024-12-29,74,Paid Search,Mobile,Beauty,2,0,52.43,0,Card,delivered,Ireland
+20754,2024-12-29,145,Social,Mobile,Electronics,1,0,59.37,0,Digital Wallet,delivered,France
+20017,2024-12-30,400,Organic Search,Desktop,Beauty,4,0,275.83,0,Card,delivered,France
+20252,2024-12-30,407,Social,Mobile,Electronics,1,10,56.64,0,Digital Wallet,cancelled,United Kingdom
+20100,2025-01-01,67,Paid Search,Mobile,Electronics,2,0,112.69,0,Card,delivered,United Kingdom
+20295,2025-01-01,269,Organic Search,Mobile,Beauty,1,0,43.33,4.99,Digital Wallet,delivered,United Kingdom
+20329,2025-01-01,240,Paid Search,Mobile,Home,1,0,71.81,0,Card,delivered,United Kingdom
+20554,2025-01-01,97,Social,Mobile,Sports,4,5.76,109.5,0,Digital Wallet,returned,Germany
+20690,2025-01-01,233,Paid Search,Desktop,Fashion,2,0,60.85,0,Digital Wallet,returned,United Kingdom
+20556,2025-01-02,208,Paid Search,Mobile,Sports,2,0,124.16,0,Card,returned,United Kingdom
+20696,2025-01-02,86,Email,Tablet,Beauty,1,2.65,23.84,4.99,Digital Wallet,delivered,Germany
+20010,2025-01-03,356,Email,Mobile,Fashion,2,5.69,108.03,0,Card,delivered,United Kingdom
+20027,2025-01-03,324,Organic Search,Mobile,Fashion,1,0,66.13,0,Digital Wallet,delivered,United Kingdom
+20137,2025-01-03,42,Organic Search,Mobile,Beauty,3,0,200.88,0,Card,delivered,France
+20499,2025-01-03,122,Direct,Mobile,Fashion,1,0,49.31,4.99,Card,delivered,United Kingdom
+20772,2025-01-03,412,Direct,Mobile,Fashion,1,0,28.24,4.99,Card,delivered,United Kingdom
+20063,2025-01-04,170,Referral,Mobile,Beauty,1,0,47.03,4.99,Card,delivered,United Kingdom
+20236,2025-01-04,342,Paid Search,Tablet,Electronics,1,0,60.78,0,Pay Later,delivered,France
+20374,2025-01-04,22,Paid Search,Desktop,Home,1,0,20.95,4.99,Card,delivered,Germany
+20496,2025-01-04,251,Social,Mobile,Sports,2,0,105.05,0,Card,delivered,Germany
+20242,2025-01-05,224,Email,Desktop,Sports,2,10.16,57.58,0,Pay Later,delivered,Germany
+20761,2025-01-05,125,Organic Search,Mobile,Fashion,2,0,50.22,0,Digital Wallet,cancelled,United Kingdom
+20354,2025-01-06,227,Email,Mobile,Home,2,1.93,36.76,4.99,Card,cancelled,United Kingdom
+20135,2025-01-07,6,Email,Mobile,Fashion,2,10.14,91.27,0,Card,delivered,Germany
+20310,2025-01-07,153,Paid Search,Mobile,Home,1,0,42,4.99,Card,returned,United Kingdom
+20649,2025-01-08,381,Paid Search,Mobile,Sports,2,0,55.53,0,Digital Wallet,delivered,France
+20682,2025-01-08,36,Paid Search,Desktop,Fashion,4,0,268.63,0,Digital Wallet,returned,Ireland
+20755,2025-01-08,190,Paid Search,Desktop,Fashion,2,0,143.68,0,Card,delivered,Ireland
+20170,2025-01-09,62,Organic Search,Tablet,Home,1,0,33.09,4.99,Card,cancelled,Germany
+20569,2025-01-11,229,Email,Mobile,Sports,4,27.11,153.62,0,Digital Wallet,delivered,United Kingdom
+20615,2025-01-11,46,Organic Search,Mobile,Fashion,1,0,72.93,0,Digital Wallet,delivered,United Kingdom
+20266,2025-01-12,126,Email,Mobile,Home,1,5.16,46.46,4.99,Digital Wallet,delivered,United Kingdom
+20285,2025-01-12,313,Paid Search,Desktop,Fashion,3,0,223.93,0,Card,delivered,Germany
+20019,2025-01-15,272,Paid Search,Desktop,Fashion,3,0,180.56,0,Card,delivered,Germany
+20195,2025-01-15,158,Referral,Desktop,Electronics,1,0,57.2,0,Card,delivered,United Kingdom
+20438,2025-01-16,237,Direct,Mobile,Fashion,3,0,138.88,0,Digital Wallet,delivered,Ireland
+20462,2025-01-16,325,Organic Search,Desktop,Fashion,3,0,200.56,0,Card,delivered,United Kingdom
+20584,2025-01-16,322,Paid Search,Mobile,Home,2,0,123.52,0,Card,delivered,United Kingdom
+20037,2025-01-17,241,Organic Search,Tablet,Fashion,1,0,38.05,4.99,Digital Wallet,delivered,France
+20076,2025-01-17,77,Direct,Mobile,Beauty,4,15.66,88.71,0,Card,delivered,United Kingdom
+20444,2025-01-17,114,Paid Search,Mobile,Home,1,2.53,22.73,4.99,Pay Later,delivered,United Kingdom
+20040,2025-01-18,287,Organic Search,Desktop,Sports,2,0,58.57,0,Digital Wallet,delivered,United Kingdom
+20286,2025-01-18,81,Organic Search,Mobile,Fashion,3,0,185.66,0,Digital Wallet,delivered,United Kingdom
+20333,2025-01-18,213,Social,Desktop,Home,3,0,181.53,0,Card,delivered,United Kingdom
+20432,2025-01-18,126,Paid Search,Desktop,Electronics,1,0,56.63,0,Digital Wallet,delivered,United Kingdom
+20487,2025-01-18,149,Organic Search,Mobile,Electronics,2,0,110.57,0,Card,delivered,Netherlands
+20512,2025-01-19,46,Organic Search,Mobile,Fashion,2,0,90.06,0,Digital Wallet,delivered,Germany
+20109,2025-01-20,37,Email,Desktop,Home,2,9.01,51.03,0,Card,delivered,United Kingdom
+20479,2025-01-20,286,Paid Search,Desktop,Sports,2,0,103.24,0,Card,delivered,France
+20742,2025-01-20,376,Paid Search,Desktop,Home,2,0,176.44,0,Card,delivered,France
+20023,2025-01-21,285,Paid Search,Mobile,Home,1,4.78,27.07,4.99,Digital Wallet,delivered,United Kingdom
+20145,2025-01-21,145,Email,Mobile,Electronics,1,2.5,47.4,4.99,Card,delivered,Germany
+20498,2025-01-21,281,Social,Desktop,Fashion,1,0,41.81,4.99,Pay Later,delivered,United Kingdom
+20035,2025-01-22,225,Organic Search,Mobile,Home,2,0,131.17,0,Card,delivered,Ireland
+20197,2025-01-22,161,Paid Search,Mobile,Fashion,2,0,123.61,0,Digital Wallet,delivered,France
+20640,2025-01-22,372,Organic Search,Desktop,Fashion,6,20.07,180.6,0,Digital Wallet,delivered,United Kingdom
+20714,2025-01-22,52,Referral,Mobile,Sports,3,0,106.88,0,Card,delivered,United Kingdom
+20141,2025-01-23,136,Organic Search,Desktop,Beauty,1,0,36.49,4.99,Card,delivered,United Kingdom
+20504,2025-01-23,329,Email,Mobile,Beauty,2,6.58,59.18,0,Card,returned,United Kingdom
+20529,2025-01-23,64,Organic Search,Mobile,Fashion,2,0,125.74,0,Card,delivered,United Kingdom
+20013,2025-01-24,92,Organic Search,Desktop,Home,1,0,28.15,4.99,Card,delivered,France
+20042,2025-01-24,292,Paid Search,Desktop,Sports,1,0,84.57,0,Card,delivered,United Kingdom
+20466,2025-01-24,55,Organic Search,Desktop,Beauty,6,0,533.15,0,Pay Later,delivered,United Kingdom
+20552,2025-01-24,327,Paid Search,Mobile,Beauty,2,0,106.65,0,Card,delivered,Germany
+20406,2025-01-25,52,Paid Search,Mobile,Home,4,0,117.06,0,Card,delivered,United Kingdom
+20657,2025-01-25,209,Email,Mobile,Fashion,1,2.86,25.78,4.99,Card,returned,United Kingdom
+20713,2025-01-25,130,Organic Search,Desktop,Fashion,6,0,147.13,0,Digital Wallet,delivered,France
+20094,2025-01-26,347,Organic Search,Tablet,Fashion,2,0,131.93,0,Digital Wallet,delivered,United Kingdom
+20168,2025-01-26,356,Organic Search,Tablet,Beauty,4,0,109.25,0,Card,delivered,United Kingdom
+20278,2025-01-26,220,Social,Mobile,Electronics,2,3.23,61.35,0,Card,delivered,United Kingdom
+20319,2025-01-26,263,Organic Search,Mobile,Electronics,4,0,96.12,0,Pay Later,delivered,Netherlands
+20450,2025-01-26,378,Direct,Desktop,Beauty,1,0,85.7,0,Card,delivered,Ireland
+20009,2025-01-27,394,Social,Mobile,Home,1,0,59.83,0,Card,delivered,United Kingdom
+20080,2025-01-27,327,Organic Search,Tablet,Fashion,3,0,71.99,0,Card,delivered,United Kingdom
+20134,2025-01-27,210,Email,Desktop,Fashion,1,7.01,39.73,4.99,Card,delivered,Netherlands
+20196,2025-01-27,381,Organic Search,Desktop,Home,3,0,212.38,0,Card,delivered,United Kingdom
+20280,2025-01-27,175,Organic Search,Mobile,Fashion,1,0,50.58,0,Card,delivered,United Kingdom
+20441,2025-01-27,359,Organic Search,Mobile,Home,1,6.02,54.18,0,Card,delivered,United Kingdom
+20643,2025-01-27,364,Paid Search,Mobile,Electronics,1,0,35.18,4.99,Card,delivered,Netherlands
+20021,2025-01-28,368,Email,Mobile,Home,1,7.24,65.17,0,Card,delivered,United Kingdom
+20782,2025-01-28,105,Email,Desktop,Fashion,1,1.19,22.56,4.99,Card,delivered,Ireland
+20004,2025-01-29,317,Paid Search,Desktop,Fashion,1,0,47.52,4.99,Digital Wallet,returned,Germany
+20360,2025-01-29,272,Organic Search,Mobile,Fashion,1,0,61.55,0,Card,delivered,United Kingdom
+20146,2025-01-31,404,Email,Desktop,Beauty,3,24.39,138.18,0,Card,delivered,Netherlands
+20308,2025-01-31,232,Referral,Mobile,Fashion,1,0,52.15,0,Card,delivered,United Kingdom
+20324,2025-01-31,9,Organic Search,Mobile,Beauty,2,0,73.35,0,Card,returned,United Kingdom
+20526,2025-01-31,299,Social,Mobile,Beauty,2,0,118.45,0,Card,delivered,United Kingdom
+20600,2025-01-31,152,Referral,Mobile,Fashion,2,0,90.78,0,Card,delivered,Germany
+20631,2025-01-31,57,Organic Search,Desktop,Electronics,1,0,28.25,4.99,Card,delivered,France
+20661,2025-02-01,286,Paid Search,Mobile,Beauty,2,0,136.38,0,Digital Wallet,delivered,United Kingdom
+20687,2025-02-01,226,Email,Desktop,Fashion,4,19.86,112.52,0,Digital Wallet,delivered,Ireland
+20304,2025-02-02,85,Paid Search,Desktop,Fashion,2,0,51.07,0,Card,cancelled,United Kingdom
+20055,2025-02-03,384,Social,Mobile,Fashion,3,0,171.21,0,Digital Wallet,delivered,United Kingdom
+20620,2025-02-03,299,Email,Tablet,Home,1,6.98,62.77,0,Card,delivered,United Kingdom
+20151,2025-02-04,265,Paid Search,Mobile,Fashion,2,0,96.05,0,Card,delivered,France
+20254,2025-02-04,394,Organic Search,Mobile,Sports,3,0,189.82,0,Card,delivered,Ireland
+20543,2025-02-04,38,Email,Mobile,Home,1,1.57,29.83,4.99,Card,delivered,United Kingdom
+20006,2025-02-05,316,Social,Mobile,Fashion,1,0,25.28,4.99,Pay Later,delivered,France
+20169,2025-02-05,320,Organic Search,Desktop,Beauty,1,0,50.66,0,Card,returned,Netherlands
+20389,2025-02-05,217,Organic Search,Mobile,Home,1,0,27.17,4.99,Card,delivered,United Kingdom
+20697,2025-02-05,160,Referral,Desktop,Fashion,3,27,153.01,0,Card,delivered,Ireland
+20092,2025-02-06,216,Referral,Mobile,Sports,1,0,24.38,4.99,Card,delivered,United Kingdom
+20710,2025-02-06,241,Paid Search,Mobile,Beauty,1,0,61.27,0,Card,delivered,United Kingdom
+20073,2025-02-07,378,Email,Mobile,Sports,3,5.11,97.08,0,Card,delivered,Germany
+20708,2025-02-07,342,Referral,Mobile,Sports,1,0,71.39,0,Card,cancelled,United Kingdom
+20777,2025-02-07,59,Paid Search,Desktop,Electronics,1,0,58.92,0,Card,delivered,United Kingdom
+20683,2025-02-08,277,Organic Search,Mobile,Electronics,1,0,44.03,4.99,Card,delivered,United Kingdom
+20446,2025-02-09,98,Paid Search,Tablet,Fashion,2,0,149.89,0,Card,delivered,United Kingdom
+20549,2025-02-09,62,Email,Mobile,Beauty,2,4.98,94.57,0,Card,delivered,United Kingdom
+20403,2025-02-10,162,Organic Search,Desktop,Home,1,0,57.08,0,Digital Wallet,delivered,United Kingdom
+20153,2025-02-11,10,Social,Mobile,Home,1,0,20.27,4.99,Pay Later,returned,France
+20564,2025-02-11,370,Social,Desktop,Sports,1,0,79.72,0,Card,delivered,Germany
+20088,2025-02-12,327,Organic Search,Desktop,Home,1,0,81.23,0,Card,delivered,United Kingdom
+20167,2025-02-12,126,Email,Mobile,Fashion,2,5.09,96.8,0,Digital Wallet,delivered,United Kingdom
+20180,2025-02-13,129,Social,Mobile,Fashion,1,0,58.24,0,Card,delivered,United Kingdom
+20388,2025-02-13,8,Paid Search,Mobile,Fashion,1,0,54.41,0,Card,delivered,United Kingdom
+20670,2025-02-13,177,Referral,Mobile,Beauty,1,0,73.65,0,Card,delivered,Ireland
+20199,2025-02-14,298,Organic Search,Desktop,Beauty,1,0,79.49,0,Card,delivered,Germany
+20372,2025-02-14,188,Email,Desktop,Beauty,3,11.88,225.76,0,Digital Wallet,delivered,Ireland
+20800,2025-02-14,19,Social,Desktop,Electronics,1,0,77.12,0,Card,delivered,United Kingdom
+20300,2025-02-16,257,Direct,Mobile,Beauty,1,0,44.01,4.99,Pay Later,delivered,France
+20666,2025-02-16,257,Paid Search,Desktop,Beauty,1,0,49.59,4.99,Digital Wallet,returned,Ireland
+20114,2025-02-17,243,Paid Search,Desktop,Fashion,2,0,116.91,0,Pay Later,delivered,Germany
+20477,2025-02-17,163,Organic Search,Mobile,Home,1,0,69.3,0,Card,delivered,United Kingdom
+20627,2025-02-17,325,Paid Search,Tablet,Beauty,3,0,206.4,0,Card,delivered,United Kingdom
+20059,2025-02-18,165,Organic Search,Desktop,Electronics,1,0,30.12,4.99,Digital Wallet,delivered,United Kingdom
+20759,2025-02-18,276,Paid Search,Mobile,Fashion,2,0,99.54,0,Card,delivered,Germany
+20290,2025-02-19,219,Email,Mobile,Electronics,1,1.07,20.34,4.99,Card,delivered,United Kingdom
+20125,2025-02-20,180,Organic Search,Tablet,Fashion,1,2.82,53.6,0,Card,returned,Ireland
+20157,2025-02-20,167,Email,Mobile,Beauty,1,3.43,65.13,0,Card,delivered,United Kingdom
+20241,2025-02-22,194,Organic Search,Mobile,Home,3,3.63,69.02,0,Digital Wallet,delivered,United Kingdom
+20325,2025-02-22,152,Referral,Desktop,Fashion,1,0,82.61,0,Card,delivered,Ireland
+20052,2025-02-23,117,Organic Search,Mobile,Home,2,0,129.87,0,Digital Wallet,delivered,Ireland
+20309,2025-02-23,45,Direct,Desktop,Fashion,3,0,74.18,0,Card,delivered,United Kingdom
+20417,2025-02-23,223,Organic Search,Mobile,Electronics,3,0,164.88,0,Card,delivered,United Kingdom
+20437,2025-02-23,148,Social,Mobile,Sports,3,0,139.3,0,Card,delivered,Netherlands
+20674,2025-02-24,218,Email,Mobile,Home,1,3.13,59.4,0,Pay Later,delivered,France
+20771,2025-02-24,364,Paid Search,Desktop,Electronics,2,0,128.45,0,Pay Later,returned,Netherlands
+20312,2025-02-27,266,Email,Desktop,Home,1,6.9,62.06,0,Card,delivered,United Kingdom
+20215,2025-02-28,109,Social,Mobile,Beauty,2,0,59.7,0,Digital Wallet,delivered,United Kingdom
+20531,2025-02-28,327,Organic Search,Desktop,Electronics,1,0,78.65,0,Digital Wallet,delivered,Netherlands
+20601,2025-02-28,204,Referral,Desktop,Sports,1,0,37.09,4.99,Digital Wallet,returned,United Kingdom
+20267,2025-03-01,214,Referral,Desktop,Fashion,1,0,40.61,4.99,Card,delivered,United Kingdom
+20380,2025-03-03,237,Organic Search,Mobile,Fashion,1,0,43.19,4.99,Card,delivered,Germany
+20382,2025-03-03,230,Social,Mobile,Home,1,4.91,44.15,4.99,Digital Wallet,delivered,United Kingdom
+20591,2025-03-03,309,Organic Search,Tablet,Sports,3,0,94.03,0,Card,delivered,France
+20676,2025-03-03,140,Organic Search,Mobile,Fashion,1,0,73.5,0,Card,delivered,United Kingdom
+20359,2025-03-05,376,Paid Search,Mobile,Home,2,4.97,94.44,0,Card,delivered,United Kingdom
+20510,2025-03-05,216,Paid Search,Mobile,Electronics,3,0,144.25,0,Digital Wallet,delivered,France
+20630,2025-03-05,390,Social,Desktop,Beauty,2,0,161.64,0,Digital Wallet,delivered,United Kingdom
+20693,2025-03-05,127,Email,Desktop,Beauty,2,15.4,138.63,0,Card,delivered,United Kingdom
+20746,2025-03-05,70,Referral,Mobile,Sports,2,0,37.99,4.99,Card,delivered,United Kingdom
+20176,2025-03-06,233,Paid Search,Desktop,Fashion,2,0,112.6,0,Card,delivered,France
+20632,2025-03-06,72,Organic Search,Mobile,Fashion,3,0,90.35,0,Card,delivered,Ireland
+20675,2025-03-07,151,Direct,Mobile,Electronics,2,0,119.12,0,Pay Later,delivered,United Kingdom
+20211,2025-03-08,122,Paid Search,Mobile,Electronics,1,0,36.79,4.99,Digital Wallet,delivered,United Kingdom
+20429,2025-03-08,117,Paid Search,Mobile,Sports,1,0,65.02,0,Card,delivered,United Kingdom
+20517,2025-03-08,138,Organic Search,Mobile,Fashion,1,0,55.51,0,Digital Wallet,delivered,United Kingdom
+20785,2025-03-08,156,Social,Mobile,Electronics,3,0,57.17,0,Card,delivered,Germany
+20070,2025-03-09,287,Paid Search,Desktop,Fashion,1,1.67,31.69,4.99,Card,delivered,Ireland
+20212,2025-03-09,375,Referral,Mobile,Fashion,1,0,34.64,4.99,Card,delivered,Germany
+20077,2025-03-10,245,Social,Tablet,Home,4,0,129.33,0,Card,delivered,United Kingdom
+20553,2025-03-10,126,Email,Desktop,Home,1,3.88,73.72,0,Card,delivered,United Kingdom
+20664,2025-03-11,416,Paid Search,Mobile,Home,2,0,52.6,0,Digital Wallet,delivered,United Kingdom
+20108,2025-03-12,344,Referral,Desktop,Fashion,4,0,104.81,0,Card,delivered,Germany
+20258,2025-03-12,228,Paid Search,Mobile,Beauty,2,0,85.06,0,Card,delivered,United Kingdom
+20368,2025-03-12,119,Social,Mobile,Home,2,0,126.28,0,Card,delivered,United Kingdom
+20439,2025-03-12,106,Paid Search,Tablet,Fashion,1,0,36.05,4.99,Pay Later,delivered,United Kingdom
+20536,2025-03-12,193,Referral,Desktop,Electronics,1,9.66,54.72,0,Card,returned,United Kingdom
+20229,2025-03-13,9,Email,Mobile,Fashion,1,6.48,36.75,4.99,Card,returned,Ireland
+20358,2025-03-13,43,Paid Search,Mobile,Beauty,2,5.32,101.14,0,Card,delivered,Germany
+20488,2025-03-15,13,Referral,Mobile,Home,1,0,74.64,0,Card,delivered,United Kingdom
+20418,2025-03-16,79,Organic Search,Mobile,Fashion,1,0,46.22,4.99,Card,returned,United Kingdom
+20291,2025-03-17,322,Organic Search,Mobile,Fashion,3,13.65,122.88,0,Digital Wallet,delivered,United Kingdom
+20132,2025-03-18,397,Paid Search,Tablet,Electronics,1,0,31.95,4.99,Card,delivered,United Kingdom
+20315,2025-03-18,399,Organic Search,Desktop,Beauty,1,0,78.8,0,Card,cancelled,Ireland
+20379,2025-03-18,36,Organic Search,Desktop,Beauty,4,0,264.31,0,Card,returned,United Kingdom
+20416,2025-03-19,365,Organic Search,Mobile,Fashion,1,7.51,67.57,0,Card,delivered,France
+20723,2025-03-19,404,Organic Search,Mobile,Beauty,1,0,63.55,0,Digital Wallet,delivered,Germany
+20565,2025-03-20,38,Organic Search,Desktop,Electronics,1,6.55,58.98,0,Card,delivered,France
+20096,2025-03-21,234,Referral,Mobile,Beauty,2,0,139.04,0,Card,delivered,United Kingdom
+20396,2025-03-21,131,Paid Search,Desktop,Fashion,1,0,43.25,4.99,Card,delivered,United Kingdom
+20638,2025-03-21,108,Organic Search,Mobile,Fashion,1,0,36.43,4.99,Digital Wallet,delivered,United Kingdom
+20005,2025-03-22,165,Email,Mobile,Electronics,2,2.16,41,4.99,Card,delivered,Ireland
+20314,2025-03-22,141,Paid Search,Desktop,Home,1,0,84.37,0,Digital Wallet,delivered,United Kingdom
+20783,2025-03-22,386,Organic Search,Desktop,Beauty,3,0,85.37,0,Digital Wallet,delivered,United Kingdom
+20799,2025-03-22,269,Social,Tablet,Electronics,3,0,206.42,0,Digital Wallet,delivered,United Kingdom
+20016,2025-03-23,277,Email,Desktop,Beauty,4,14.23,128.05,0,Card,delivered,Germany
+20422,2025-03-23,375,Paid Search,Desktop,Beauty,1,0,41.19,4.99,Pay Later,delivered,Netherlands
+20087,2025-03-24,262,Organic Search,Desktop,Beauty,2,0,171.7,0,Card,delivered,United Kingdom
+20662,2025-03-24,228,Paid Search,Desktop,Electronics,1,0,59.69,0,Digital Wallet,delivered,United Kingdom
+20724,2025-03-24,122,Organic Search,Desktop,Home,1,0,67.55,0,Card,delivered,United Kingdom
+20725,2025-03-24,93,Paid Search,Desktop,Sports,2,0,121.48,0,Card,delivered,Ireland
+20159,2025-03-26,114,Direct,Desktop,Electronics,3,0,257.27,0,Digital Wallet,cancelled,Ireland
+20289,2025-03-26,285,Organic Search,Mobile,Beauty,1,0,57.71,0,Pay Later,delivered,United Kingdom
+20293,2025-03-26,41,Organic Search,Mobile,Fashion,2,0,66.15,0,Card,delivered,United Kingdom
+20101,2025-03-27,50,Organic Search,Mobile,Beauty,3,0,202.88,0,Card,delivered,Germany
+20588,2025-03-27,366,Organic Search,Mobile,Beauty,1,0,59.4,0,Digital Wallet,delivered,United Kingdom
+20011,2025-03-28,256,Email,Desktop,Electronics,1,7.16,64.47,0,Card,delivered,Germany
+20220,2025-03-28,310,Referral,Mobile,Fashion,1,0,19.78,4.99,Digital Wallet,delivered,United Kingdom
+20685,2025-03-28,216,Organic Search,Mobile,Sports,2,0,126.91,0,Card,delivered,United Kingdom
+20198,2025-03-29,318,Paid Search,Mobile,Home,1,10.76,60.96,0,Pay Later,delivered,France
+20317,2025-03-29,132,Paid Search,Mobile,Beauty,1,0,72.67,0,Card,delivered,United Kingdom
+20606,2025-03-29,267,Organic Search,Desktop,Home,2,4.04,76.8,0,Digital Wallet,delivered,United Kingdom
+20654,2025-03-29,396,Email,Mobile,Fashion,2,2.83,53.78,0,Digital Wallet,delivered,United Kingdom
+20669,2025-03-29,354,Referral,Mobile,Fashion,3,0,125.57,0,Card,cancelled,Ireland
+20470,2025-03-30,272,Direct,Mobile,Fashion,2,0,123.13,0,Card,delivered,United Kingdom
+20626,2025-03-30,160,Email,Mobile,Beauty,1,5.81,52.33,0,Pay Later,delivered,Germany
+20493,2025-03-31,283,Organic Search,Mobile,Electronics,2,11.09,62.86,0,Card,delivered,Germany
+20166,2025-04-01,197,Organic Search,Mobile,Sports,2,7.58,42.97,4.99,Digital Wallet,delivered,France
+20641,2025-04-01,135,Email,Mobile,Electronics,2,7.6,144.37,0,Digital Wallet,returned,United Kingdom
+20597,2025-04-02,11,Paid Search,Desktop,Fashion,1,0,75.02,0,Pay Later,delivered,United Kingdom
+20707,2025-04-02,87,Paid Search,Desktop,Fashion,2,0,162.51,0,Card,delivered,United Kingdom
+20033,2025-04-03,370,Referral,Desktop,Beauty,1,0,23.6,4.99,Card,delivered,United Kingdom
+20377,2025-04-03,78,Paid Search,Desktop,Home,3,0,176.63,0,Card,returned,United Kingdom
+20393,2025-04-03,264,Email,Mobile,Home,1,2.29,43.47,4.99,Card,delivered,Ireland
+20773,2025-04-03,364,Social,Mobile,Fashion,3,20.19,114.41,0,Card,delivered,United Kingdom
+20121,2025-04-04,23,Email,Desktop,Fashion,1,1.09,20.65,4.99,Card,delivered,United Kingdom
+20459,2025-04-04,36,Paid Search,Mobile,Sports,4,0,284.07,0,Card,delivered,Germany
+20712,2025-04-05,83,Paid Search,Mobile,Sports,1,6.39,57.51,0,Card,delivered,Netherlands
+20467,2025-04-06,285,Social,Mobile,Fashion,2,0,139.93,0,Card,returned,Ireland
+20518,2025-04-06,39,Organic Search,Desktop,Sports,2,0,118.23,0,Card,delivered,Germany
+20560,2025-04-06,417,Social,Mobile,Sports,2,0,109.21,0,Pay Later,delivered,United Kingdom
+20339,2025-04-07,149,Social,Mobile,Sports,1,0,36.39,4.99,Card,delivered,United Kingdom
+20115,2025-04-08,332,Organic Search,Mobile,Home,1,0,42.74,4.99,Card,delivered,United Kingdom
+20288,2025-04-09,139,Paid Search,Mobile,Beauty,4,0,187.26,0,Card,delivered,United Kingdom
+20634,2025-04-09,413,Organic Search,Desktop,Home,2,7.9,44.76,4.99,Digital Wallet,delivered,France
+20695,2025-04-09,320,Paid Search,Tablet,Fashion,4,37.38,211.82,0,Card,delivered,United Kingdom
+20106,2025-04-10,19,Organic Search,Mobile,Home,3,0,197.17,0,Card,delivered,United Kingdom
+20142,2025-04-10,315,Email,Desktop,Fashion,1,1.86,35.37,4.99,Card,delivered,United Kingdom
+20181,2025-04-10,57,Paid Search,Mobile,Sports,2,4.34,39.08,4.99,Digital Wallet,delivered,United Kingdom
+20397,2025-04-10,83,Paid Search,Mobile,Electronics,1,0,22.99,4.99,Digital Wallet,delivered,United Kingdom
+20026,2025-04-11,178,Paid Search,Desktop,Home,2,0,136.16,0,Card,delivered,United Kingdom
+20043,2025-04-11,32,Social,Desktop,Home,1,0,69.93,0,Card,delivered,United Kingdom
+20302,2025-04-11,58,Social,Mobile,Home,2,0,38.71,4.99,Card,delivered,Ireland
+20174,2025-04-12,108,Organic Search,Mobile,Fashion,3,13.11,118,0,Digital Wallet,delivered,United Kingdom
+20245,2025-04-13,400,Paid Search,Mobile,Beauty,3,0,108.85,0,Card,delivered,United Kingdom
+20346,2025-04-13,119,Organic Search,Tablet,Fashion,1,0,39.27,4.99,Card,delivered,United Kingdom
+20551,2025-04-13,363,Referral,Desktop,Beauty,3,0,237.86,0,Card,delivered,Ireland
+20262,2025-04-14,374,Email,Mobile,Electronics,3,34.13,193.37,0,Card,delivered,United Kingdom
+20587,2025-04-14,121,Organic Search,Desktop,Fashion,6,0,155.82,0,Card,delivered,United Kingdom
+20791,2025-04-14,98,Paid Search,Tablet,Fashion,1,0,53.57,0,Card,delivered,United Kingdom
+20294,2025-04-15,175,Email,Mobile,Fashion,4,40.79,231.16,0,Pay Later,delivered,United Kingdom
+20227,2025-04-16,275,Referral,Mobile,Beauty,1,0,18.84,4.99,Card,delivered,Ireland
+20375,2025-04-16,276,Email,Mobile,Fashion,3,4.98,94.58,0,Card,delivered,France
+20381,2025-04-16,170,Organic Search,Mobile,Fashion,1,0,68.96,0,Pay Later,delivered,United Kingdom
+20481,2025-04-16,295,Organic Search,Mobile,Electronics,1,0,36.2,4.99,Card,delivered,United Kingdom
+20065,2025-04-17,383,Organic Search,Mobile,Sports,3,0,134.57,0,Card,delivered,United Kingdom
+20524,2025-04-17,119,Paid Search,Mobile,Fashion,1,0,47.22,4.99,Card,delivered,Ireland
+20535,2025-04-17,114,Paid Search,Mobile,Fashion,1,0,42,4.99,Card,delivered,United Kingdom
+20671,2025-04-17,392,Organic Search,Mobile,Beauty,1,2.19,41.66,4.99,Card,delivered,United Kingdom
+20797,2025-04-17,108,Paid Search,Mobile,Home,1,0,41.35,4.99,Card,delivered,United Kingdom
+20078,2025-04-18,70,Email,Mobile,Home,1,7.27,65.47,0,Card,delivered,United Kingdom
+20191,2025-04-18,148,Paid Search,Tablet,Electronics,4,0,236.88,0,Card,delivered,United Kingdom
+20320,2025-04-19,37,Email,Desktop,Beauty,2,17.04,153.35,0,Digital Wallet,delivered,United Kingdom
+20336,2025-04-19,60,Social,Mobile,Electronics,3,0,145.07,0,Card,returned,United Kingdom
+20576,2025-04-19,127,Social,Mobile,Electronics,1,8.69,49.26,4.99,Digital Wallet,delivered,United Kingdom
+20729,2025-04-19,85,Social,Mobile,Fashion,3,0,142.35,0,Digital Wallet,delivered,United Kingdom
+20203,2025-04-20,402,Paid Search,Mobile,Home,2,7.7,43.66,4.99,Card,delivered,United Kingdom
+20250,2025-04-20,162,Referral,Desktop,Fashion,2,0,142.35,0,Card,returned,France
+20390,2025-04-20,404,Email,Mobile,Electronics,1,1.46,27.74,4.99,Card,delivered,Ireland
+20680,2025-04-20,368,Direct,Desktop,Sports,2,0,140.94,0,Card,returned,United Kingdom
+20691,2025-04-21,400,Paid Search,Desktop,Sports,1,0,69.46,0,Digital Wallet,delivered,United Kingdom
+20711,2025-04-21,119,Paid Search,Desktop,Sports,1,3.28,29.54,4.99,Digital Wallet,delivered,United Kingdom
+20246,2025-04-22,49,Paid Search,Mobile,Home,2,0,65.11,0,Card,delivered,United Kingdom
+20395,2025-04-22,322,Email,Desktop,Sports,1,3.85,73.18,0,Pay Later,delivered,Germany
+20123,2025-04-23,350,Social,Desktop,Home,1,0,70.32,0,Digital Wallet,delivered,United Kingdom
+20165,2025-04-23,69,Paid Search,Desktop,Fashion,1,0,25.74,4.99,Digital Wallet,delivered,Germany
+20083,2025-04-24,376,Email,Mobile,Fashion,2,7.4,41.95,4.99,Pay Later,delivered,Ireland
+20384,2025-04-24,157,Organic Search,Mobile,Home,1,0,24.6,4.99,Pay Later,delivered,United Kingdom
+20404,2025-04-24,92,Paid Search,Mobile,Home,1,0,54.02,0,Digital Wallet,delivered,United Kingdom
+20635,2025-04-24,92,Organic Search,Desktop,Beauty,4,41.67,236.11,0,Card,delivered,Germany
+20177,2025-04-25,239,Direct,Tablet,Fashion,6,0,294.62,0,Card,delivered,Ireland
+20259,2025-04-25,316,Paid Search,Mobile,Beauty,1,0,20.74,4.99,Card,delivered,Ireland
+20575,2025-04-25,206,Social,Mobile,Fashion,1,3.85,34.62,4.99,Card,delivered,United Kingdom
+20007,2025-04-26,304,Direct,Mobile,Home,1,2.79,15.8,4.99,Card,delivered,United Kingdom
+20303,2025-04-26,400,Social,Desktop,Home,2,0,80.45,0,Card,returned,United Kingdom
+20025,2025-04-27,417,Social,Mobile,Electronics,2,0,145.89,0,Digital Wallet,delivered,Ireland
+20281,2025-04-27,47,Direct,Mobile,Beauty,1,0,23.21,4.99,Card,delivered,Netherlands
+20500,2025-04-27,287,Organic Search,Desktop,Beauty,3,0,130.44,0,Digital Wallet,delivered,Ireland
+20594,2025-04-27,202,Paid Search,Mobile,Electronics,1,0,39.92,4.99,Card,delivered,Netherlands
+20110,2025-04-28,378,Direct,Desktop,Home,1,0,73.31,0,Card,delivered,United Kingdom
+20273,2025-04-28,395,Organic Search,Desktop,Home,2,15.02,135.22,0,Digital Wallet,delivered,United Kingdom
+20298,2025-04-28,28,Email,Mobile,Home,1,3.66,20.77,4.99,Card,delivered,Germany
+20639,2025-04-28,178,Social,Desktop,Fashion,1,0,82.89,0,Card,delivered,United Kingdom
+20049,2025-04-29,331,Paid Search,Mobile,Home,1,0,52.38,0,Digital Wallet,delivered,Netherlands
+20015,2025-04-30,253,Email,Mobile,Electronics,3,17.99,161.95,0,Digital Wallet,delivered,United Kingdom
+20378,2025-04-30,40,Paid Search,Desktop,Home,3,31.02,175.76,0,Card,delivered,United Kingdom
+20577,2025-04-30,372,Email,Mobile,Fashion,1,11.31,64.06,0,Digital Wallet,delivered,United Kingdom
+20623,2025-04-30,345,Social,Tablet,Fashion,6,0,216.11,0,Digital Wallet,cancelled,Germany
+20775,2025-05-01,351,Social,Mobile,Fashion,1,0,73.36,0,Digital Wallet,returned,United Kingdom
+20249,2025-05-02,372,Referral,Mobile,Fashion,1,0,72.73,0,Card,delivered,France
+20253,2025-05-02,46,Paid Search,Mobile,Fashion,2,0,114.97,0,Card,delivered,Germany
+20612,2025-05-02,395,Paid Search,Mobile,Fashion,2,0,92.74,0,Card,delivered,United Kingdom
+20204,2025-05-03,173,Paid Search,Mobile,Fashion,2,0,112.11,0,Pay Later,returned,United Kingdom
+20625,2025-05-03,289,Email,Desktop,Fashion,1,4.3,81.78,0,Digital Wallet,delivered,United Kingdom
+20018,2025-05-04,239,Organic Search,Tablet,Beauty,1,0,55.19,0,Card,delivered,United Kingdom
+20331,2025-05-04,391,Social,Mobile,Fashion,1,0,44.64,4.99,Card,delivered,Netherlands
+20409,2025-05-04,368,Email,Desktop,Fashion,3,10.39,58.87,0,Card,delivered,United Kingdom
+20454,2025-05-05,338,Referral,Mobile,Fashion,2,0,140.65,0,Card,returned,Ireland
+20385,2025-05-06,161,Email,Mobile,Beauty,2,7.31,138.84,0,Card,delivered,United Kingdom
+20192,2025-05-07,402,Referral,Mobile,Fashion,1,0,68.37,0,Card,returned,Ireland
+20411,2025-05-08,140,Email,Mobile,Fashion,1,7.4,41.93,4.99,Card,delivered,United Kingdom
+20457,2025-05-08,128,Paid Search,Mobile,Fashion,2,0,46.98,4.99,Pay Later,delivered,United Kingdom
+20497,2025-05-08,250,Social,Mobile,Fashion,1,0,73.5,0,Card,delivered,United Kingdom
+20034,2025-05-10,390,Organic Search,Mobile,Fashion,2,0,56.94,0,Card,cancelled,Germany
+20036,2025-05-10,158,Email,Desktop,Sports,1,8.47,76.21,0,Card,delivered,Ireland
+20394,2025-05-10,363,Paid Search,Mobile,Fashion,1,0,34.78,4.99,Card,delivered,Germany
+20508,2025-05-10,125,Paid Search,Desktop,Home,2,0,167.84,0,Pay Later,delivered,United Kingdom
+20054,2025-05-11,260,Social,Mobile,Fashion,3,22.02,198.16,0,Digital Wallet,returned,Germany
+20279,2025-05-11,370,Referral,Desktop,Fashion,1,0,51.66,0,Card,delivered,United Kingdom
+20463,2025-05-11,11,Referral,Desktop,Beauty,2,0,90.38,0,Digital Wallet,delivered,United Kingdom
+20214,2025-05-14,216,Email,Mobile,Electronics,4,15,84.97,0,Card,delivered,United Kingdom
+20275,2025-05-14,214,Email,Mobile,Sports,1,3.09,58.67,0,Pay Later,delivered,France
+20356,2025-05-14,52,Paid Search,Desktop,Home,2,0,63,0,Card,delivered,United Kingdom
+20490,2025-05-14,276,Email,Desktop,Home,1,6.95,39.38,4.99,Card,returned,United Kingdom
+20768,2025-05-14,159,Email,Mobile,Fashion,1,2.78,52.83,0,Digital Wallet,delivered,Ireland
+20044,2025-05-15,108,Organic Search,Desktop,Fashion,1,4.86,43.69,4.99,Card,delivered,Germany
+20263,2025-05-15,205,Social,Desktop,Home,3,0,193.82,0,Digital Wallet,delivered,France
+20532,2025-05-15,276,Paid Search,Mobile,Fashion,1,0,47.55,4.99,Digital Wallet,delivered,Germany
+20655,2025-05-16,278,Email,Mobile,Fashion,2,5.11,97.05,0,Card,delivered,United Kingdom
+20208,2025-05-17,383,Paid Search,Mobile,Fashion,1,0,49.72,4.99,Card,delivered,Ireland
+20365,2025-05-17,361,Organic Search,Mobile,Beauty,3,0,119.54,0,Card,delivered,United Kingdom
+20103,2025-05-18,80,Social,Desktop,Sports,1,0,40.29,4.99,Card,delivered,France
+20148,2025-05-18,277,Email,Desktop,Fashion,3,9.35,177.7,0,Card,delivered,France
+20408,2025-05-18,318,Organic Search,Mobile,Beauty,2,0,83.89,0,Card,returned,United Kingdom
+20269,2025-05-19,94,Social,Mobile,Fashion,3,0,124.04,0,Card,delivered,United Kingdom
+20558,2025-05-19,245,Organic Search,Mobile,Fashion,2,0,99.7,0,Card,delivered,United Kingdom
+20053,2025-05-20,355,Email,Mobile,Fashion,2,6.55,124.53,0,Digital Wallet,returned,United Kingdom
+20126,2025-05-20,5,Organic Search,Desktop,Home,2,0,152.4,0,Card,delivered,United Kingdom
+20357,2025-05-20,303,Paid Search,Desktop,Home,3,0,192.23,0,Card,delivered,France
+20172,2025-05-21,24,Email,Desktop,Electronics,1,7.6,43.05,4.99,Card,delivered,United Kingdom
+20001,2025-05-22,366,Paid Search,Mobile,Home,1,0,40.94,4.99,Card,delivered,United Kingdom
+20362,2025-05-22,247,Referral,Mobile,Fashion,1,0,19.68,4.99,Digital Wallet,delivered,United Kingdom
+20430,2025-05-22,173,Email,Tablet,Electronics,2,3.34,63.48,0,Card,delivered,Ireland
+20434,2025-05-22,370,Referral,Mobile,Beauty,1,0,23.99,4.99,Digital Wallet,delivered,United Kingdom
+20648,2025-05-22,162,Social,Tablet,Home,2,0,125.75,0,Card,delivered,United Kingdom
+20206,2025-05-23,184,Paid Search,Desktop,Fashion,2,5.71,108.41,0,Card,delivered,France
+20003,2025-05-24,273,Email,Mobile,Beauty,1,8.72,49.41,4.99,Card,delivered,United Kingdom
+20066,2025-05-25,306,Referral,Desktop,Fashion,1,0,44.53,4.99,Digital Wallet,delivered,United Kingdom
+20475,2025-05-25,196,Paid Search,Mobile,Fashion,1,0,56.7,0,Card,delivered,United Kingdom
+20525,2025-05-25,178,Paid Search,Desktop,Home,2,0,161.92,0,Digital Wallet,cancelled,United Kingdom
+20574,2025-05-25,187,Email,Desktop,Fashion,3,15.2,86.14,0,Card,delivered,United Kingdom
+20089,2025-05-26,209,Direct,Mobile,Beauty,2,0,39.34,4.99,Digital Wallet,delivered,United Kingdom
+20585,2025-05-26,70,Paid Search,Mobile,Home,3,0,201.36,0,Digital Wallet,delivered,Netherlands
+20118,2025-05-27,223,Referral,Mobile,Home,6,13.08,117.68,0,Digital Wallet,delivered,Ireland
+20415,2025-05-27,47,Referral,Desktop,Home,1,0,49.3,4.99,Digital Wallet,delivered,United Kingdom
+20593,2025-05-28,323,Referral,Desktop,Fashion,3,0,159.64,0,Digital Wallet,delivered,United Kingdom
+20452,2025-05-30,30,Email,Desktop,Beauty,3,16.64,94.3,0,Digital Wallet,delivered,Ireland
+20483,2025-05-31,65,Email,Mobile,Fashion,3,18.45,104.56,0,Card,delivered,United Kingdom
+20234,2025-06-01,369,Organic Search,Desktop,Home,2,0,56.34,0,Digital Wallet,delivered,United Kingdom
+20764,2025-06-01,323,Organic Search,Mobile,Home,2,0,87.78,0,Card,cancelled,United Kingdom
+20072,2025-06-02,324,Paid Search,Desktop,Home,1,0,81.94,0,Digital Wallet,delivered,United Kingdom
+20306,2025-06-03,48,Email,Desktop,Beauty,2,14.19,80.41,0,Card,delivered,Germany
+20592,2025-06-03,236,Organic Search,Mobile,Electronics,3,0,66.21,0,Card,delivered,United Kingdom
+20235,2025-06-04,26,Organic Search,Mobile,Fashion,3,0,69.13,0,Card,cancelled,United Kingdom
+20276,2025-06-06,213,Social,Desktop,Fashion,2,0,97.19,0,Card,delivered,Ireland
+20424,2025-06-06,204,Organic Search,Mobile,Fashion,2,0,148.35,0,Card,delivered,Ireland
+20583,2025-06-06,413,Referral,Mobile,Fashion,4,0,227.59,0,Card,cancelled,Ireland
+20511,2025-06-07,68,Referral,Desktop,Fashion,6,0,468.28,0,Digital Wallet,delivered,United Kingdom
+20178,2025-06-08,315,Organic Search,Mobile,Home,1,7.61,43.15,4.99,Digital Wallet,delivered,Netherlands
+20778,2025-06-08,39,Organic Search,Mobile,Home,1,0,59.61,0,Card,delivered,United Kingdom
+20474,2025-06-09,157,Organic Search,Mobile,Fashion,1,0,31.06,4.99,Digital Wallet,delivered,United Kingdom
+20124,2025-06-10,132,Social,Tablet,Electronics,1,0,71.65,0,Digital Wallet,delivered,United Kingdom
+20127,2025-06-10,225,Social,Mobile,Home,2,0,104.44,0,Card,delivered,Ireland
+20566,2025-06-10,266,Organic Search,Mobile,Fashion,2,0,107.4,0,Card,returned,United Kingdom
+20748,2025-06-10,195,Direct,Tablet,Beauty,1,0,18.1,4.99,Card,delivered,United Kingdom
+20152,2025-06-11,110,Organic Search,Mobile,Beauty,2,0,71.2,0,Card,delivered,Germany
+20238,2025-06-11,371,Email,Mobile,Home,2,21.96,124.46,0,Card,delivered,France
+20349,2025-06-12,157,Paid Search,Desktop,Home,1,0,23.3,4.99,Card,cancelled,Ireland
+20698,2025-06-13,47,Referral,Desktop,Sports,1,0,80.84,0,Card,delivered,United Kingdom
+20240,2025-06-14,267,Social,Desktop,Fashion,1,0,66.72,0,Pay Later,delivered,Ireland
+20069,2025-06-16,302,Direct,Mobile,Sports,1,0,42.62,4.99,Digital Wallet,delivered,Netherlands
+20149,2025-06-16,275,Paid Search,Mobile,Sports,1,0,41.9,4.99,Digital Wallet,delivered,United Kingdom
+20233,2025-06-18,172,Social,Desktop,Beauty,2,0,131.41,0,Pay Later,delivered,United Kingdom
+20284,2025-06-18,2,Social,Mobile,Fashion,1,0,68.15,0,Digital Wallet,delivered,United Kingdom
+20780,2025-06-18,218,Organic Search,Desktop,Sports,2,0,48.02,4.99,Card,delivered,United Kingdom
+20673,2025-06-19,271,Email,Mobile,Sports,1,5.19,29.42,4.99,Card,delivered,United Kingdom
+20642,2025-06-20,286,Organic Search,Mobile,Home,3,0,143.57,0,Digital Wallet,delivered,France
+20465,2025-06-21,385,Organic Search,Desktop,Fashion,2,5.41,102.8,0,Digital Wallet,delivered,Germany
+20776,2025-06-21,351,Social,Desktop,Fashion,6,16.42,147.75,0,Card,returned,France
+20750,2025-06-22,63,Organic Search,Desktop,Home,2,0,136.09,0,Digital Wallet,returned,Germany
+20079,2025-06-23,370,Email,Desktop,Electronics,3,20.33,182.99,0,Card,delivered,United Kingdom
+20545,2025-06-23,124,Paid Search,Mobile,Beauty,6,20.41,115.66,0,Card,delivered,Ireland
+20647,2025-06-23,361,Organic Search,Tablet,Fashion,3,0,149.05,0,Pay Later,delivered,United Kingdom
+20653,2025-06-23,15,Paid Search,Mobile,Home,1,0,34.35,4.99,Digital Wallet,delivered,Germany
+20743,2025-06-23,22,Direct,Mobile,Fashion,2,0,64.25,0,Digital Wallet,delivered,United Kingdom
+20091,2025-06-24,333,Email,Desktop,Beauty,1,2.73,24.6,4.99,Card,delivered,United Kingdom
+20218,2025-06-25,377,Paid Search,Mobile,Sports,1,0,41.19,4.99,Card,delivered,France
+20373,2025-06-25,303,Paid Search,Mobile,Beauty,2,0,155.95,0,Card,delivered,Germany
+20478,2025-06-25,181,Social,Desktop,Electronics,1,0,83.79,0,Card,delivered,United Kingdom
+20175,2025-06-26,228,Organic Search,Mobile,Electronics,1,0,35.96,4.99,Card,delivered,United Kingdom
+20528,2025-06-26,212,Organic Search,Tablet,Home,1,0,40.35,4.99,Digital Wallet,delivered,Ireland
+20763,2025-06-26,338,Social,Mobile,Electronics,2,0,118.76,0,Card,delivered,Netherlands
+20337,2025-06-27,217,Email,Desktop,Fashion,2,6.88,130.78,0,Card,delivered,United Kingdom
+20537,2025-06-27,329,Organic Search,Desktop,Sports,1,0,73.22,0,Digital Wallet,delivered,United Kingdom
+20485,2025-06-28,46,Organic Search,Mobile,Beauty,2,0,138.29,0,Card,delivered,Ireland
+20495,2025-06-28,19,Organic Search,Desktop,Electronics,6,0,179.03,0,Digital Wallet,delivered,Germany
+20633,2025-06-28,148,Organic Search,Mobile,Beauty,1,5.61,31.8,4.99,Card,delivered,France
+20243,2025-06-29,189,Direct,Mobile,Beauty,4,0,83.16,0,Card,delivered,Ireland
+20533,2025-06-29,342,Organic Search,Mobile,Fashion,2,0,78.98,0,Card,returned,United Kingdom
+20068,2025-06-30,365,Organic Search,Mobile,Sports,1,0,21.71,4.99,Card,delivered,United Kingdom
+20484,2025-06-30,159,Social,Mobile,Beauty,1,7.14,64.21,0,Card,delivered,Germany

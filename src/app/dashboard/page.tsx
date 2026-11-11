@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { XP, challengeId, sqlChallenges } from "@/content/sql-challenges";
 import { DashboardView, type DashboardPath } from "@/components/dashboard-view";
 import { flatTopics, lessons, tools } from "@/content";
 
@@ -25,5 +26,5 @@ export default function DashboardPage() {
         })),
     };
   });
-  return <DashboardView paths={paths} />;
+  return <DashboardView paths={paths} sql={sqlChallenges.map((c) => ({ id: challengeId(c.slug), xp: XP[c.difficulty] }))} />;
 }

@@ -3,9 +3,16 @@ import { sqlCore } from "./lessons/sql-core";
 import { sqlAdvanced } from "./lessons/sql-advanced";
 import { excel } from "./lessons/excel";
 import { starters } from "./lessons/starters";
+import { beginner } from "./lessons/beginner";
+import { extras } from "./lessons/extras";
 import type { Lesson, Level, Tool, TopicRef } from "./types";
 
-export const lessons: Record<string, Lesson> = { ...sqlCore, ...sqlAdvanced, ...starters, ...excel };
+const base: Record<string, Lesson> = { ...sqlCore, ...sqlAdvanced, ...starters, ...excel, ...beginner };
+
+/** Every lesson, with objectives and interview questions merged in where they are kept separately. */
+export const lessons: Record<string, Lesson> = Object.fromEntries(
+  Object.entries(base).map(([id, lesson]) => [id, { ...extras[id], ...lesson }]),
+);
 
 export const topicId = (tool: string, topic: string) => `${tool}/${topic}`;
 

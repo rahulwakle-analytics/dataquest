@@ -1,0 +1,841 @@
+{
+ "retail_customers.csv": {
+  "rows": 120,
+  "columns": [
+   "customer_id",
+   "full_name",
+   "segment",
+   "city",
+   "signup_date"
+  ],
+  "preview": [
+   {
+    "customer_id": 1,
+    "full_name": "Mei Larsen",
+    "segment": "Small Business",
+    "city": "Norwich",
+    "signup_date": "2024-06-19"
+   },
+   {
+    "customer_id": 2,
+    "full_name": "Liam Petrov",
+    "segment": "Small Business",
+    "city": "Norwich",
+    "signup_date": "2023-07-02"
+   },
+   {
+    "customer_id": 3,
+    "full_name": "Leila Tanaka",
+    "segment": "Small Business",
+    "city": "Bristol",
+    "signup_date": "2024-01-22"
+   },
+   {
+    "customer_id": 4,
+    "full_name": "Zara Haddad",
+    "segment": "Consumer",
+    "city": "Newcastle",
+    "signup_date": "2023-04-29"
+   },
+   {
+    "customer_id": 5,
+    "full_name": "Sofia Garcia",
+    "segment": "Small Business",
+    "city": "Norwich",
+    "signup_date": "2023-06-04"
+   },
+   {
+    "customer_id": 6,
+    "full_name": "Felix Khan",
+    "segment": "Consumer",
+    "city": "Plymouth",
+    "signup_date": "2023-12-01"
+   }
+  ]
+ },
+ "retail_products.csv": {
+  "rows": 40,
+  "columns": [
+   "product_id",
+   "product_name",
+   "category",
+   "unit_cost"
+  ],
+  "preview": [
+   {
+    "product_id": 101,
+    "product_name": "Wireless Mouse",
+    "category": "Electronics",
+    "unit_cost": 11
+   },
+   {
+    "product_id": 102,
+    "product_name": "Mechanical Keyboard",
+    "category": "Electronics",
+    "unit_cost": 41
+   },
+   {
+    "product_id": 103,
+    "product_name": "USB-C Hub",
+    "category": "Electronics",
+    "unit_cost": 17
+   },
+   {
+    "product_id": 104,
+    "product_name": "Webcam HD",
+    "category": "Electronics",
+    "unit_cost": 28
+   },
+   {
+    "product_id": 105,
+    "product_name": "Noise-Cancelling Headset",
+    "category": "Electronics",
+    "unit_cost": 70
+   },
+   {
+    "product_id": 106,
+    "product_name": "Portable SSD 1TB",
+    "category": "Electronics",
+    "unit_cost": 61
+   }
+  ]
+ },
+ "retail_orders.csv": {
+  "rows": 600,
+  "columns": [
+   "order_id",
+   "customer_id",
+   "order_date",
+   "region",
+   "status",
+   "amount"
+  ],
+  "preview": [
+   {
+    "order_id": 5270,
+    "customer_id": 116,
+    "order_date": "2024-01-01",
+    "region": "South",
+    "status": "completed",
+    "amount": 90
+   },
+   {
+    "order_id": 5266,
+    "customer_id": 89,
+    "order_date": "2024-01-02",
+    "region": "South",
+    "status": "completed",
+    "amount": 338.9
+   },
+   {
+    "order_id": 5578,
+    "customer_id": 2,
+    "order_date": "2024-01-02",
+    "region": "East",
+    "status": "cancelled",
+    "amount": 143.99
+   },
+   {
+    "order_id": 5440,
+    "customer_id": 26,
+    "order_date": "2024-01-04",
+    "region": "South",
+    "status": "completed",
+    "amount": 19
+   },
+   {
+    "order_id": 5542,
+    "customer_id": 29,
+    "order_date": "2024-01-06",
+    "region": "South",
+    "status": "completed",
+    "amount": 265.5
+   },
+   {
+    "order_id": 5346,
+    "customer_id": 7,
+    "order_date": "2024-01-07",
+    "region": "South",
+    "status": "completed",
+    "amount": 782.4
+   }
+  ]
+ },
+ "retail_order_items.csv": {
+  "rows": 1246,
+  "columns": [
+   "order_item_id",
+   "order_id",
+   "product_id",
+   "quantity",
+   "unit_price"
+  ],
+  "preview": [
+   {
+    "order_item_id": 1,
+    "order_id": 5001,
+    "product_id": 138,
+    "quantity": 2,
+    "unit_price": 9
+   },
+   {
+    "order_item_id": 2,
+    "order_id": 5001,
+    "product_id": 107,
+    "quantity": 2,
+    "unit_price": 149
+   },
+   {
+    "order_item_id": 3,
+    "order_id": 5002,
+    "product_id": 113,
+    "quantity": 1,
+    "unit_price": 89
+   },
+   {
+    "order_item_id": 4,
+    "order_id": 5003,
+    "product_id": 134,
+    "quantity": 2,
+    "unit_price": 139
+   },
+   {
+    "order_item_id": 5,
+    "order_id": 5003,
+    "product_id": 101,
+    "quantity": 2,
+    "unit_price": 24.99
+   },
+   {
+    "order_item_id": 6,
+    "order_id": 5004,
+    "product_id": 118,
+    "quantity": 1,
+    "unit_price": 55
+   }
+  ]
+ },
+ "ecommerce_orders.csv": {
+  "rows": 800,
+  "columns": [
+   "order_id",
+   "order_date",
+   "customer_id",
+   "channel",
+   "device",
+   "category",
+   "items",
+   "discount",
+   "order_value",
+   "shipping_fee",
+   "payment_method",
+   "status",
+   "country"
+  ],
+  "preview": [
+   {
+    "order_id": 20129,
+    "order_date": "2024-07-01",
+    "customer_id": 2,
+    "channel": "Referral",
+    "device": "Mobile",
+    "category": "Fashion",
+    "items": 1,
+    "discount": 0,
+    "order_value": 63.73,
+    "shipping_fee": 0,
+    "payment_method": "Card",
+    "status": "delivered",
+    "country": "United Kingdom"
+   },
+   {
+    "order_id": 20256,
+    "order_date": "2024-07-01",
+    "customer_id": 64,
+    "channel": "Paid Search",
+    "device": "Mobile",
+    "category": "Sports",
+    "items": 1,
+    "discount": 0,
+    "order_value": 53.45,
+    "shipping_fee": 0,
+    "payment_method": "Card",
+    "status": "delivered",
+    "country": "France"
+   },
+   {
+    "order_id": 20739,
+    "order_date": "2024-07-01",
+    "customer_id": 124,
+    "channel": "Direct",
+    "device": "Mobile",
+    "category": "Electronics",
+    "items": 2,
+    "discount": 0,
+    "order_value": 50.89,
+    "shipping_fee": 0,
+    "payment_method": "Card",
+    "status": "delivered",
+    "country": "United Kingdom"
+   },
+   {
+    "order_id": 20061,
+    "order_date": "2024-07-02",
+    "customer_id": 309,
+    "channel": "Referral",
+    "device": "Desktop",
+    "category": "Home",
+    "items": 6,
+    "discount": 0,
+    "order_value": 340.03,
+    "shipping_fee": 0,
+    "payment_method": "Card",
+    "status": "delivered",
+    "country": "United Kingdom"
+   },
+   {
+    "order_id": 20351,
+    "order_date": "2024-07-02",
+    "customer_id": 4,
+    "channel": "Social",
+    "device": "Tablet",
+    "category": "Home",
+    "items": 3,
+    "discount": 0,
+    "order_value": 185.12,
+    "shipping_fee": 0,
+    "payment_method": "Card",
+    "status": "delivered",
+    "country": "France"
+   },
+   {
+    "order_id": 20447,
+    "order_date": "2024-07-02",
+    "customer_id": 120,
+    "channel": "Direct",
+    "device": "Tablet",
+    "category": "Fashion",
+    "items": 1,
+    "discount": 4.53,
+    "order_value": 40.78,
+    "shipping_fee": 4.99,
+    "payment_method": "Card",
+    "status": "returned",
+    "country": "United Kingdom"
+   }
+  ]
+ },
+ "customer_transactions.csv": {
+  "rows": 1000,
+  "columns": [
+   "transaction_id",
+   "customer_id",
+   "transaction_date",
+   "type",
+   "amount",
+   "store_id",
+   "payment_method",
+   "loyalty_tier"
+  ],
+  "preview": [
+   {
+    "transaction_id": 70286,
+    "customer_id": 146,
+    "transaction_date": "2024-01-01",
+    "type": "purchase",
+    "amount": 65.97,
+    "store_id": 10,
+    "payment_method": "Cash",
+    "loyalty_tier": "None"
+   },
+   {
+    "transaction_id": 70601,
+    "customer_id": 25,
+    "transaction_date": "2024-01-02",
+    "type": "purchase",
+    "amount": 135.98,
+    "store_id": 5,
+    "payment_method": "Card",
+    "loyalty_tier": "Platinum"
+   },
+   {
+    "transaction_id": 70813,
+    "customer_id": 1,
+    "transaction_date": "2024-01-02",
+    "type": "purchase",
+    "amount": 66.3,
+    "store_id": 12,
+    "payment_method": "Cash",
+    "loyalty_tier": "Silver"
+   },
+   {
+    "transaction_id": 70272,
+    "customer_id": 2,
+    "transaction_date": "2024-01-03",
+    "type": "purchase",
+    "amount": 145.22,
+    "store_id": 6,
+    "payment_method": "Card",
+    "loyalty_tier": "Gold"
+   },
+   {
+    "transaction_id": 70484,
+    "customer_id": 8,
+    "transaction_date": "2024-01-03",
+    "type": "purchase",
+    "amount": 190.95,
+    "store_id": 8,
+    "payment_method": "Cash",
+    "loyalty_tier": "Platinum"
+   },
+   {
+    "transaction_id": 70584,
+    "customer_id": 68,
+    "transaction_date": "2024-01-03",
+    "type": "purchase",
+    "amount": 96.93,
+    "store_id": 8,
+    "payment_method": "Card",
+    "loyalty_tier": "Gold"
+   }
+  ]
+ },
+ "employees.csv": {
+  "rows": 300,
+  "columns": [
+   "employee_id",
+   "department",
+   "job_level",
+   "hire_date",
+   "age",
+   "salary",
+   "manager_id",
+   "overtime_hours",
+   "years_since_promotion",
+   "satisfaction",
+   "left_company",
+   "exit_date"
+  ],
+  "preview": [
+   {
+    "employee_id": 1001,
+    "department": "Operations",
+    "job_level": 2,
+    "hire_date": "2022-03-19",
+    "age": 38,
+    "salary": 35100,
+    "manager_id": 1018,
+    "overtime_hours": 6,
+    "years_since_promotion": 3,
+    "satisfaction": 5,
+    "left_company": "No",
+    "exit_date": ""
+   },
+   {
+    "employee_id": 1002,
+    "department": "Operations",
+    "job_level": 1,
+    "hire_date": "2019-10-22",
+    "age": 48,
+    "salary": 33100,
+    "manager_id": 1008,
+    "overtime_hours": 12,
+    "years_since_promotion": 1,
+    "satisfaction": 3,
+    "left_company": "No",
+    "exit_date": ""
+   },
+   {
+    "employee_id": 1003,
+    "department": "Engineering",
+    "job_level": 2,
+    "hire_date": "2018-10-12",
+    "age": 23,
+    "salary": 74100,
+    "manager_id": 1005,
+    "overtime_hours": 4,
+    "years_since_promotion": 3,
+    "satisfaction": 2,
+    "left_company": "No",
+    "exit_date": ""
+   },
+   {
+    "employee_id": 1004,
+    "department": "Sales",
+    "job_level": 2,
+    "hire_date": "2020-12-10",
+    "age": 38,
+    "salary": 45200,
+    "manager_id": 1005,
+    "overtime_hours": 10,
+    "years_since_promotion": 1,
+    "satisfaction": 4,
+    "left_company": "No",
+    "exit_date": ""
+   },
+   {
+    "employee_id": 1005,
+    "department": "Engineering",
+    "job_level": 3,
+    "hire_date": "2021-06-17",
+    "age": 23,
+    "salary": 77800,
+    "manager_id": 1001,
+    "overtime_hours": 2,
+    "years_since_promotion": 4,
+    "satisfaction": 5,
+    "left_company": "No",
+    "exit_date": ""
+   },
+   {
+    "employee_id": 1006,
+    "department": "Marketing",
+    "job_level": 1,
+    "hire_date": "2021-08-16",
+    "age": 36,
+    "salary": 39900,
+    "manager_id": 1003,
+    "overtime_hours": 0,
+    "years_since_promotion": 3,
+    "satisfaction": 3,
+    "left_company": "No",
+    "exit_date": ""
+   }
+  ]
+ },
+ "marketing_campaigns.csv": {
+  "rows": 31,
+  "columns": [
+   "campaign_id",
+   "campaign_name",
+   "channel",
+   "start_date",
+   "end_date",
+   "spend",
+   "impressions",
+   "clicks",
+   "signups",
+   "orders",
+   "revenue"
+  ],
+  "preview": [
+   {
+    "campaign_id": "CMP-001",
+    "campaign_name": "Spring Sale - Social",
+    "channel": "Social",
+    "start_date": "2024-03-01",
+    "end_date": "2024-03-22",
+    "spend": 1831.54,
+    "impressions": 268000,
+    "clicks": 2789,
+    "signups": 109,
+    "orders": 12,
+    "revenue": 569.61
+   },
+   {
+    "campaign_id": "CMP-002",
+    "campaign_name": "Spring Sale - Display",
+    "channel": "Display",
+    "start_date": "2024-03-05",
+    "end_date": "2024-03-19",
+    "spend": 347.57,
+    "impressions": 113000,
+    "clicks": 338,
+    "signups": 8,
+    "orders": 1,
+    "revenue": 64.01
+   },
+   {
+    "campaign_id": "CMP-003",
+    "campaign_name": "Spring Sale - Referral",
+    "channel": "Referral",
+    "start_date": "2024-03-07",
+    "end_date": "2024-03-21",
+    "spend": 811.17,
+    "impressions": 371000,
+    "clicks": 17717,
+    "signups": 2269,
+    "orders": 817,
+    "revenue": 35215.82
+   },
+   {
+    "campaign_id": "CMP-004",
+    "campaign_name": "Back to Work - Email",
+    "channel": "Email",
+    "start_date": "2024-04-20",
+    "end_date": "2024-05-04",
+    "spend": 469.42,
+    "impressions": 714000,
+    "clicks": 18921,
+    "signups": 1918,
+    "orders": 598,
+    "revenue": 24958.56
+   },
+   {
+    "campaign_id": "CMP-005",
+    "campaign_name": "Back to Work - Paid Search",
+    "channel": "Paid Search",
+    "start_date": "2024-04-18",
+    "end_date": "2024-05-09",
+    "spend": 2837.6,
+    "impressions": 311000,
+    "clicks": 11588,
+    "signups": 740,
+    "orders": 155,
+    "revenue": 8292.35
+   },
+   {
+    "campaign_id": "CMP-006",
+    "campaign_name": "Back to Work - Social",
+    "channel": "Social",
+    "start_date": "2024-04-15",
+    "end_date": "2024-04-29",
+    "spend": 3732.63,
+    "impressions": 713000,
+    "clicks": 8340,
+    "signups": 430,
+    "orders": 40,
+    "revenue": 2640.59
+   }
+  ]
+ },
+ "financial_performance.csv": {
+  "rows": 270,
+  "columns": [
+   "month",
+   "department",
+   "account",
+   "account_type",
+   "budget",
+   "actual"
+  ],
+  "preview": [
+   {
+    "month": "2024-01-01",
+    "department": "Sales",
+    "account": "Revenue",
+    "account_type": "Income",
+    "budget": 354500,
+    "actual": 361802
+   },
+   {
+    "month": "2024-01-01",
+    "department": "Operations",
+    "account": "Cost of Goods Sold",
+    "account_type": "Expense",
+    "budget": 194100,
+    "actual": 204935
+   },
+   {
+    "month": "2024-01-01",
+    "department": "Sales",
+    "account": "Salaries",
+    "account_type": "Expense",
+    "budget": 90000,
+    "actual": 98439
+   },
+   {
+    "month": "2024-01-01",
+    "department": "Marketing",
+    "account": "Salaries",
+    "account_type": "Expense",
+    "budget": 45000,
+    "actual": 47741
+   },
+   {
+    "month": "2024-01-01",
+    "department": "Operations",
+    "account": "Salaries",
+    "account_type": "Expense",
+    "budget": 72000,
+    "actual": 65495
+   },
+   {
+    "month": "2024-01-01",
+    "department": "Technology",
+    "account": "Salaries",
+    "account_type": "Expense",
+    "budget": 63000,
+    "actual": 59481
+   }
+  ]
+ },
+ "inventory.csv": {
+  "rows": 40,
+  "columns": [
+   "product_id",
+   "product_name",
+   "category",
+   "supplier",
+   "unit_cost",
+   "stock_on_hand",
+   "reorder_point",
+   "avg_daily_sales",
+   "lead_time_days",
+   "last_restock_date"
+  ],
+  "preview": [
+   {
+    "product_id": 101,
+    "product_name": "Wireless Mouse",
+    "category": "Electronics",
+    "supplier": "Linden & Co",
+    "unit_cost": 11,
+    "stock_on_hand": 3,
+    "reorder_point": 6,
+    "avg_daily_sales": 0.16,
+    "lead_time_days": 14,
+    "last_restock_date": "2025-04-24"
+   },
+   {
+    "product_id": 102,
+    "product_name": "Mechanical Keyboard",
+    "category": "Electronics",
+    "supplier": "Harbour Trading",
+    "unit_cost": 41,
+    "stock_on_hand": 2,
+    "reorder_point": 4,
+    "avg_daily_sales": 0.17,
+    "lead_time_days": 5,
+    "last_restock_date": "2025-04-17"
+   },
+   {
+    "product_id": 103,
+    "product_name": "USB-C Hub",
+    "category": "Electronics",
+    "supplier": "Kestrel Wholesale",
+    "unit_cost": 17,
+    "stock_on_hand": 21,
+    "reorder_point": 6,
+    "avg_daily_sales": 0.11,
+    "lead_time_days": 21,
+    "last_restock_date": "2025-06-01"
+   },
+   {
+    "product_id": 104,
+    "product_name": "Webcam HD",
+    "category": "Electronics",
+    "supplier": "Linden & Co",
+    "unit_cost": 28,
+    "stock_on_hand": 249,
+    "reorder_point": 6,
+    "avg_daily_sales": 0.22,
+    "lead_time_days": 10,
+    "last_restock_date": "2025-04-30"
+   },
+   {
+    "product_id": 105,
+    "product_name": "Noise-Cancelling Headset",
+    "category": "Electronics",
+    "supplier": "Linden & Co",
+    "unit_cost": 70,
+    "stock_on_hand": 3,
+    "reorder_point": 6,
+    "avg_daily_sales": 0.15,
+    "lead_time_days": 14,
+    "last_restock_date": "2025-03-08"
+   },
+   {
+    "product_id": 106,
+    "product_name": "Portable SSD 1TB",
+    "category": "Electronics",
+    "supplier": "Northfield Supply",
+    "unit_cost": 61,
+    "stock_on_hand": 13,
+    "reorder_point": 2,
+    "avg_daily_sales": 0,
+    "lead_time_days": 5,
+    "last_restock_date": "2025-06-08"
+   }
+  ]
+ },
+ "store_performance.csv": {
+  "rows": 144,
+  "columns": [
+   "store_id",
+   "store_name",
+   "region",
+   "size_sqm",
+   "opened_date",
+   "month",
+   "revenue",
+   "transactions",
+   "staff_count",
+   "revenue_target"
+  ],
+  "preview": [
+   {
+    "store_id": 1,
+    "store_name": "Leeds Central",
+    "region": "North",
+    "size_sqm": 540,
+    "opened_date": "2015-06-05",
+    "month": "2024-01-01",
+    "revenue": 118375.12,
+    "transactions": 3851,
+    "staff_count": 12,
+    "revenue_target": 98700
+   },
+   {
+    "store_id": 1,
+    "store_name": "Leeds Central",
+    "region": "North",
+    "size_sqm": 540,
+    "opened_date": "2015-06-05",
+    "month": "2024-02-01",
+    "revenue": 102367.04,
+    "transactions": 4083,
+    "staff_count": 12,
+    "revenue_target": 104900
+   },
+   {
+    "store_id": 1,
+    "store_name": "Leeds Central",
+    "region": "North",
+    "size_sqm": 540,
+    "opened_date": "2015-06-05",
+    "month": "2024-03-01",
+    "revenue": 137102.47,
+    "transactions": 4765,
+    "staff_count": 12,
+    "revenue_target": 113400
+   },
+   {
+    "store_id": 1,
+    "store_name": "Leeds Central",
+    "region": "North",
+    "size_sqm": 540,
+    "opened_date": "2015-06-05",
+    "month": "2024-04-01",
+    "revenue": 122279.11,
+    "transactions": 4928,
+    "staff_count": 12,
+    "revenue_target": 121900
+   },
+   {
+    "store_id": 1,
+    "store_name": "Leeds Central",
+    "region": "North",
+    "size_sqm": 540,
+    "opened_date": "2015-06-05",
+    "month": "2024-05-01",
+    "revenue": 145370.03,
+    "transactions": 5329,
+    "staff_count": 12,
+    "revenue_target": 128100
+   },
+   {
+    "store_id": 1,
+    "store_name": "Leeds Central",
+    "region": "North",
+    "size_sqm": 540,
+    "opened_date": "2015-06-05",
+    "month": "2024-06-01",
+    "revenue": 141131.7,
+    "transactions": 5146,
+    "staff_count": 12,
+    "revenue_target": 130400
+   }
+  ]
+ }
+}

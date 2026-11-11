@@ -23,9 +23,10 @@ const features = [
   { icon: CheckCircle2, title: "Validated knowledge checks", body: "Answers are checked, not self-marked, and solutions stay hidden until you ask.", live: true },
   { icon: Save, title: "Progress that persists", body: "Completed topics are saved in your browser today, and to your account once sign-in launches.", live: true },
   { icon: Table2, title: "Interactive Excel practice", body: "Write formulas in a spreadsheet grid and sort and filter real tables. Answers are calculated and checked against test cases.", live: true },
-  { icon: Database, title: "SQL practice engine", body: "Write queries in an editor and have them run on PostgreSQL and checked against test cases.", live: false },
+  { icon: Database, title: "SQL practice engine", body: "Write queries in an editor and run them on DuckDB, a real SQL engine, in your browser. Answers are checked against test cases on two datasets.", live: true },
+  { icon: FolderKanban, title: "Dataset library", body: "Eight sample datasets with column descriptions, previews and CSV downloads.", live: true },
   { icon: Gauge, title: "XP, streaks and leaderboards", body: "Earn XP for verified solutions and keep a daily streak going.", live: false },
-  { icon: FolderKanban, title: "Dataset library and guided projects", body: "Downloadable datasets and step-by-step projects with completion tracking.", live: false },
+  { icon: FolderKanban, title: "Guided projects with tracking", body: "Step-by-step projects with solution walkthroughs and milestone tracking.", live: false },
 ];
 
 export default function HomePage() {
@@ -49,11 +50,11 @@ export default function HomePage() {
     },
     {
       q: "How are my answers checked?",
-      a: "Excel exercises are checked for real: your formula is calculated by DataQuest's own formula engine and compared with the expected results across several test cases, including after it is copied to other cells. Sort and filter exercises check the table you produce. Knowledge checks are validated as soon as you answer. SQL practice questions currently show hints and a model solution; automatic checking of your own SQL is in development.",
+      a: "Excel exercises are checked for real: your formula is calculated by DataQuest's own formula engine and compared with the expected results across several test cases, including after it is copied to other cells. Sort and filter exercises check the table you produce. Knowledge checks are validated as soon as you answer. SQL challenges run your query on DuckDB, a real SQL engine, in your browser and compare the result with the expected answer on two datasets. The practice questions inside SQL lessons still show hints and a model solution to compare against.",
     },
     {
       q: "Do I need to install anything?",
-      a: "No. Excel exercises run in the browser on a built-in spreadsheet. Until the SQL editor is released, you will need your own database if you want to run your answers to the SQL practice questions.",
+      a: "No. Excel exercises run on a built-in spreadsheet and SQL challenges run on a database engine inside your browser. The datasets can also be downloaded as CSV if you want to use your own tools.",
     },
     {
       q: "Who is DataQuest for?",

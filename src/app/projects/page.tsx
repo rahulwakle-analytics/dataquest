@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Link from "next/link";
 import { Badge } from "@/components/ui/badge";
 import { Card } from "@/components/ui/card";
 import { projects } from "@/content/projects";
@@ -20,7 +21,11 @@ export default function ProjectsPage() {
         </p>
       </header>
       <p className="mx-auto mt-8 max-w-2xl rounded-xl border border-border bg-surface px-4 py-3 text-center text-sm text-muted">
-        Downloadable datasets, per-task hints and completion tracking are in development. For now these are written briefs.
+        Sample data for these briefs is in the{" "}
+        <Link href="/datasets" className="font-medium text-primary underline-offset-4 hover:underline">
+          dataset library
+        </Link>
+        . Per-task hints, solution walkthroughs and completion tracking are in development.
       </p>
 
       <div className="mx-auto mt-12 max-w-4xl space-y-6">

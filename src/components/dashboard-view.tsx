@@ -1,7 +1,7 @@
 "use client";
 
 import Link from "next/link";
-import { ArrowRight, BookOpenCheck, CheckCircle2, ListChecks, Target } from "lucide-react";
+import { ArrowRight, BookOpenCheck, CheckCircle2, ListChecks, Target, Zap } from "lucide-react";
 import { useState } from "react";
 import { ToolIcon } from "@/components/tool-icon";
 import { Button } from "@/components/ui/button";
@@ -20,7 +20,7 @@ type Event = { at: string; kind: "topic" | "exercise"; label: string; path: stri
 
 const fmtDate = (iso: string) => new Date(iso).toLocaleString(undefined, { day: "numeric", month: "short", hour: "2-digit", minute: "2-digit" });
 
-export function DashboardView({ paths }: { paths: DashboardPath[] }) {
+export function DashboardView({ paths, sql }: { paths: DashboardPath[]; sql: { id: string; xp: number }[] }) {
   const progress = useProgress();
   const [confirmReset, setConfirmReset] = useState(false);
 
@@ -46,7 +46,8 @@ export function DashboardView({ paths }: { paths: DashboardPath[] }) {
     }
   }
   events.sort((a, b) => b.at.localeCompare(a.at));
-  const started = events.length > 0 || checksDone > 0;
+  const sqlSolved = sql.filter((c) => progress[c.id]?.exercises?.[0]);
+  const started = events.length > 0 || checksDone > 0 || sqlSolved.length > 0;
 
   const pathRows = paths.map((p) => {
     const done = p.topics.filter((t) => isComplete(progress, t.id)).length;
@@ -56,7 +57,9 @@ export function DashboardView({ paths }: { paths: DashboardPath[] }) {
   });
   const resume = pathRows.filter((p) => p.active && p.next);
 
+  const xp = sqlSolved.reduce((n, c) => n + c.xp, 0);
   const stats = [
+    { icon: Zap, label: `XP from ${sqlSolved.length} of ${sql.length} SQL challenges`, value: String(xp), tone: "text-warning" },
     { icon: BookOpenCheck, label: "Topics completed", value: String(topicsDone), tone: "text-success" },
     { icon: Target, label: "Exercises solved", value: `${exercisesDone} / ${exercisesTotal}`, tone: "text-primary" },
     { icon: ListChecks, label: "Knowledge checks correct", value: String(checksDone), tone: "text-violet" },
@@ -91,7 +94,7 @@ export function DashboardView({ paths }: { paths: DashboardPath[] }) {
         </Card>
       ) : (
         <>
-          <dl className="mt-8 grid gap-4 sm:grid-cols-3">
+          <dl className="mt-8 grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
             {stats.map((s) => (
               <Card key={s.label} className="p-5">
                 <s.icon className={`size-5 ${s.tone}`} aria-hidden="true" />

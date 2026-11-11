@@ -1,0 +1,41 @@
+product_id,product_name,category,unit_cost
+101,Wireless Mouse,Electronics,11
+102,Mechanical Keyboard,Electronics,41
+103,USB-C Hub,Electronics,17
+104,Webcam HD,Electronics,28
+105,Noise-Cancelling Headset,Electronics,70
+106,Portable SSD 1TB,Electronics,61
+107,Monitor 24in,Electronics,96
+108,Laptop Stand,Electronics,13
+109,Bluetooth Speaker,Electronics,22
+110,Smart Plug,Electronics,8
+111,Office Chair,Furniture,105
+112,Standing Desk,Furniture,210
+113,Bookshelf,Furniture,48
+114,Filing Cabinet,Furniture,66
+115,Desk Lamp,Furniture,12
+116,Monitor Arm,Furniture,30
+117,Footrest,Furniture,11
+118,Whiteboard,Furniture,26
+119,Notebook A5,Office Supplies,1.6
+120,Gel Pens 10pk,Office Supplies,2.4
+121,Printer Paper 500,Office Supplies,3.1
+122,Sticky Notes,Office Supplies,1
+123,Stapler,Office Supplies,4.2
+124,Desk Organiser,Office Supplies,6
+125,Label Maker,Office Supplies,17
+126,Highlighters 6pk,Office Supplies,1.7
+127,Ring Binder,Office Supplies,1.5
+128,Whiteboard Markers,Office Supplies,2.9
+129,Coffee Machine,Kitchen,47
+130,Electric Kettle,Kitchen,13
+131,Water Bottle,Kitchen,4.1
+132,Lunch Box,Kitchen,6.2
+133,Mug Set,Kitchen,7.8
+134,Mini Fridge,Kitchen,92
+135,Laptop Backpack,Accessories,21
+136,Phone Stand,Accessories,3.5
+137,Cable Organiser,Accessories,2.6
+138,Screen Cleaner Kit,Accessories,2.9
+139,Laptop Sleeve,Accessories,9
+140,Travel Adapter,Accessories,6.5

@@ -1,0 +1,271 @@
+month,department,account,account_type,budget,actual
+2024-01-01,Sales,Revenue,Income,354500,361802
+2024-01-01,Operations,Cost of Goods Sold,Expense,194100,204935
+2024-01-01,Sales,Salaries,Expense,90000,98439
+2024-01-01,Marketing,Salaries,Expense,45000,47741
+2024-01-01,Operations,Salaries,Expense,72000,65495
+2024-01-01,Technology,Salaries,Expense,63000,59481
+2024-01-01,Marketing,Marketing Spend,Expense,28000,28729
+2024-01-01,Sales,Software and Tools,Expense,9000,8934
+2024-01-01,Marketing,Software and Tools,Expense,4500,4438
+2024-01-01,Operations,Software and Tools,Expense,7200,7303
+2024-01-01,Technology,Software and Tools,Expense,6300,6763
+2024-01-01,Sales,Travel,Expense,6000,6228
+2024-01-01,Marketing,Travel,Expense,3000,3184
+2024-01-01,Operations,Travel,Expense,4800,4741
+2024-01-01,Technology,Travel,Expense,4200,4463
+2024-02-01,Sales,Revenue,Income,382200,379446
+2024-02-01,Operations,Cost of Goods Sold,Expense,209300,227509
+2024-02-01,Sales,Salaries,Expense,90400,90888
+2024-02-01,Marketing,Salaries,Expense,45200,45550
+2024-02-01,Operations,Salaries,Expense,72300,78514
+2024-02-01,Technology,Salaries,Expense,63300,70030
+2024-02-01,Marketing,Marketing Spend,Expense,28100,29101
+2024-02-01,Sales,Software and Tools,Expense,9000,10015
+2024-02-01,Marketing,Software and Tools,Expense,4500,4250
+2024-02-01,Operations,Software and Tools,Expense,7200,6500
+2024-02-01,Technology,Software and Tools,Expense,6300,5865
+2024-02-01,Sales,Travel,Expense,6000,6660
+2024-02-01,Marketing,Travel,Expense,3000,3224
+2024-02-01,Operations,Travel,Expense,4800,5029
+2024-02-01,Technology,Travel,Expense,4200,3979
+2024-03-01,Sales,Revenue,Income,420000,444535
+2024-03-01,Operations,Cost of Goods Sold,Expense,230000,250801
+2024-03-01,Sales,Salaries,Expense,90700,85626
+2024-03-01,Marketing,Salaries,Expense,45400,42395
+2024-03-01,Operations,Salaries,Expense,72600,78636
+2024-03-01,Technology,Salaries,Expense,63500,63677
+2024-03-01,Marketing,Marketing Spend,Expense,28200,29203
+2024-03-01,Sales,Software and Tools,Expense,9100,9300
+2024-03-01,Marketing,Software and Tools,Expense,4500,4544
+2024-03-01,Operations,Software and Tools,Expense,7300,6739
+2024-03-01,Technology,Software and Tools,Expense,6400,6064
+2024-03-01,Sales,Travel,Expense,6000,6421
+2024-03-01,Marketing,Travel,Expense,3000,3076
+2024-03-01,Operations,Travel,Expense,4800,4379
+2024-03-01,Technology,Travel,Expense,4200,4513
+2024-04-01,Sales,Revenue,Income,457800,437826
+2024-04-01,Operations,Cost of Goods Sold,Expense,250700,256519
+2024-04-01,Sales,Salaries,Expense,91100,98365
+2024-04-01,Marketing,Salaries,Expense,45500,41305
+2024-04-01,Operations,Salaries,Expense,72900,77191
+2024-04-01,Technology,Salaries,Expense,63800,58897
+2024-04-01,Marketing,Marketing Spend,Expense,28300,30812
+2024-04-01,Sales,Software and Tools,Expense,9100,9926
+2024-04-01,Marketing,Software and Tools,Expense,4600,5139
+2024-04-01,Operations,Software and Tools,Expense,7300,7166
+2024-04-01,Technology,Software and Tools,Expense,6400,6121
+2024-04-01,Sales,Travel,Expense,6100,6498
+2024-04-01,Marketing,Travel,Expense,3000,3296
+2024-04-01,Operations,Travel,Expense,4900,4591
+2024-04-01,Technology,Travel,Expense,4300,4639
+2024-05-01,Sales,Revenue,Income,485500,516035
+2024-05-01,Operations,Cost of Goods Sold,Expense,265900,260641
+2024-05-01,Sales,Salaries,Expense,91400,88432
+2024-05-01,Marketing,Salaries,Expense,45700,48489
+2024-05-01,Operations,Salaries,Expense,73200,80965
+2024-05-01,Technology,Salaries,Expense,64000,63700
+2024-05-01,Marketing,Marketing Spend,Expense,28400,25579
+2024-05-01,Sales,Software and Tools,Expense,9100,9222
+2024-05-01,Marketing,Software and Tools,Expense,4600,5118
+2024-05-01,Operations,Software and Tools,Expense,7300,7995
+2024-05-01,Technology,Software and Tools,Expense,6400,5954
+2024-05-01,Sales,Travel,Expense,6100,6511
+2024-05-01,Marketing,Travel,Expense,3000,3206
+2024-05-01,Operations,Travel,Expense,4900,5005
+2024-05-01,Technology,Travel,Expense,4300,4293
+2024-06-01,Sales,Revenue,Income,495600,468840
+2024-06-01,Operations,Cost of Goods Sold,Expense,271400,290511
+2024-06-01,Sales,Salaries,Expense,91800,87138
+2024-06-01,Marketing,Salaries,Expense,45900,45031
+2024-06-01,Operations,Salaries,Expense,73400,70095
+2024-06-01,Technology,Salaries,Expense,64300,66211
+2024-06-01,Marketing,Marketing Spend,Expense,28600,30924
+2024-06-01,Sales,Software and Tools,Expense,9200,8855
+2024-06-01,Marketing,Software and Tools,Expense,4600,4506
+2024-06-01,Operations,Software and Tools,Expense,7300,7077
+2024-06-01,Technology,Software and Tools,Expense,6400,6993
+2024-06-01,Sales,Travel,Expense,6100,5956
+2024-06-01,Marketing,Travel,Expense,3100,3286
+2024-06-01,Operations,Travel,Expense,4900,5350
+2024-06-01,Technology,Travel,Expense,4300,3990
+2024-07-01,Sales,Revenue,Income,485500,457336
+2024-07-01,Operations,Cost of Goods Sold,Expense,265900,284880
+2024-07-01,Sales,Salaries,Expense,92200,86234
+2024-07-01,Marketing,Salaries,Expense,46100,49994
+2024-07-01,Operations,Salaries,Expense,73700,69858
+2024-07-01,Technology,Salaries,Expense,64500,61415
+2024-07-01,Marketing,Marketing Spend,Expense,28700,30845
+2024-07-01,Sales,Software and Tools,Expense,9200,8323
+2024-07-01,Marketing,Software and Tools,Expense,4600,4603
+2024-07-01,Operations,Software and Tools,Expense,7400,7134
+2024-07-01,Technology,Software and Tools,Expense,6500,6526
+2024-07-01,Sales,Travel,Expense,6100,6371
+2024-07-01,Marketing,Travel,Expense,3100,2807
+2024-07-01,Operations,Travel,Expense,4900,4882
+2024-07-01,Technology,Travel,Expense,4300,4302
+2024-08-01,Sales,Revenue,Income,457800,449719
+2024-08-01,Operations,Cost of Goods Sold,Expense,250700,227451
+2024-08-01,Sales,Salaries,Expense,92500,89370
+2024-08-01,Marketing,Salaries,Expense,46300,43558
+2024-08-01,Operations,Salaries,Expense,74000,70216
+2024-08-01,Technology,Salaries,Expense,64800,63425
+2024-08-01,Marketing,Marketing Spend,Expense,28800,28082
+2024-08-01,Sales,Software and Tools,Expense,9300,9398
+2024-08-01,Marketing,Software and Tools,Expense,4600,5125
+2024-08-01,Operations,Software and Tools,Expense,7400,8153
+2024-08-01,Technology,Software and Tools,Expense,6500,6714
+2024-08-01,Sales,Travel,Expense,6200,6260
+2024-08-01,Marketing,Travel,Expense,3100,2862
+2024-08-01,Operations,Travel,Expense,4900,4719
+2024-08-01,Technology,Travel,Expense,4300,3972
+2024-09-01,Sales,Revenue,Income,420000,415255
+2024-09-01,Operations,Cost of Goods Sold,Expense,230000,246333
+2024-09-01,Sales,Salaries,Expense,92900,87889
+2024-09-01,Marketing,Salaries,Expense,46400,43627
+2024-09-01,Operations,Salaries,Expense,74300,71473
+2024-09-01,Technology,Salaries,Expense,65000,70920
+2024-09-01,Marketing,Marketing Spend,Expense,28900,27374
+2024-09-01,Sales,Software and Tools,Expense,9300,9592
+2024-09-01,Marketing,Software and Tools,Expense,4600,5033
+2024-09-01,Operations,Software and Tools,Expense,7400,8186
+2024-09-01,Technology,Software and Tools,Expense,6500,6383
+2024-09-01,Sales,Travel,Expense,6200,6234
+2024-09-01,Marketing,Travel,Expense,3100,3396
+2024-09-01,Operations,Travel,Expense,5000,4567
+2024-09-01,Technology,Travel,Expense,4300,4596
+2024-10-01,Sales,Revenue,Income,382200,427805
+2024-10-01,Operations,Cost of Goods Sold,Expense,209300,188656
+2024-10-01,Sales,Salaries,Expense,93200,92185
+2024-10-01,Marketing,Salaries,Expense,46600,45231
+2024-10-01,Operations,Salaries,Expense,74600,77236
+2024-10-01,Technology,Salaries,Expense,65300,61362
+2024-10-01,Marketing,Marketing Spend,Expense,29000,31866
+2024-10-01,Sales,Software and Tools,Expense,9300,8855
+2024-10-01,Marketing,Software and Tools,Expense,4700,4778
+2024-10-01,Operations,Software and Tools,Expense,7500,8342
+2024-10-01,Technology,Software and Tools,Expense,6500,6704
+2024-10-01,Sales,Travel,Expense,6200,6880
+2024-10-01,Marketing,Travel,Expense,3100,2947
+2024-10-01,Operations,Travel,Expense,5000,5529
+2024-10-01,Technology,Travel,Expense,4400,4714
+2024-11-01,Sales,Revenue,Income,438500,424080
+2024-11-01,Operations,Cost of Goods Sold,Expense,240100,259817
+2024-11-01,Sales,Salaries,Expense,93600,92214
+2024-11-01,Marketing,Salaries,Expense,46800,51464
+2024-11-01,Operations,Salaries,Expense,74900,80291
+2024-11-01,Technology,Salaries,Expense,65500,65224
+2024-11-01,Marketing,Marketing Spend,Expense,29100,29132
+2024-11-01,Sales,Software and Tools,Expense,9400,10296
+2024-11-01,Marketing,Software and Tools,Expense,4700,4514
+2024-11-01,Operations,Software and Tools,Expense,7500,8114
+2024-11-01,Technology,Software and Tools,Expense,6600,6563
+2024-11-01,Sales,Travel,Expense,6200,6452
+2024-11-01,Marketing,Travel,Expense,3100,3170
+2024-11-01,Operations,Travel,Expense,5000,4974
+2024-11-01,Technology,Travel,Expense,4400,4661
+2024-12-01,Sales,Revenue,Income,428400,451447
+2024-12-01,Operations,Cost of Goods Sold,Expense,234600,250817
+2024-12-01,Sales,Salaries,Expense,94000,100444
+2024-12-01,Marketing,Salaries,Expense,47000,48628
+2024-12-01,Operations,Salaries,Expense,75200,80174
+2024-12-01,Technology,Salaries,Expense,65800,63195
+2024-12-01,Marketing,Marketing Spend,Expense,29200,30969
+2024-12-01,Sales,Software and Tools,Expense,9400,8488
+2024-12-01,Marketing,Software and Tools,Expense,4700,5114
+2024-12-01,Operations,Software and Tools,Expense,7500,6861
+2024-12-01,Technology,Software and Tools,Expense,6600,7355
+2024-12-01,Sales,Travel,Expense,6300,6450
+2024-12-01,Marketing,Travel,Expense,3100,3240
+2024-12-01,Operations,Travel,Expense,5000,5597
+2024-12-01,Technology,Travel,Expense,4400,4197
+2025-01-01,Sales,Revenue,Income,354500,371995
+2025-01-01,Operations,Cost of Goods Sold,Expense,194100,177027
+2025-01-01,Sales,Salaries,Expense,94300,95362
+2025-01-01,Marketing,Salaries,Expense,47200,48069
+2025-01-01,Operations,Salaries,Expense,75500,84204
+2025-01-01,Technology,Salaries,Expense,66000,69752
+2025-01-01,Marketing,Marketing Spend,Expense,29300,31055
+2025-01-01,Sales,Software and Tools,Expense,9400,9478
+2025-01-01,Marketing,Software and Tools,Expense,4700,4488
+2025-01-01,Operations,Software and Tools,Expense,7500,8347
+2025-01-01,Technology,Software and Tools,Expense,6600,6324
+2025-01-01,Sales,Travel,Expense,6300,6331
+2025-01-01,Marketing,Travel,Expense,3100,3383
+2025-01-01,Operations,Travel,Expense,5000,5227
+2025-01-01,Technology,Travel,Expense,4400,4184
+2025-02-01,Sales,Revenue,Income,382200,419855
+2025-02-01,Operations,Cost of Goods Sold,Expense,209300,199222
+2025-02-01,Sales,Salaries,Expense,94700,99402
+2025-02-01,Marketing,Salaries,Expense,47300,50239
+2025-02-01,Operations,Salaries,Expense,75700,74412
+2025-02-01,Technology,Salaries,Expense,66300,61875
+2025-02-01,Marketing,Marketing Spend,Expense,29500,28104
+2025-02-01,Sales,Software and Tools,Expense,9500,10020
+2025-02-01,Marketing,Software and Tools,Expense,4700,4909
+2025-02-01,Operations,Software and Tools,Expense,7600,7701
+2025-02-01,Technology,Software and Tools,Expense,6600,5969
+2025-02-01,Sales,Travel,Expense,6300,6729
+2025-02-01,Marketing,Travel,Expense,3200,2922
+2025-02-01,Operations,Travel,Expense,5000,5105
+2025-02-01,Technology,Travel,Expense,4400,4180
+2025-03-01,Sales,Revenue,Income,420000,421034
+2025-03-01,Operations,Cost of Goods Sold,Expense,230000,247386
+2025-03-01,Sales,Salaries,Expense,95000,105891
+2025-03-01,Marketing,Salaries,Expense,47500,45921
+2025-03-01,Operations,Salaries,Expense,76000,82973
+2025-03-01,Technology,Salaries,Expense,66500,61452
+2025-03-01,Marketing,Marketing Spend,Expense,29600,27242
+2025-03-01,Sales,Software and Tools,Expense,9500,9722
+2025-03-01,Marketing,Software and Tools,Expense,4800,4490
+2025-03-01,Operations,Software and Tools,Expense,7600,7210
+2025-03-01,Technology,Software and Tools,Expense,6700,7059
+2025-03-01,Sales,Travel,Expense,6300,5832
+2025-03-01,Marketing,Travel,Expense,3200,3549
+2025-03-01,Operations,Travel,Expense,5100,4879
+2025-03-01,Technology,Travel,Expense,4400,4274
+2025-04-01,Sales,Revenue,Income,457800,447969
+2025-04-01,Operations,Cost of Goods Sold,Expense,250700,239741
+2025-04-01,Sales,Salaries,Expense,95400,91803
+2025-04-01,Marketing,Salaries,Expense,47700,48270
+2025-04-01,Operations,Salaries,Expense,76300,79230
+2025-04-01,Technology,Salaries,Expense,66800,72490
+2025-04-01,Marketing,Marketing Spend,Expense,29700,29563
+2025-04-01,Sales,Software and Tools,Expense,9500,10037
+2025-04-01,Marketing,Software and Tools,Expense,4800,4380
+2025-04-01,Operations,Software and Tools,Expense,7600,7866
+2025-04-01,Technology,Software and Tools,Expense,6700,6642
+2025-04-01,Sales,Travel,Expense,6400,7081
+2025-04-01,Marketing,Travel,Expense,3200,3529
+2025-04-01,Operations,Travel,Expense,5100,5172
+2025-04-01,Technology,Travel,Expense,4500,4556
+2025-05-01,Sales,Revenue,Income,485500,505174
+2025-05-01,Operations,Cost of Goods Sold,Expense,265900,286806
+2025-05-01,Sales,Salaries,Expense,95800,91221
+2025-05-01,Marketing,Salaries,Expense,47900,48480
+2025-05-01,Operations,Salaries,Expense,76600,76848
+2025-05-01,Technology,Salaries,Expense,67000,71858
+2025-05-01,Marketing,Marketing Spend,Expense,29800,30631
+2025-05-01,Sales,Software and Tools,Expense,9600,9550
+2025-05-01,Marketing,Software and Tools,Expense,4800,4751
+2025-05-01,Operations,Software and Tools,Expense,7700,7198
+2025-05-01,Technology,Software and Tools,Expense,6700,7442
+2025-05-01,Sales,Travel,Expense,6400,6432
+2025-05-01,Marketing,Travel,Expense,3200,3364
+2025-05-01,Operations,Travel,Expense,5100,5526
+2025-05-01,Technology,Travel,Expense,4500,4147
+2025-06-01,Sales,Revenue,Income,495600,483544
+2025-06-01,Operations,Cost of Goods Sold,Expense,271400,285102
+2025-06-01,Sales,Salaries,Expense,96100,99556
+2025-06-01,Marketing,Salaries,Expense,48100,53292
+2025-06-01,Operations,Salaries,Expense,76900,70675
+2025-06-01,Technology,Salaries,Expense,67300,63411
+2025-06-01,Marketing,Marketing Spend,Expense,29900,28940
+2025-06-01,Sales,Software and Tools,Expense,9600,8769
+2025-06-01,Marketing,Software and Tools,Expense,4800,4922
+2025-06-01,Operations,Software and Tools,Expense,7700,8282
+2025-06-01,Technology,Software and Tools,Expense,6700,6173
+2025-06-01,Sales,Travel,Expense,6400,6964
+2025-06-01,Marketing,Travel,Expense,3200,2960
+2025-06-01,Operations,Travel,Expense,5100,5427
+2025-06-01,Technology,Travel,Expense,4500,4540

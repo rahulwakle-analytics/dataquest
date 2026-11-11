@@ -35,6 +35,8 @@ export type Playground = { title: string; intro: string; sheet: SheetSpec; targe
 export type Lesson = {
   /** One-sentence summary, also used for page metadata. */
   summary: string;
+  /** What the learner will be able to do afterwards. */
+  objectives?: string[];
   explanation: string[];
   syntax: string;
   examples: { title: string; code: string; note: string }[];
@@ -43,6 +45,8 @@ export type Lesson = {
   scenario: { title: string; body: string; code?: string };
   mistakes: { mistake: string; fix: string }[];
   practice: PracticeItem[];
+  /** Questions an interviewer might ask on this topic, with model answers. */
+  interview?: { q: string; a: string }[];
   checks: { q: string; options: string[]; answer: number; why: string }[];
 };
 

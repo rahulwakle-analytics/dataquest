@@ -20,6 +20,8 @@ export const site = {
     { label: "Explore", href: "/explore" },
     { label: "Roadmap", href: "/roadmap" },
     { label: "Learning Paths", href: "/paths" },
+    { label: "Practice", href: "/practice" },
+    { label: "Datasets", href: "/datasets" },
     { label: "Projects", href: "/projects" },
     { label: "Career", href: "/career" },
     { label: "Dashboard", href: "/dashboard" },

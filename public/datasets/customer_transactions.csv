@@ -1,0 +1,1001 @@
+transaction_id,customer_id,transaction_date,type,amount,store_id,payment_method,loyalty_tier
+70286,146,2024-01-01,purchase,65.97,10,Cash,None
+70601,25,2024-01-02,purchase,135.98,5,Card,Platinum
+70813,1,2024-01-02,purchase,66.3,12,Cash,Silver
+70272,2,2024-01-03,purchase,145.22,6,Card,Gold
+70484,8,2024-01-03,purchase,190.95,8,Cash,Platinum
+70584,68,2024-01-03,purchase,96.93,8,Card,Gold
+70708,12,2024-01-03,purchase,66.15,1,Digital Wallet,Silver
+70745,35,2024-01-03,purchase,30.21,8,Cash,Silver
+70039,104,2024-01-04,purchase,44.92,11,Card,None
+70177,130,2024-01-04,purchase,14.51,2,Digital Wallet,None
+70242,4,2024-01-04,purchase,69.8,11,Card,None
+70608,19,2024-01-04,purchase,145.93,1,Cash,Gold
+70640,2,2024-01-04,purchase,30.81,11,Digital Wallet,Gold
+70812,2,2024-01-04,purchase,61.18,1,Digital Wallet,Gold
+70585,67,2024-01-05,purchase,81.57,1,Cash,None
+70729,116,2024-01-05,purchase,27.59,5,Card,None
+70810,96,2024-01-05,purchase,68.66,10,Card,None
+70515,115,2024-01-07,purchase,101.16,12,Cash,Silver
+70022,125,2024-01-09,purchase,92.11,9,Card,None
+70801,106,2024-01-09,purchase,50.26,8,Card,None
+70921,10,2024-01-09,purchase,99.48,11,Card,Silver
+70009,7,2024-01-10,purchase,44.23,12,Card,None
+70208,41,2024-01-10,purchase,38.64,4,Card,None
+70615,4,2024-01-10,purchase,49.42,2,Digital Wallet,None
+70552,82,2024-01-11,purchase,100.93,10,Cash,None
+70593,88,2024-01-11,purchase,48.64,12,Digital Wallet,Silver
+70878,23,2024-01-11,purchase,24.09,1,Cash,Gold
+70061,61,2024-01-12,purchase,115.29,9,Card,Gold
+70697,2,2024-01-13,purchase,80.02,11,Card,Gold
+70335,26,2024-01-15,purchase,103.47,3,Digital Wallet,Silver
+70626,23,2024-01-15,purchase,67.95,11,Digital Wallet,Gold
+70501,65,2024-01-16,purchase,75.57,11,Card,Gold
+70074,30,2024-01-17,purchase,29.83,9,Digital Wallet,None
+70518,69,2024-01-17,purchase,80.67,6,Card,None
+70924,131,2024-01-17,purchase,84.58,10,Digital Wallet,Silver
+70275,28,2024-01-19,purchase,36.66,7,Digital Wallet,None
+70488,111,2024-01-19,purchase,91.42,11,Card,Silver
+70554,14,2024-01-20,purchase,55.31,2,Card,None
+70356,104,2024-01-21,purchase,49.35,3,Card,None
+70753,19,2024-01-22,purchase,20.7,10,Card,Gold
+70419,84,2024-01-23,purchase,102.61,2,Digital Wallet,Silver
+70085,78,2024-01-24,purchase,189.81,12,Cash,Platinum
+70435,108,2024-01-24,purchase,61.44,3,Card,Silver
+70804,103,2024-01-24,purchase,86.56,10,Cash,Silver
+70845,83,2024-01-24,purchase,82.3,5,Card,None
+70748,108,2024-01-25,purchase,19.7,8,Card,Silver
+70066,4,2024-01-26,purchase,37.89,8,Card,None
+70319,1,2024-01-28,refund,-78.61,8,Card,Silver
+70087,41,2024-01-29,purchase,48.21,7,Card,None
+70454,13,2024-01-29,purchase,81.79,12,Cash,Silver
+70680,27,2024-01-29,purchase,43.96,12,Card,Silver
+70059,51,2024-01-31,purchase,52.04,5,Digital Wallet,Silver
+70282,68,2024-01-31,refund,-18.03,8,Card,Gold
+70860,11,2024-02-01,purchase,49.96,6,Digital Wallet,None
+70070,57,2024-02-02,purchase,72.04,8,Cash,Silver
+70477,24,2024-02-02,purchase,117.72,3,Card,Gold
+70387,18,2024-02-03,purchase,41.29,12,Card,Gold
+70933,3,2024-02-03,purchase,49.84,12,Card,Silver
+70352,98,2024-02-04,purchase,62.76,2,Cash,None
+70397,25,2024-02-04,purchase,70.67,7,Card,Platinum
+70405,19,2024-02-04,purchase,27.71,5,Digital Wallet,Gold
+70497,1,2024-02-04,purchase,28.73,6,Digital Wallet,Silver
+70904,6,2024-02-05,purchase,81.2,8,Cash,None
+70784,93,2024-02-06,purchase,69.73,1,Card,Silver
+70362,19,2024-02-07,purchase,22.79,7,Digital Wallet,Gold
+70232,122,2024-02-08,purchase,105.42,9,Card,Gold
+70649,39,2024-02-08,purchase,71.95,3,Cash,Gold
+70669,86,2024-02-08,refund,-85.02,11,Card,Silver
+70360,38,2024-02-09,purchase,146.9,4,Digital Wallet,Gold
+70869,8,2024-02-09,purchase,107.71,10,Card,Platinum
+70448,7,2024-02-10,purchase,32.11,8,Digital Wallet,None
+70699,6,2024-02-10,purchase,71.22,3,Card,None
+70960,140,2024-02-10,purchase,30.83,2,Card,None
+70031,1,2024-02-11,purchase,42.19,10,Cash,Silver
+70053,73,2024-02-11,purchase,30.92,3,Digital Wallet,None
+70216,134,2024-02-11,purchase,104.77,5,Digital Wallet,Gold
+70521,46,2024-02-11,purchase,22.74,5,Card,None
+70896,140,2024-02-11,purchase,34.1,3,Cash,None
+70218,67,2024-02-12,purchase,69.37,10,Card,None
+70958,126,2024-02-12,purchase,96.78,1,Card,None
+70046,70,2024-02-13,purchase,74.71,2,Card,Gold
+70510,3,2024-02-13,purchase,46.27,11,Card,Silver
+70310,3,2024-02-14,purchase,38.17,11,Card,Silver
+70365,64,2024-02-15,purchase,121.32,6,Card,Gold
+70012,147,2024-02-16,purchase,28.95,1,Cash,Silver
+70214,16,2024-02-16,purchase,90.49,12,Card,None
+70505,106,2024-02-17,purchase,75.56,2,Digital Wallet,None
+70289,22,2024-02-18,purchase,55.92,8,Card,Gold
+70325,8,2024-02-18,purchase,166.63,4,Card,Platinum
+70604,1,2024-02-18,refund,-76.92,6,Cash,Silver
+70627,2,2024-02-19,purchase,55.58,3,Cash,Gold
+70456,1,2024-02-20,purchase,53.69,3,Digital Wallet,Silver
+70651,9,2024-02-20,purchase,143.41,3,Digital Wallet,Gold
+70940,125,2024-02-20,purchase,41.8,12,Card,None
+70600,8,2024-02-21,purchase,122.7,9,Card,Platinum
+70474,7,2024-02-22,purchase,41.8,1,Card,None
+70850,33,2024-02-22,purchase,18.99,9,Card,None
+70063,20,2024-02-23,purchase,54.33,1,Card,None
+70099,12,2024-02-23,purchase,59.3,5,Card,Silver
+70173,54,2024-02-23,purchase,47.86,3,Cash,None
+70326,78,2024-02-23,purchase,47.95,12,Card,Platinum
+70738,93,2024-02-23,purchase,64.17,4,Card,Silver
+70815,149,2024-02-23,purchase,32.35,4,Cash,None
+70578,1,2024-02-24,purchase,28.91,11,Card,Silver
+70003,3,2024-02-25,purchase,44.67,1,Card,Silver
+70270,6,2024-02-25,purchase,42.23,10,Card,None
+70134,2,2024-02-26,purchase,49,4,Digital Wallet,Gold
+70706,87,2024-02-26,purchase,84.05,8,Card,Silver
+70605,14,2024-02-27,purchase,72.62,5,Card,None
+70754,40,2024-02-27,purchase,15.63,7,Card,None
+70948,135,2024-02-27,purchase,101.26,6,Digital Wallet,Gold
+70538,150,2024-02-28,purchase,20.36,3,Cash,Silver
+70546,129,2024-02-28,purchase,75.75,6,Digital Wallet,None
+70563,47,2024-02-28,purchase,60.19,10,Card,None
+70764,127,2024-03-01,purchase,46.26,9,Card,None
+70334,29,2024-03-02,purchase,18.72,10,Cash,None
+70507,42,2024-03-02,purchase,95.82,10,Digital Wallet,None
+70715,17,2024-03-02,refund,-26.67,8,Card,Silver
+70102,1,2024-03-03,purchase,72.04,12,Cash,Silver
+70210,97,2024-03-03,purchase,30.37,8,Card,None
+70855,92,2024-03-03,purchase,122.03,7,Card,Silver
+70445,6,2024-03-05,purchase,26.45,2,Digital Wallet,None
+70496,11,2024-03-05,purchase,68.87,5,Cash,None
+70069,6,2024-03-06,purchase,22.96,10,Card,None
+70636,113,2024-03-06,purchase,125.1,7,Card,Platinum
+70302,89,2024-03-07,purchase,38.19,4,Card,None
+70731,93,2024-03-07,purchase,72.65,8,Digital Wallet,Silver
+70976,25,2024-03-07,purchase,188.75,7,Card,Platinum
+70930,2,2024-03-08,purchase,52,12,Card,Gold
+70027,17,2024-03-09,refund,-39.26,10,Card,Silver
+70502,28,2024-03-09,purchase,65.68,6,Card,None
+70779,17,2024-03-09,purchase,45.29,12,Cash,Silver
+70131,126,2024-03-10,purchase,54.17,5,Cash,None
+70726,54,2024-03-10,purchase,85.46,7,Digital Wallet,None
+70573,2,2024-03-11,purchase,58.45,3,Digital Wallet,Gold
+70761,19,2024-03-11,purchase,141.9,9,Card,Gold
+70859,113,2024-03-11,purchase,49.27,11,Digital Wallet,Platinum
+70273,24,2024-03-12,purchase,133.36,6,Card,Gold
+70440,25,2024-03-12,purchase,82.46,2,Digital Wallet,Platinum
+70524,145,2024-03-13,purchase,63,2,Digital Wallet,None
+70378,15,2024-03-14,purchase,67.78,12,Card,Silver
+70467,136,2024-03-14,purchase,67.95,7,Card,Silver
+70482,102,2024-03-14,purchase,14.01,2,Cash,None
+70007,49,2024-03-15,purchase,83.73,10,Card,Gold
+70558,91,2024-03-15,purchase,37.38,11,Card,Gold
+70471,19,2024-03-16,purchase,144.25,4,Card,Gold
+70551,28,2024-03-16,purchase,18.5,11,Card,None
+70711,10,2024-03-16,purchase,114.18,11,Cash,Silver
+70038,26,2024-03-17,purchase,46.17,2,Card,Silver
+70639,127,2024-03-17,purchase,34.07,10,Card,None
+70541,5,2024-03-18,purchase,23.62,2,Card,None
+70685,139,2024-03-19,purchase,57.98,6,Cash,None
+70819,107,2024-03-21,purchase,23.03,5,Card,None
+70400,28,2024-03-22,purchase,50.7,6,Digital Wallet,None
+70557,47,2024-03-22,purchase,62.51,10,Cash,None
+70620,6,2024-03-24,purchase,68.33,2,Digital Wallet,None
+70915,5,2024-03-25,purchase,80.37,11,Digital Wallet,None
+70983,114,2024-03-25,purchase,56.93,9,Card,Silver
+70354,142,2024-03-26,purchase,38.3,9,Digital Wallet,None
+70475,9,2024-03-26,purchase,68.79,12,Cash,Gold
+70635,93,2024-03-26,purchase,33.26,2,Digital Wallet,Silver
+70198,45,2024-03-27,purchase,73,10,Card,None
+70682,45,2024-03-28,purchase,54.4,11,Digital Wallet,None
+70929,134,2024-03-29,purchase,65.06,10,Card,Gold
+70460,3,2024-04-01,purchase,63.94,7,Digital Wallet,Silver
+70910,43,2024-04-01,purchase,78.34,4,Digital Wallet,None
+70076,15,2024-04-02,purchase,90.74,8,Card,Silver
+70206,3,2024-04-02,purchase,87.91,2,Card,Silver
+70269,33,2024-04-02,purchase,100.4,11,Cash,None
+70330,4,2024-04-02,purchase,58.67,3,Cash,None
+70436,54,2024-04-02,refund,-20.16,2,Digital Wallet,None
+70673,14,2024-04-02,purchase,86.9,6,Card,None
+70416,26,2024-04-03,purchase,108.94,2,Card,Silver
+70719,144,2024-04-03,purchase,90.85,11,Card,Platinum
+70018,124,2024-04-04,purchase,34.18,11,Cash,Silver
+70315,12,2024-04-05,purchase,60.7,5,Digital Wallet,Silver
+70404,2,2024-04-05,purchase,42.97,1,Cash,Gold
+70421,60,2024-04-05,purchase,91.08,12,Card,None
+70694,5,2024-04-07,purchase,17.5,5,Card,None
+70899,46,2024-04-07,refund,-35.15,12,Cash,None
+70340,132,2024-04-08,purchase,92.65,10,Card,Silver
+70388,62,2024-04-08,purchase,55.79,1,Cash,None
+70767,5,2024-04-09,purchase,24,1,Card,None
+70068,119,2024-04-11,purchase,100.83,1,Digital Wallet,None
+70690,19,2024-04-11,purchase,80.75,8,Cash,Gold
+70787,99,2024-04-12,purchase,103.68,2,Cash,Gold
+70893,38,2024-04-12,purchase,89.98,6,Digital Wallet,Gold
+70201,105,2024-04-13,purchase,32.18,2,Card,None
+70257,98,2024-04-13,purchase,91.65,5,Card,None
+70446,23,2024-04-13,purchase,61.72,5,Digital Wallet,Gold
+70015,77,2024-04-14,purchase,14.94,2,Digital Wallet,Silver
+70890,137,2024-04-14,purchase,70.88,7,Digital Wallet,None
+70903,139,2024-04-15,purchase,92.47,11,Cash,None
+70183,19,2024-04-16,purchase,143.75,10,Card,Gold
+70221,37,2024-04-16,purchase,95.42,7,Digital Wallet,Gold
+70347,146,2024-04-16,purchase,100.81,6,Cash,None
+70350,141,2024-04-16,purchase,51.16,5,Digital Wallet,Silver
+70372,69,2024-04-16,refund,-76.51,11,Card,None
+70375,36,2024-04-16,purchase,40.98,1,Cash,Platinum
+70553,141,2024-04-16,purchase,22.61,6,Card,Silver
+70883,1,2024-04-16,purchase,95.28,4,Digital Wallet,Silver
+70792,18,2024-04-17,purchase,118.1,11,Card,Gold
+70115,144,2024-04-18,purchase,132.62,10,Cash,Platinum
+70887,62,2024-04-18,purchase,18.9,5,Card,None
+70036,94,2024-04-19,purchase,85.42,9,Card,Gold
+70072,27,2024-04-19,purchase,101.43,12,Cash,Silver
+70258,72,2024-04-19,purchase,70.51,12,Digital Wallet,Gold
+70314,9,2024-04-19,purchase,122.02,2,Digital Wallet,Gold
+70529,35,2024-04-19,purchase,85.56,6,Digital Wallet,Silver
+70944,138,2024-04-19,purchase,98.16,6,Card,None
+70090,69,2024-04-21,purchase,57.82,9,Card,None
+70427,105,2024-04-22,purchase,61.41,12,Cash,None
+70213,22,2024-04-24,purchase,152.46,3,Cash,Gold
+70316,42,2024-04-24,purchase,78.91,1,Digital Wallet,None
+70379,1,2024-04-24,purchase,14.61,10,Cash,Silver
+70320,7,2024-04-25,purchase,30.16,2,Cash,None
+70868,131,2024-04-25,purchase,97.92,3,Card,Silver
+70438,92,2024-04-26,refund,-73.55,11,Card,Silver
+70140,68,2024-04-27,purchase,118.99,7,Card,Gold
+70229,45,2024-04-27,purchase,82.65,1,Digital Wallet,None
+70545,16,2024-04-27,purchase,26.64,1,Card,None
+70547,33,2024-04-27,purchase,75.18,4,Cash,None
+70323,39,2024-04-29,purchase,22.49,3,Card,Gold
+70401,48,2024-04-30,purchase,17.61,10,Card,None
+70453,137,2024-04-30,purchase,43,3,Cash,None
+70638,85,2024-04-30,purchase,15.33,4,Digital Wallet,Silver
+70044,28,2024-05-01,purchase,100.05,5,Digital Wallet,None
+70361,12,2024-05-01,purchase,116.27,7,Digital Wallet,Silver
+70575,78,2024-05-03,purchase,137.78,4,Digital Wallet,Platinum
+70485,4,2024-05-04,purchase,41.2,3,Cash,None
+70760,70,2024-05-04,purchase,101.36,4,Digital Wallet,Gold
+70188,3,2024-05-05,purchase,25.37,12,Cash,Silver
+70802,94,2024-05-05,purchase,52.21,6,Cash,Gold
+70278,1,2024-05-06,purchase,64.53,9,Cash,Silver
+70628,8,2024-05-06,purchase,29.96,9,Cash,Platinum
+70194,148,2024-05-07,purchase,108.93,6,Cash,Platinum
+70805,11,2024-05-07,purchase,48.35,10,Card,None
+70345,32,2024-05-08,purchase,90.61,9,Cash,None
+70691,21,2024-05-09,purchase,85.29,3,Card,Gold
+70786,32,2024-05-09,purchase,32.97,7,Card,None
+70741,30,2024-05-10,purchase,36.19,4,Card,None
+70919,37,2024-05-11,purchase,73.73,11,Digital Wallet,Gold
+70987,88,2024-05-12,purchase,71.82,12,Card,Silver
+70244,6,2024-05-14,purchase,16.7,6,Digital Wallet,None
+70394,9,2024-05-14,purchase,39.96,8,Card,Gold
+70851,34,2024-05-14,purchase,60.55,8,Digital Wallet,Silver
+70141,134,2024-05-15,purchase,52.82,1,Digital Wallet,Gold
+70166,139,2024-05-15,purchase,92.69,7,Digital Wallet,None
+70178,147,2024-05-15,purchase,28.38,7,Card,Silver
+70303,77,2024-05-15,purchase,20.1,8,Card,Silver
+70632,53,2024-05-16,purchase,37.6,6,Digital Wallet,Silver
+70783,10,2024-05-16,refund,-102.95,2,Card,Silver
+70999,35,2024-05-16,purchase,92.78,11,Digital Wallet,Silver
+70192,114,2024-05-17,purchase,17.87,10,Card,Silver
+70337,4,2024-05-17,purchase,93.97,7,Card,None
+70425,39,2024-05-17,purchase,76.13,4,Cash,Gold
+70650,7,2024-05-17,purchase,18.66,6,Cash,None
+70854,39,2024-05-18,purchase,69.29,3,Card,Gold
+70261,49,2024-05-19,purchase,101.71,12,Digital Wallet,Gold
+70721,23,2024-05-19,purchase,130.55,3,Card,Gold
+70825,106,2024-05-19,purchase,68.48,3,Card,None
+70439,3,2024-05-20,purchase,121.85,3,Digital Wallet,Silver
+70536,147,2024-05-20,purchase,56.95,10,Cash,Silver
+70129,49,2024-05-21,purchase,36.18,6,Card,Gold
+70276,10,2024-05-21,purchase,94.63,12,Card,Silver
+70135,65,2024-05-22,purchase,33.44,4,Cash,Gold
+70235,125,2024-05-22,purchase,101.95,9,Card,None
+70478,87,2024-05-22,purchase,25.87,7,Card,Silver
+70797,32,2024-05-22,purchase,81.09,10,Card,None
+70990,6,2024-05-22,purchase,81.3,1,Digital Wallet,None
+70998,5,2024-05-22,purchase,88.22,3,Card,None
+70157,9,2024-05-23,refund,-25.83,7,Cash,Gold
+70295,88,2024-05-23,purchase,72.68,5,Card,Silver
+70080,125,2024-05-24,purchase,82.6,3,Cash,None
+70321,1,2024-05-24,purchase,83.54,6,Card,Silver
+70528,29,2024-05-24,purchase,13.91,7,Card,None
+70169,3,2024-05-27,purchase,105.77,11,Card,Silver
+70370,85,2024-05-27,purchase,53.18,3,Cash,Silver
+70307,70,2024-05-28,purchase,30.16,8,Digital Wallet,Gold
+70714,77,2024-05-28,purchase,25.55,8,Card,Silver
+70770,48,2024-05-28,purchase,41.95,4,Digital Wallet,None
+70858,1,2024-05-28,refund,-95.27,7,Cash,Silver
+70040,18,2024-05-31,purchase,73.02,7,Digital Wallet,Gold
+70681,21,2024-05-31,purchase,144.2,10,Digital Wallet,Gold
+70491,36,2024-06-01,purchase,108.55,3,Cash,Platinum
+70025,85,2024-06-03,purchase,50.21,3,Cash,Silver
+70078,101,2024-06-03,purchase,89.68,5,Card,None
+70118,144,2024-06-03,purchase,164.35,9,Digital Wallet,Platinum
+70155,8,2024-06-03,purchase,61.07,8,Card,Platinum
+70212,125,2024-06-03,purchase,76.96,1,Digital Wallet,None
+70462,102,2024-06-03,purchase,72.26,4,Card,None
+70609,141,2024-06-03,purchase,39.85,5,Cash,Silver
+70973,1,2024-06-03,purchase,41.11,8,Card,Silver
+70019,139,2024-06-04,purchase,54.74,5,Card,None
+70037,36,2024-06-04,purchase,147.48,11,Card,Platinum
+70720,6,2024-06-04,purchase,16.49,8,Card,None
+70946,18,2024-06-04,purchase,107.31,4,Cash,Gold
+70047,36,2024-06-05,purchase,60.15,9,Card,Platinum
+70403,97,2024-06-05,purchase,19.46,10,Cash,None
+70032,126,2024-06-06,purchase,23.46,2,Digital Wallet,None
+70702,39,2024-06-06,purchase,44.85,9,Cash,Gold
+70109,11,2024-06-07,purchase,96.21,7,Card,None
+70481,1,2024-06-07,purchase,54.84,12,Card,Silver
+70647,62,2024-06-07,purchase,36.02,7,Card,None
+70657,15,2024-06-07,purchase,66.64,7,Digital Wallet,Silver
+70008,85,2024-06-08,purchase,45.31,6,Cash,Silver
+70016,53,2024-06-08,purchase,113.29,1,Cash,Silver
+70051,13,2024-06-08,purchase,77.09,10,Cash,Silver
+70341,41,2024-06-08,purchase,23.85,10,Card,None
+70431,141,2024-06-08,purchase,31.75,10,Cash,Silver
+70888,35,2024-06-08,purchase,84.28,7,Cash,Silver
+70902,80,2024-06-08,purchase,37.04,9,Card,Silver
+70542,2,2024-06-09,purchase,74.2,8,Card,Gold
+70577,78,2024-06-09,purchase,164.71,8,Card,Platinum
+70592,1,2024-06-09,purchase,119.74,12,Card,Silver
+70342,102,2024-06-10,purchase,85.9,3,Card,None
+70200,16,2024-06-11,purchase,93.05,12,Card,None
+70377,134,2024-06-11,purchase,86.85,2,Card,Gold
+70941,98,2024-06-11,purchase,16.9,5,Cash,None
+70926,25,2024-06-12,purchase,166.79,2,Card,Platinum
+70055,29,2024-06-13,purchase,95.72,1,Card,None
+70533,1,2024-06-14,purchase,111.04,2,Cash,Silver
+70114,92,2024-06-15,purchase,83.42,12,Cash,Silver
+70168,146,2024-06-15,purchase,21.51,7,Cash,None
+70202,123,2024-06-16,purchase,118,5,Cash,Silver
+70517,1,2024-06-17,purchase,22.73,10,Cash,Silver
+70629,129,2024-06-17,purchase,68.46,6,Cash,None
+70665,27,2024-06-17,purchase,71.05,8,Cash,Silver
+70695,55,2024-06-18,purchase,30.79,8,Card,None
+70747,143,2024-06-18,purchase,102.77,6,Card,Gold
+70982,96,2024-06-18,purchase,46.91,4,Digital Wallet,None
+70327,5,2024-06-20,purchase,26.98,3,Cash,None
+70613,79,2024-06-21,purchase,86.17,12,Cash,Silver
+70625,55,2024-06-21,purchase,34.81,2,Digital Wallet,None
+70075,19,2024-06-22,purchase,86.68,4,Card,Gold
+70472,8,2024-06-22,purchase,59.94,10,Digital Wallet,Platinum
+70582,104,2024-06-22,purchase,86.24,6,Card,None
+70884,44,2024-06-22,purchase,143.71,7,Card,Gold
+70128,102,2024-06-23,purchase,76.16,6,Digital Wallet,None
+70675,15,2024-06-23,purchase,101.31,11,Card,Silver
+70683,45,2024-06-23,purchase,29.85,12,Digital Wallet,None
+70679,33,2024-06-24,purchase,52.06,11,Cash,None
+70692,129,2024-06-24,purchase,56.76,7,Cash,None
+70005,19,2024-06-25,purchase,45.85,5,Cash,Gold
+70332,61,2024-06-25,refund,-109.04,6,Digital Wallet,Gold
+70376,1,2024-06-25,purchase,43.9,7,Cash,Silver
+70490,2,2024-06-25,purchase,48.12,5,Digital Wallet,Gold
+70544,95,2024-06-25,purchase,19.61,6,Digital Wallet,Silver
+70766,24,2024-06-25,purchase,51.39,6,Cash,Gold
+70158,12,2024-06-26,refund,-101.13,8,Card,Silver
+70193,82,2024-06-26,purchase,52.91,4,Card,None
+70186,2,2024-06-27,purchase,38.03,10,Digital Wallet,Gold
+70391,82,2024-06-27,purchase,77.9,9,Digital Wallet,None
+70602,146,2024-06-29,purchase,19.82,7,Digital Wallet,None
+70021,1,2024-06-30,purchase,87.18,5,Cash,Silver
+70513,80,2024-06-30,purchase,29.63,12,Card,Silver
+70148,6,2024-07-02,purchase,100.54,7,Card,None
+70606,132,2024-07-02,refund,-121.52,11,Card,Silver
+70461,15,2024-07-03,purchase,35.38,12,Card,Silver
+70847,20,2024-07-03,purchase,52.42,8,Cash,None
+70409,9,2024-07-04,purchase,101.16,8,Digital Wallet,Gold
+70637,7,2024-07-04,purchase,63.25,9,Card,None
+70539,56,2024-07-05,purchase,62.59,11,Digital Wallet,Platinum
+70559,144,2024-07-05,purchase,83.23,5,Digital Wallet,Platinum
+70980,1,2024-07-05,purchase,81.63,6,Card,Silver
+70520,61,2024-07-06,purchase,89.86,7,Card,Gold
+70073,15,2024-07-07,purchase,113.05,1,Digital Wallet,Silver
+70209,117,2024-07-07,purchase,167.97,12,Digital Wallet,Platinum
+70780,17,2024-07-07,purchase,90.64,10,Cash,Silver
+70817,42,2024-07-07,refund,-78.65,2,Digital Wallet,None
+70523,25,2024-07-08,purchase,163.71,7,Cash,Platinum
+70113,49,2024-07-09,purchase,54.82,8,Card,Gold
+70867,75,2024-07-09,purchase,23.88,5,Digital Wallet,None
+70309,10,2024-07-10,purchase,58.42,9,Card,Silver
+70333,3,2024-07-10,purchase,78.88,12,Card,Silver
+70500,141,2024-07-10,purchase,37.94,10,Card,Silver
+70567,6,2024-07-10,purchase,13.82,9,Cash,None
+70317,92,2024-07-12,purchase,68.54,8,Digital Wallet,Silver
+70364,23,2024-07-12,refund,-84.42,4,Digital Wallet,Gold
+70641,3,2024-07-12,purchase,85.03,12,Card,Silver
+70916,103,2024-07-12,purchase,46.83,3,Cash,Silver
+70026,4,2024-07-13,purchase,26.63,6,Digital Wallet,None
+70238,111,2024-07-13,purchase,119.94,1,Card,Silver
+70591,93,2024-07-13,purchase,103.13,12,Card,Silver
+70519,5,2024-07-14,purchase,26.45,10,Card,None
+70730,9,2024-07-14,purchase,108.54,8,Card,Gold
+70418,37,2024-07-15,purchase,104.75,4,Digital Wallet,Gold
+70807,1,2024-07-15,purchase,56.93,6,Digital Wallet,Silver
+70712,52,2024-07-17,purchase,76.4,5,Card,Gold
+70969,65,2024-07-18,purchase,37.47,1,Card,Gold
+70368,16,2024-07-19,purchase,73.12,5,Digital Wallet,None
+70882,2,2024-07-20,purchase,62.76,4,Digital Wallet,Gold
+70228,51,2024-07-22,purchase,113.68,3,Card,Silver
+70281,116,2024-07-22,purchase,40.93,12,Card,None
+70835,77,2024-07-22,purchase,74.72,10,Card,Silver
+70028,5,2024-07-23,purchase,57.93,8,Cash,None
+70339,17,2024-07-23,purchase,109.6,2,Digital Wallet,Silver
+70414,103,2024-07-23,purchase,87.77,3,Card,Silver
+70564,27,2024-07-24,purchase,47.85,3,Card,Silver
+70865,115,2024-07-24,refund,-103.06,1,Card,Silver
+71000,5,2024-07-24,purchase,69.52,7,Cash,None
+70424,30,2024-07-25,purchase,90.28,3,Card,None
+70989,52,2024-07-25,purchase,114.86,8,Cash,Gold
+70880,4,2024-07-26,purchase,75.37,9,Digital Wallet,None
+70900,124,2024-07-26,purchase,26.74,7,Card,Silver
+70974,62,2024-07-26,purchase,63.96,11,Digital Wallet,None
+70979,82,2024-07-26,purchase,26.98,8,Digital Wallet,None
+70769,3,2024-07-27,purchase,48.55,9,Card,Silver
+70968,80,2024-07-27,purchase,21.76,4,Card,Silver
+70535,115,2024-07-29,purchase,86.68,8,Cash,Silver
+70630,14,2024-07-29,purchase,20.58,6,Digital Wallet,None
+70853,5,2024-07-30,purchase,73.05,8,Digital Wallet,None
+70030,44,2024-07-31,purchase,87.17,8,Card,Gold
+70127,7,2024-08-01,purchase,42.74,9,Card,None
+70252,71,2024-08-01,purchase,41.29,8,Cash,None
+70993,20,2024-08-01,purchase,13.24,9,Card,None
+70390,43,2024-08-02,purchase,68.25,11,Cash,None
+70105,10,2024-08-04,purchase,38.14,9,Card,Silver
+70791,128,2024-08-04,purchase,54.26,5,Card,Silver
+70965,45,2024-08-04,purchase,38.88,9,Card,None
+70143,43,2024-08-05,purchase,30.4,9,Digital Wallet,None
+70936,29,2024-08-05,purchase,77.95,1,Digital Wallet,None
+70373,15,2024-08-06,purchase,22.35,12,Card,Silver
+70757,4,2024-08-06,purchase,95.35,10,Card,None
+70241,37,2024-08-07,refund,-126.56,9,Card,Gold
+70713,118,2024-08-07,purchase,45.49,9,Digital Wallet,Silver
+70096,55,2024-08-08,purchase,34.91,6,Card,None
+70603,59,2024-08-08,purchase,133.86,12,Card,Gold
+70548,27,2024-08-09,purchase,82.93,3,Digital Wallet,Silver
+70092,83,2024-08-11,purchase,73.97,12,Digital Wallet,None
+70107,14,2024-08-11,purchase,48.48,8,Digital Wallet,None
+70187,2,2024-08-11,purchase,110.64,11,Card,Gold
+70399,101,2024-08-11,purchase,97.03,12,Cash,None
+70052,144,2024-08-12,purchase,176.88,11,Card,Platinum
+70215,3,2024-08-12,purchase,66.8,3,Digital Wallet,Silver
+70077,2,2024-08-13,purchase,114.63,4,Card,Gold
+70355,35,2024-08-13,purchase,100.58,9,Digital Wallet,Silver
+70381,44,2024-08-13,purchase,130.6,8,Card,Gold
+70537,33,2024-08-13,purchase,101.22,8,Card,None
+70430,1,2024-08-14,purchase,77.15,12,Cash,Silver
+70594,13,2024-08-15,purchase,105.48,9,Cash,Silver
+70112,24,2024-08-16,purchase,35.94,9,Card,Gold
+70661,1,2024-08-17,refund,-22.15,3,Cash,Silver
+70735,8,2024-08-17,purchase,60.77,11,Digital Wallet,Platinum
+70799,124,2024-08-17,purchase,70.7,12,Card,Silver
+70389,18,2024-08-18,refund,-112.02,1,Digital Wallet,Gold
+70442,51,2024-08-18,refund,-74.18,2,Digital Wallet,Silver
+70123,44,2024-08-20,purchase,48.74,6,Cash,Gold
+70386,38,2024-08-20,purchase,84.66,12,Cash,Gold
+70610,71,2024-08-20,purchase,50.02,7,Card,None
+70103,58,2024-08-22,purchase,80.73,5,Cash,Platinum
+70171,28,2024-08-24,purchase,81.17,9,Cash,None
+70580,53,2024-08-24,purchase,102.24,1,Cash,Silver
+70964,33,2024-08-24,purchase,66.82,7,Cash,None
+70161,79,2024-08-25,purchase,38.24,11,Card,Silver
+70240,146,2024-08-25,purchase,65.07,4,Card,None
+70686,136,2024-08-25,purchase,98.76,4,Card,Silver
+70305,42,2024-08-26,purchase,66.55,2,Digital Wallet,None
+70469,74,2024-08-26,purchase,113.02,3,Card,Gold
+70842,36,2024-08-26,purchase,63.35,1,Card,Platinum
+70994,1,2024-08-27,refund,-24.92,7,Card,Silver
+70104,10,2024-08-28,purchase,98.21,6,Card,Silver
+70180,76,2024-08-28,purchase,124.91,1,Card,Gold
+70588,26,2024-08-30,purchase,100.32,5,Card,Silver
+70844,60,2024-08-30,purchase,30.41,5,Card,None
+70117,94,2024-09-01,purchase,44.42,10,Card,Gold
+70260,75,2024-09-01,purchase,87.47,4,Cash,None
+70677,1,2024-09-02,purchase,27,9,Card,Silver
+70907,72,2024-09-02,purchase,90.54,12,Card,Gold
+70149,8,2024-09-03,purchase,164.06,4,Card,Platinum
+70239,11,2024-09-03,purchase,24.2,5,Card,None
+70011,117,2024-09-04,purchase,57.6,3,Card,Platinum
+70004,102,2024-09-05,purchase,69.11,10,Cash,None
+70176,142,2024-09-05,refund,-70.57,10,Digital Wallet,None
+70556,109,2024-09-06,purchase,96.81,1,Card,Silver
+70707,66,2024-09-06,purchase,19.5,4,Cash,Silver
+70966,13,2024-09-06,purchase,83,4,Cash,Silver
+70841,2,2024-09-07,purchase,122.55,8,Card,Gold
+70249,86,2024-09-08,purchase,105.18,4,Cash,Silver
+70172,69,2024-09-10,purchase,72.24,7,Cash,None
+70385,4,2024-09-10,purchase,18.59,5,Card,None
+70428,26,2024-09-10,purchase,52.55,10,Digital Wallet,Silver
+70736,2,2024-09-10,purchase,88.09,11,Card,Gold
+70152,1,2024-09-11,purchase,41.5,12,Card,Silver
+70196,1,2024-09-12,purchase,46.18,11,Card,Silver
+70297,44,2024-09-12,purchase,80.66,5,Card,Gold
+70217,146,2024-09-13,purchase,80.44,3,Card,None
+70163,76,2024-09-14,purchase,106.55,5,Card,Gold
+70876,24,2024-09-14,purchase,57.65,7,Card,Gold
+70256,60,2024-09-15,purchase,86.57,7,Card,None
+70006,29,2024-09-16,purchase,22.58,9,Card,None
+70346,12,2024-09-16,purchase,77.44,8,Cash,Silver
+70798,94,2024-09-17,purchase,116.48,3,Digital Wallet,Gold
+70997,13,2024-09-18,purchase,103.56,11,Card,Silver
+70125,26,2024-09-19,purchase,71.89,5,Cash,Silver
+70182,76,2024-09-19,purchase,122.42,5,Card,Gold
+70203,81,2024-09-19,purchase,83.97,4,Cash,Silver
+70259,15,2024-09-19,purchase,76.76,8,Card,Silver
+70164,29,2024-09-20,purchase,16.99,9,Card,None
+70179,32,2024-09-20,purchase,40.18,8,Digital Wallet,None
+70225,49,2024-09-20,purchase,85.12,7,Cash,Gold
+70476,80,2024-09-21,purchase,84.36,4,Card,Silver
+70833,21,2024-09-21,purchase,127.61,5,Card,Gold
+70809,48,2024-09-23,purchase,77.23,6,Card,None
+70121,28,2024-09-24,purchase,101.85,5,Card,None
+70174,20,2024-09-24,purchase,22.35,8,Digital Wallet,None
+70197,16,2024-09-24,purchase,27.76,9,Card,None
+70827,53,2024-09-24,purchase,16.44,9,Card,Silver
+70935,102,2024-09-24,purchase,83.15,1,Cash,None
+70156,127,2024-09-25,purchase,99.45,12,Card,None
+70493,32,2024-09-25,purchase,48.08,11,Card,None
+70616,57,2024-09-25,purchase,82.08,11,Card,Silver
+70759,35,2024-09-26,purchase,82.7,7,Card,Silver
+70658,10,2024-09-28,purchase,107.78,7,Digital Wallet,Silver
+70705,21,2024-09-28,purchase,140.63,2,Digital Wallet,Gold
+70962,5,2024-09-28,purchase,69.44,12,Card,None
+70504,126,2024-09-29,purchase,77.51,8,Card,None
+70043,21,2024-09-30,purchase,150.15,7,Digital Wallet,Gold
+70402,13,2024-10-01,purchase,57.36,5,Digital Wallet,Silver
+70953,1,2024-10-01,purchase,103.52,7,Card,Silver
+70894,145,2024-10-02,purchase,72.43,9,Digital Wallet,None
+70042,37,2024-10-03,purchase,32.4,12,Cash,Gold
+70248,34,2024-10-03,purchase,93.24,4,Digital Wallet,Silver
+70963,79,2024-10-03,purchase,52.88,7,Card,Silver
+70126,21,2024-10-04,purchase,34.3,3,Cash,Gold
+70357,10,2024-10-04,purchase,64.11,9,Card,Silver
+70095,148,2024-10-05,purchase,59.52,6,Cash,Platinum
+70151,8,2024-10-05,purchase,183.85,5,Card,Platinum
+70236,24,2024-10-06,purchase,106.88,11,Digital Wallet,Gold
+70082,66,2024-10-07,purchase,67.5,12,Cash,Silver
+70415,23,2024-10-08,purchase,27.25,8,Cash,Gold
+70468,109,2024-10-08,purchase,17.67,2,Digital Wallet,Silver
+70782,25,2024-10-08,purchase,194.75,10,Card,Platinum
+70466,117,2024-10-09,refund,-143.39,8,Card,Platinum
+70830,19,2024-10-09,purchase,65.54,1,Cash,Gold
+70487,7,2024-10-10,purchase,46.54,12,Card,None
+70877,131,2024-10-10,purchase,38,12,Card,Silver
+70914,11,2024-10-10,purchase,12.96,4,Card,None
+70094,20,2024-10-11,purchase,18.54,5,Cash,None
+70423,33,2024-10-11,purchase,41.47,3,Card,None
+70644,141,2024-10-11,purchase,98.01,4,Cash,Silver
+70655,115,2024-10-11,purchase,36.11,5,Digital Wallet,Silver
+70498,1,2024-10-12,purchase,14.91,3,Card,Silver
+70349,113,2024-10-13,purchase,42.47,12,Cash,Platinum
+70444,64,2024-10-13,purchase,58.13,10,Card,Gold
+70725,125,2024-10-13,purchase,13.64,2,Card,None
+70014,98,2024-10-14,purchase,80.07,1,Card,None
+70324,48,2024-10-14,purchase,87.3,2,Card,None
+70465,44,2024-10-14,purchase,93.15,8,Card,Gold
+70662,4,2024-10-14,purchase,53.96,3,Cash,None
+70785,14,2024-10-14,purchase,98.84,3,Card,None
+70057,132,2024-10-15,purchase,89.53,7,Card,Silver
+70670,50,2024-10-15,purchase,106.12,11,Card,Platinum
+70879,149,2024-10-15,purchase,37.01,12,Digital Wallet,None
+70645,89,2024-10-16,purchase,90.53,3,Card,None
+70717,141,2024-10-16,purchase,71.59,9,Card,Silver
+70049,1,2024-10-17,purchase,96.31,5,Digital Wallet,Silver
+70932,53,2024-10-17,purchase,84.08,9,Card,Silver
+70621,118,2024-10-19,purchase,23.18,5,Digital Wallet,Silver
+70204,135,2024-10-21,purchase,69.61,3,Card,Gold
+70280,5,2024-10-21,purchase,37.43,3,Cash,None
+70304,30,2024-10-21,purchase,99.62,12,Digital Wallet,None
+70367,4,2024-10-21,purchase,27.08,12,Card,None
+70586,48,2024-10-21,purchase,63.94,10,Card,None
+70885,130,2024-10-22,purchase,36.08,2,Card,None
+70336,74,2024-10-23,purchase,149.95,5,Card,Gold
+70795,12,2024-10-24,purchase,94.77,11,Digital Wallet,Silver
+70920,63,2024-10-24,purchase,82.37,4,Card,Gold
+70806,86,2024-10-25,purchase,47.21,9,Card,Silver
+70279,52,2024-10-26,purchase,21.02,5,Card,Gold
+70836,72,2024-10-27,purchase,149.21,3,Card,Gold
+70058,1,2024-10-28,purchase,26.76,4,Cash,Silver
+70264,21,2024-10-29,purchase,18.86,3,Card,Gold
+70777,30,2024-10-29,purchase,12.62,8,Cash,None
+70223,25,2024-10-30,purchase,78.87,3,Card,Platinum
+70622,4,2024-10-30,purchase,41.14,1,Card,None
+70331,113,2024-11-03,purchase,106.27,12,Card,Platinum
+70353,87,2024-11-03,purchase,76.79,6,Digital Wallet,Silver
+70560,2,2024-11-03,purchase,89.96,8,Cash,Gold
+70775,1,2024-11-05,purchase,85.5,7,Card,Silver
+70195,28,2024-11-06,purchase,89.3,11,Card,None
+70995,21,2024-11-07,purchase,122.43,9,Digital Wallet,Gold
+70237,39,2024-11-09,purchase,114.68,3,Digital Wallet,Gold
+70081,39,2024-11-10,purchase,23.26,6,Digital Wallet,Gold
+70222,38,2024-11-10,purchase,104.35,6,Cash,Gold
+70251,114,2024-11-10,purchase,48.94,7,Digital Wallet,Silver
+70306,97,2024-11-10,purchase,46.37,11,Cash,None
+70671,35,2024-11-10,purchase,79.49,4,Card,Silver
+70489,77,2024-11-11,purchase,97.15,9,Cash,Silver
+70570,32,2024-11-11,purchase,98.37,7,Card,None
+70506,11,2024-11-13,purchase,44.41,6,Card,None
+70954,20,2024-11-13,purchase,64.33,11,Card,None
+70972,14,2024-11-13,purchase,79.4,6,Card,None
+70981,3,2024-11-14,purchase,48.67,9,Cash,Silver
+70408,33,2024-11-15,purchase,28.65,6,Card,None
+70422,7,2024-11-15,refund,-71.04,1,Digital Wallet,None
+70470,1,2024-11-15,purchase,78.05,5,Card,Silver
+70574,6,2024-11-15,purchase,78.71,7,Card,None
+70773,104,2024-11-15,purchase,30.78,1,Cash,None
+70934,68,2024-11-15,purchase,73.69,12,Cash,Gold
+70064,91,2024-11-16,purchase,150.28,9,Digital Wallet,Gold
+70413,83,2024-11-16,purchase,78.37,4,Card,None
+70583,73,2024-11-16,refund,-99.18,6,Digital Wallet,None
+70293,8,2024-11-17,purchase,164.22,4,Card,Platinum
+70950,27,2024-11-17,purchase,49.36,8,Card,Silver
+70457,9,2024-11-18,purchase,102.85,12,Card,Gold
+70755,10,2024-11-18,refund,-100.77,7,Card,Silver
+70133,138,2024-11-19,refund,-31.3,8,Card,None
+70219,29,2024-11-20,purchase,12.06,7,Digital Wallet,None
+70555,105,2024-11-20,purchase,15.23,10,Cash,None
+70010,14,2024-11-22,purchase,73.65,8,Card,None
+70656,1,2024-11-23,purchase,14.57,9,Card,Silver
+70816,111,2024-11-23,purchase,57.54,7,Card,Silver
+70986,22,2024-11-24,purchase,115.4,8,Digital Wallet,Gold
+70718,88,2024-11-26,purchase,83.44,1,Card,Silver
+70988,89,2024-11-26,purchase,29.49,6,Digital Wallet,None
+70572,19,2024-11-27,purchase,145.34,6,Cash,Gold
+70463,28,2024-11-29,purchase,15.22,11,Card,None
+70486,109,2024-11-29,purchase,32.31,7,Card,Silver
+70863,44,2024-11-30,purchase,147.39,10,Cash,Gold
+70492,119,2024-12-01,purchase,34.51,1,Cash,None
+70666,80,2024-12-01,purchase,54.05,3,Card,Silver
+70955,28,2024-12-01,purchase,15.5,6,Digital Wallet,None
+70344,21,2024-12-02,purchase,86.85,8,Card,Gold
+70646,39,2024-12-03,purchase,37.4,9,Cash,Gold
+70243,18,2024-12-04,purchase,53.53,9,Card,Gold
+70642,29,2024-12-04,purchase,36.36,3,Cash,None
+70348,27,2024-12-05,purchase,109.82,6,Digital Wallet,Silver
+70380,25,2024-12-05,purchase,87,2,Card,Platinum
+70571,9,2024-12-05,purchase,42.43,4,Card,Gold
+70928,5,2024-12-06,purchase,18.79,4,Cash,None
+70205,130,2024-12-07,purchase,47.26,9,Digital Wallet,None
+70100,140,2024-12-08,purchase,83.36,10,Cash,None
+70956,31,2024-12-08,purchase,33.04,7,Card,Silver
+70060,140,2024-12-09,purchase,90.74,10,Card,None
+70154,133,2024-12-09,purchase,30.36,9,Card,None
+70892,116,2024-12-10,purchase,61.35,8,Card,None
+70106,9,2024-12-11,purchase,96.19,4,Card,Gold
+70667,57,2024-12-11,purchase,100.04,7,Card,Silver
+70266,32,2024-12-13,purchase,75.17,9,Card,None
+70771,4,2024-12-14,purchase,50.78,6,Card,None
+70957,10,2024-12-14,purchase,108.97,4,Digital Wallet,Silver
+70384,8,2024-12-15,purchase,183.42,11,Card,Platinum
+70749,45,2024-12-15,purchase,69.21,1,Card,None
+70794,8,2024-12-15,purchase,106.64,12,Card,Platinum
+70843,64,2024-12-15,purchase,56.62,8,Digital Wallet,Gold
+70017,2,2024-12-17,purchase,70.6,1,Card,Gold
+70071,150,2024-12-17,purchase,73.63,5,Digital Wallet,Silver
+70411,16,2024-12-17,purchase,25.62,4,Card,None
+70562,134,2024-12-18,purchase,96.24,3,Card,Gold
+70743,33,2024-12-20,purchase,54.19,8,Card,None
+70870,4,2024-12-20,purchase,81.88,3,Digital Wallet,None
+70949,22,2024-12-20,purchase,47.67,1,Card,Gold
+70137,31,2024-12-21,purchase,52.86,3,Card,Silver
+70587,140,2024-12-22,purchase,42.37,8,Card,None
+70653,1,2024-12-23,purchase,87.8,7,Cash,Silver
+70814,103,2024-12-23,purchase,51.1,9,Card,Silver
+70227,97,2024-12-24,purchase,41.01,4,Digital Wallet,None
+70308,99,2024-12-24,purchase,123.62,6,Digital Wallet,Gold
+70837,1,2024-12-24,purchase,20.5,4,Card,Silver
+70872,23,2024-12-24,purchase,124.39,12,Cash,Gold
+70067,105,2024-12-25,purchase,88.55,6,Cash,None
+70231,33,2024-12-25,purchase,60.73,10,Digital Wallet,None
+70255,19,2024-12-25,purchase,91.22,6,Card,Gold
+70597,32,2024-12-26,purchase,73.15,4,Digital Wallet,None
+70674,70,2024-12-26,refund,-105.51,5,Digital Wallet,Gold
+70041,1,2024-12-27,purchase,96.6,8,Card,Silver
+70526,8,2024-12-27,purchase,143.53,11,Cash,Platinum
+70530,49,2024-12-27,purchase,47.53,1,Cash,Gold
+70624,25,2024-12-27,purchase,113.38,8,Cash,Platinum
+70846,112,2024-12-27,purchase,60.79,6,Digital Wallet,None
+70922,21,2024-12-28,purchase,91.7,3,Digital Wallet,Gold
+70937,71,2024-12-28,purchase,25.58,1,Cash,None
+70943,1,2024-12-28,purchase,102.87,8,Cash,Silver
+70945,106,2024-12-28,purchase,25.96,4,Card,None
+70931,94,2024-12-29,purchase,22.22,2,Digital Wallet,Gold
+70136,8,2024-12-30,purchase,105.09,4,Card,Platinum
+70871,77,2025-01-01,purchase,72.07,11,Card,Silver
+70065,106,2025-01-02,purchase,33.62,4,Cash,None
+70531,48,2025-01-02,purchase,82.54,12,Card,None
+70975,39,2025-01-03,purchase,143.97,7,Card,Gold
+70144,8,2025-01-04,purchase,167.88,12,Card,Platinum
+70089,102,2025-01-05,purchase,43.04,12,Card,None
+70110,56,2025-01-05,purchase,199.01,9,Digital Wallet,Platinum
+70328,130,2025-01-05,purchase,52.29,5,Cash,None
+70443,29,2025-01-05,purchase,40.81,6,Digital Wallet,None
+70088,2,2025-01-07,purchase,143.76,6,Cash,Gold
+70434,133,2025-01-07,purchase,93.25,2,Card,None
+70672,29,2025-01-07,purchase,56.69,1,Card,None
+70406,45,2025-01-08,purchase,84.36,10,Cash,None
+70821,146,2025-01-08,purchase,38.87,10,Digital Wallet,None
+70687,104,2025-01-10,purchase,76.1,8,Digital Wallet,None
+70895,5,2025-01-10,purchase,12.81,12,Card,None
+70909,4,2025-01-10,purchase,40.02,1,Card,None
+70343,12,2025-01-11,purchase,89.42,3,Card,Silver
+70410,13,2025-01-12,purchase,42.56,12,Cash,Silver
+70739,32,2025-01-12,purchase,57.23,6,Cash,None
+70897,51,2025-01-12,purchase,77.52,4,Card,Silver
+70322,105,2025-01-13,refund,-41.94,10,Digital Wallet,None
+70614,15,2025-01-13,purchase,56.94,2,Card,Silver
+70768,14,2025-01-13,purchase,98.95,9,Digital Wallet,None
+70170,68,2025-01-14,purchase,32.13,8,Card,Gold
+70220,115,2025-01-14,purchase,104.93,11,Card,Silver
+70700,1,2025-01-15,purchase,107.06,1,Card,Silver
+70724,39,2025-01-15,purchase,55.42,6,Card,Gold
+70329,23,2025-01-17,purchase,129.49,4,Digital Wallet,Gold
+70116,35,2025-01-18,purchase,31.04,1,Card,Silver
+70300,142,2025-01-18,refund,-26.13,7,Cash,None
+70153,5,2025-01-20,purchase,76.34,9,Cash,None
+70503,27,2025-01-20,purchase,75.38,9,Card,Silver
+70512,64,2025-01-20,purchase,60.4,5,Digital Wallet,Gold
+70790,15,2025-01-20,purchase,74.66,10,Cash,Silver
+70991,1,2025-01-21,purchase,15.8,4,Card,Silver
+70918,109,2025-01-23,refund,-89.66,2,Digital Wallet,Silver
+70511,6,2025-01-24,purchase,36.39,12,Card,None
+70623,4,2025-01-24,purchase,57.46,12,Cash,None
+70648,6,2025-01-24,purchase,97.49,6,Card,None
+70631,117,2025-01-25,purchase,194.96,11,Digital Wallet,Platinum
+70417,1,2025-01-27,purchase,41.82,6,Cash,Silver
+70565,76,2025-01-27,purchase,22.29,2,Digital Wallet,Gold
+70996,4,2025-01-27,purchase,76.01,10,Card,None
+70664,73,2025-01-28,purchase,53.42,3,Card,None
+70318,94,2025-01-30,purchase,35.76,1,Card,Gold
+70857,55,2025-01-30,purchase,57.46,8,Digital Wallet,None
+70970,71,2025-01-30,purchase,83.62,11,Digital Wallet,None
+70226,141,2025-01-31,purchase,89.35,8,Card,Silver
+70023,96,2025-02-02,purchase,50.01,11,Cash,None
+70097,57,2025-02-03,purchase,98.15,7,Digital Wallet,Silver
+70659,1,2025-02-03,purchase,111.59,5,Digital Wallet,Silver
+70668,122,2025-02-03,purchase,120.44,7,Cash,Gold
+70313,145,2025-02-04,purchase,37.67,5,Card,None
+70426,78,2025-02-04,purchase,27.67,11,Card,Platinum
+70740,40,2025-02-04,purchase,85.13,10,Card,None
+70774,9,2025-02-04,purchase,103.53,6,Card,Gold
+70407,124,2025-02-05,purchase,56,2,Cash,Silver
+70709,25,2025-02-05,purchase,197.92,4,Card,Platinum
+70733,22,2025-02-05,purchase,121.56,10,Card,Gold
+70162,3,2025-02-06,purchase,62.33,6,Digital Wallet,Silver
+70189,68,2025-02-06,purchase,49.84,6,Card,Gold
+70441,3,2025-02-07,purchase,54.52,9,Cash,Silver
+70977,72,2025-02-07,purchase,70.28,10,Card,Gold
+70288,52,2025-02-08,purchase,83.47,10,Card,Gold
+70703,74,2025-02-08,purchase,37.8,9,Digital Wallet,Gold
+70750,97,2025-02-08,purchase,60.5,10,Card,None
+70181,32,2025-02-09,purchase,72.02,12,Digital Wallet,None
+70190,59,2025-02-09,purchase,19.3,2,Digital Wallet,Gold
+70829,117,2025-02-09,purchase,149.88,12,Digital Wallet,Platinum
+70001,27,2025-02-12,purchase,93.4,4,Card,Silver
+70159,4,2025-02-12,purchase,97.93,3,Card,None
+70654,31,2025-02-12,purchase,61.75,3,Card,Silver
+70912,55,2025-02-12,purchase,96.6,6,Digital Wallet,None
+70967,29,2025-02-13,purchase,25.12,5,Card,None
+70938,1,2025-02-14,purchase,54.2,11,Card,Silver
+70035,18,2025-02-16,purchase,99.8,10,Card,Gold
+70199,101,2025-02-16,purchase,85.79,12,Digital Wallet,None
+70689,140,2025-02-16,purchase,44.39,6,Digital Wallet,None
+70866,23,2025-02-19,purchase,86.92,10,Cash,Gold
+70522,13,2025-02-21,purchase,81.83,10,Card,Silver
+70704,10,2025-02-21,purchase,44.52,9,Card,Silver
+70033,5,2025-02-22,purchase,93.3,2,Cash,None
+70132,16,2025-02-22,purchase,93.13,8,Digital Wallet,None
+70984,52,2025-02-22,purchase,93.64,11,Card,Gold
+70029,14,2025-02-23,purchase,55.06,9,Card,None
+70034,57,2025-02-23,purchase,112.2,5,Digital Wallet,Silver
+70383,123,2025-02-23,refund,-117,4,Cash,Silver
+70420,22,2025-02-23,purchase,20.49,2,Digital Wallet,Gold
+70473,125,2025-02-23,purchase,90.94,7,Cash,None
+70120,18,2025-02-25,purchase,138.81,10,Card,Gold
+70184,1,2025-02-25,purchase,41.37,10,Card,Silver
+70652,121,2025-02-25,purchase,74.39,8,Digital Wallet,None
+70393,1,2025-02-28,purchase,41.41,10,Digital Wallet,Silver
+70633,23,2025-02-28,purchase,150.95,7,Cash,Gold
+70811,66,2025-02-28,purchase,102.01,6,Card,Silver
+70826,56,2025-02-28,purchase,127.27,12,Digital Wallet,Platinum
+70224,9,2025-03-01,purchase,53.32,9,Card,Gold
+70959,39,2025-03-01,purchase,144.32,2,Card,Gold
+70253,34,2025-03-04,purchase,54.44,5,Cash,Silver
+70693,76,2025-03-05,purchase,68.03,5,Cash,Gold
+70901,47,2025-03-05,purchase,74.69,10,Digital Wallet,None
+70124,9,2025-03-07,purchase,102.83,3,Digital Wallet,Gold
+70247,13,2025-03-07,purchase,18.02,1,Card,Silver
+70607,35,2025-03-07,purchase,22.23,4,Card,Silver
+70045,129,2025-03-08,purchase,21.79,5,Digital Wallet,None
+70961,85,2025-03-08,purchase,16.53,12,Card,Silver
+70449,125,2025-03-09,purchase,67.65,1,Digital Wallet,None
+70684,15,2025-03-09,purchase,26.02,11,Cash,Silver
+70834,35,2025-03-09,purchase,54.63,10,Card,Silver
+70084,117,2025-03-10,purchase,35.59,6,Digital Wallet,Platinum
+70311,1,2025-03-10,purchase,61.35,1,Card,Silver
+70371,21,2025-03-10,purchase,83.69,7,Card,Gold
+70808,1,2025-03-12,purchase,44.5,4,Cash,Silver
+70301,39,2025-03-13,purchase,121.34,2,Card,Gold
+70351,21,2025-03-13,purchase,121.17,7,Digital Wallet,Gold
+70283,73,2025-03-14,purchase,82.48,9,Digital Wallet,None
+70701,20,2025-03-14,purchase,89.85,7,Card,None
+70398,4,2025-03-17,purchase,88.23,3,Digital Wallet,None
+70800,1,2025-03-17,purchase,74.34,11,Cash,Silver
+70122,37,2025-03-18,purchase,86.56,5,Card,Gold
+70358,67,2025-03-19,purchase,70.93,11,Digital Wallet,None
+70992,121,2025-03-19,purchase,19.76,9,Card,None
+70298,45,2025-03-20,purchase,20.7,1,Cash,None
+70723,131,2025-03-20,purchase,57.04,3,Digital Wallet,Silver
+70062,58,2025-03-21,purchase,120.61,10,Digital Wallet,Platinum
+70382,10,2025-03-21,purchase,42.89,7,Card,Silver
+70576,5,2025-03-21,purchase,90.5,11,Card,None
+70818,21,2025-03-21,purchase,49.43,3,Card,Gold
+70985,6,2025-03-21,purchase,39.71,11,Digital Wallet,None
+70581,150,2025-03-22,purchase,46.57,1,Cash,Silver
+70828,86,2025-03-22,purchase,66.75,9,Card,Silver
+70284,4,2025-03-23,purchase,39.49,2,Card,None
+70447,50,2025-03-23,purchase,31.17,3,Digital Wallet,Platinum
+70093,145,2025-03-24,purchase,65.53,3,Digital Wallet,None
+70111,123,2025-03-24,purchase,104.45,9,Cash,Silver
+70906,77,2025-03-24,purchase,109.46,9,Digital Wallet,Silver
+70927,36,2025-03-24,purchase,156.03,8,Cash,Platinum
+70589,72,2025-03-26,purchase,49.23,11,Digital Wallet,Gold
+70002,44,2025-03-27,purchase,83.58,8,Digital Wallet,Gold
+70191,23,2025-03-28,purchase,83.08,11,Card,Gold
+70211,12,2025-03-29,purchase,58.28,12,Cash,Silver
+70142,5,2025-03-30,purchase,62.68,3,Card,None
+70762,47,2025-03-30,purchase,77.8,6,Digital Wallet,None
+70579,19,2025-03-31,purchase,31.1,10,Card,Gold
+70832,24,2025-03-31,purchase,78.8,5,Card,Gold
+70776,3,2025-04-01,purchase,116.48,9,Digital Wallet,Silver
+70796,13,2025-04-01,purchase,44.01,9,Card,Silver
+70516,55,2025-04-03,purchase,47.53,12,Card,None
+70861,104,2025-04-03,purchase,46.42,3,Cash,None
+70862,81,2025-04-03,purchase,96.52,8,Card,Silver
+70881,8,2025-04-03,purchase,94.16,1,Cash,Platinum
+70852,70,2025-04-04,refund,-35.67,1,Card,Gold
+70108,32,2025-04-05,purchase,94.15,1,Digital Wallet,None
+70185,120,2025-04-05,purchase,109.27,10,Card,Silver
+70566,91,2025-04-06,purchase,132.27,8,Card,Gold
+70864,7,2025-04-06,purchase,66.73,5,Card,None
+70429,17,2025-04-07,purchase,98.11,11,Card,Silver
+70778,37,2025-04-07,purchase,102.37,9,Card,Gold
+70971,1,2025-04-07,purchase,46.3,6,Digital Wallet,Silver
+70048,1,2025-04-08,purchase,52.84,7,Card,Silver
+70923,1,2025-04-09,purchase,99.18,11,Digital Wallet,Silver
+70366,63,2025-04-11,purchase,96.06,4,Digital Wallet,Gold
+70898,17,2025-04-11,refund,-32.72,5,Digital Wallet,Silver
+70165,121,2025-04-12,refund,-77.64,8,Digital Wallet,None
+70294,14,2025-04-13,purchase,45.79,1,Card,None
+70569,32,2025-04-13,purchase,79.77,1,Card,None
+70696,56,2025-04-13,purchase,82.42,2,Digital Wallet,Platinum
+70856,21,2025-04-13,purchase,53.76,4,Card,Gold
+70056,49,2025-04-14,purchase,45.04,3,Card,Gold
+70451,64,2025-04-14,purchase,71.73,1,Card,Gold
+70889,128,2025-04-14,purchase,19.49,8,Card,Silver
+70098,75,2025-04-17,refund,-101.1,5,Cash,None
+70452,45,2025-04-17,purchase,90.81,2,Cash,None
+70480,2,2025-04-17,purchase,58.9,10,Cash,Gold
+70698,115,2025-04-17,purchase,98.81,9,Digital Wallet,Silver
+70742,43,2025-04-17,purchase,23.77,3,Digital Wallet,None
+70514,21,2025-04-18,purchase,149.93,2,Card,Gold
+70561,124,2025-04-18,purchase,38.43,5,Cash,Silver
+70873,27,2025-04-18,refund,-81.95,6,Card,Silver
+70147,96,2025-04-19,purchase,52.89,6,Cash,None
+70392,86,2025-04-20,purchase,69.15,10,Card,Silver
+70596,50,2025-04-20,refund,-106.45,5,Digital Wallet,Platinum
+70543,96,2025-04-21,purchase,51.51,1,Card,None
+70245,1,2025-04-22,purchase,117.18,2,Card,Silver
+70359,15,2025-04-23,purchase,43.05,7,Cash,Silver
+70433,107,2025-04-23,refund,-22.01,9,Digital Wallet,None
+70822,96,2025-04-23,purchase,60.44,1,Digital Wallet,None
+70905,46,2025-04-23,refund,-99.74,3,Card,None
+70913,131,2025-04-23,purchase,73.96,5,Digital Wallet,Silver
+70396,3,2025-04-25,purchase,94.29,5,Digital Wallet,Silver
+70710,5,2025-04-26,purchase,87.63,1,Cash,None
+70167,90,2025-04-27,refund,-32.54,2,Card,Silver
+70271,2,2025-04-27,purchase,65.88,2,Cash,Gold
+70299,1,2025-04-27,purchase,81.45,12,Card,Silver
+70728,135,2025-04-27,purchase,84.76,9,Card,Gold
+70820,8,2025-04-27,purchase,32.58,6,Card,Platinum
+70054,37,2025-04-28,purchase,78.71,3,Digital Wallet,Gold
+70130,18,2025-04-28,purchase,150.42,2,Card,Gold
+70765,51,2025-04-28,purchase,105.68,2,Digital Wallet,Silver
+70458,12,2025-04-29,refund,-62.02,4,Cash,Silver
+70050,1,2025-04-30,purchase,79.59,4,Card,Silver
+70395,1,2025-04-30,purchase,98.68,11,Digital Wallet,Silver
+70716,105,2025-04-30,purchase,33.52,2,Card,None
+70139,79,2025-05-01,purchase,86.99,2,Cash,Silver
+70274,77,2025-05-01,purchase,111.75,10,Card,Silver
+70292,143,2025-05-01,purchase,125.87,8,Card,Gold
+70676,2,2025-05-01,purchase,78.43,9,Digital Wallet,Gold
+70086,81,2025-05-02,purchase,108.17,4,Cash,Silver
+70617,50,2025-05-02,purchase,176.98,3,Card,Platinum
+70268,119,2025-05-03,purchase,50.14,8,Cash,None
+70756,70,2025-05-03,purchase,78.07,6,Card,Gold
+70886,4,2025-05-03,purchase,98.19,7,Cash,None
+70508,29,2025-05-04,purchase,21.6,5,Digital Wallet,None
+70618,80,2025-05-04,purchase,63.54,2,Card,Silver
+70509,46,2025-05-08,refund,-43.04,10,Digital Wallet,None
+70732,2,2025-05-08,purchase,57.56,5,Card,Gold
+70412,18,2025-05-09,purchase,127.56,7,Card,Gold
+70549,16,2025-05-09,purchase,89.8,1,Card,None
+70267,3,2025-05-10,purchase,109.34,12,Digital Wallet,Silver
+70285,19,2025-05-10,refund,-81.6,1,Digital Wallet,Gold
+70952,3,2025-05-10,purchase,63.07,5,Card,Silver
+70145,113,2025-05-12,purchase,83.42,5,Card,Platinum
+70246,76,2025-05-13,purchase,144.61,10,Card,Gold
+70874,1,2025-05-13,purchase,20.23,5,Card,Silver
+70013,50,2025-05-14,purchase,194.08,5,Cash,Platinum
+70590,7,2025-05-14,purchase,32.22,7,Card,None
+70788,65,2025-05-14,purchase,31.1,7,Card,Gold
+70534,133,2025-05-15,purchase,16.59,2,Card,None
+70751,112,2025-05-15,purchase,57.23,12,Cash,None
+70234,35,2025-05-16,purchase,110.25,1,Card,Silver
+70450,12,2025-05-16,purchase,64.53,11,Cash,Silver
+70455,1,2025-05-16,purchase,72.55,2,Card,Silver
+70891,9,2025-05-16,purchase,147.32,5,Digital Wallet,Gold
+70369,54,2025-05-18,purchase,63.81,12,Card,None
+70746,149,2025-05-18,purchase,89.68,4,Card,None
+70312,84,2025-05-19,purchase,96.41,8,Card,Silver
+70789,112,2025-05-19,purchase,76.25,10,Digital Wallet,None
+70263,11,2025-05-20,purchase,69.37,12,Cash,None
+70527,7,2025-05-20,purchase,99.91,10,Digital Wallet,None
+70758,101,2025-05-20,purchase,39.14,3,Card,None
+70840,78,2025-05-20,purchase,109.81,12,Card,Platinum
+70925,1,2025-05-20,purchase,113.19,12,Digital Wallet,Silver
+70598,22,2025-05-21,purchase,79.44,3,Cash,Gold
+70634,95,2025-05-21,purchase,42.7,10,Cash,Silver
+70101,142,2025-05-23,purchase,64.45,7,Card,None
+70230,88,2025-05-23,purchase,121.16,7,Card,Silver
+70459,112,2025-05-23,purchase,93.54,10,Card,None
+70495,121,2025-05-23,purchase,73.51,4,Card,None
+70823,38,2025-05-23,purchase,63.21,10,Card,Gold
+70831,120,2025-05-23,purchase,35.5,11,Card,Silver
+70091,1,2025-05-24,purchase,76.35,5,Card,Silver
+70781,73,2025-05-24,purchase,20.96,5,Card,None
+70875,63,2025-05-24,purchase,106.6,3,Card,Gold
+70024,26,2025-05-25,refund,-34.24,5,Cash,Silver
+70083,8,2025-05-25,purchase,38.34,4,Cash,Platinum
+70290,3,2025-05-26,purchase,76.81,5,Card,Silver
+70772,45,2025-05-26,purchase,49.72,12,Cash,None
+70233,123,2025-05-28,purchase,109.47,1,Digital Wallet,Silver
+70599,3,2025-05-28,purchase,32.09,8,Digital Wallet,Silver
+70908,122,2025-05-29,purchase,69.99,5,Cash,Gold
+70793,49,2025-05-30,purchase,44.5,9,Card,Gold
+70917,32,2025-05-30,purchase,62.21,5,Card,None
+70277,3,2025-05-31,refund,-25.73,10,Cash,Silver
+70942,86,2025-05-31,purchase,116.63,4,Card,Silver
+70611,12,2025-06-01,purchase,79.33,9,Digital Wallet,Silver
+70727,99,2025-06-01,purchase,117.35,11,Cash,Gold
+70838,35,2025-06-01,purchase,93.65,3,Card,Silver
+70207,58,2025-06-02,purchase,175.68,1,Cash,Platinum
+70150,131,2025-06-03,purchase,47.77,8,Card,Silver
+70464,10,2025-06-03,purchase,41.21,5,Cash,Silver
+70911,3,2025-06-03,refund,-72.59,9,Cash,Silver
+70612,79,2025-06-04,purchase,80.74,1,Card,Silver
+70660,108,2025-06-04,purchase,17.04,1,Card,Silver
+70663,25,2025-06-06,purchase,75.21,3,Card,Platinum
+70803,1,2025-06-06,purchase,32.23,2,Card,Silver
+70540,97,2025-06-07,purchase,54.08,2,Digital Wallet,None
+70763,44,2025-06-07,purchase,36.13,8,Card,Gold
+70849,88,2025-06-07,purchase,33.56,10,Card,Silver
+70978,103,2025-06-07,purchase,83.95,2,Card,Silver
+70338,4,2025-06-08,purchase,55.32,3,Digital Wallet,None
+70437,19,2025-06-08,purchase,29.41,3,Card,Gold
+70643,50,2025-06-08,purchase,137.76,6,Cash,Platinum
+70744,55,2025-06-08,purchase,52.24,4,Digital Wallet,None
+70363,123,2025-06-09,purchase,103.68,10,Cash,Silver
+70595,2,2025-06-09,purchase,31.74,11,Digital Wallet,Gold
+70752,6,2025-06-09,purchase,50.11,3,Card,None
+70262,14,2025-06-10,purchase,49.15,10,Digital Wallet,None
+70550,139,2025-06-11,purchase,86.76,12,Digital Wallet,None
+70688,45,2025-06-11,purchase,76.05,4,Card,None
+70020,80,2025-06-13,purchase,90.16,1,Digital Wallet,Silver
+70619,120,2025-06-13,purchase,25.44,2,Card,Silver
+70737,83,2025-06-13,refund,-74.99,3,Digital Wallet,None
+70432,127,2025-06-14,purchase,61.78,12,Cash,None
+70254,68,2025-06-15,purchase,37.31,6,Cash,Gold
+70146,26,2025-06-16,purchase,86.68,9,Card,Silver
+70824,1,2025-06-16,purchase,39.8,6,Card,Silver
+70119,9,2025-06-17,purchase,22.69,6,Cash,Gold
+70265,65,2025-06-17,purchase,104.6,5,Digital Wallet,Gold
+70374,125,2025-06-17,refund,-59.08,10,Cash,None
+70734,5,2025-06-18,purchase,85.14,2,Card,None
+70939,25,2025-06-18,purchase,120.73,3,Card,Platinum
+70494,20,2025-06-19,purchase,39.47,11,Card,None
+70568,38,2025-06-20,purchase,65.12,1,Card,Gold
+70678,79,2025-06-20,purchase,52.75,1,Digital Wallet,Silver
+70250,98,2025-06-21,purchase,55.02,9,Card,None
+70848,142,2025-06-22,refund,-96.1,5,Card,None
+70499,5,2025-06-23,purchase,63.82,8,Card,None
+70525,13,2025-06-23,purchase,49.55,12,Card,Silver
+70532,4,2025-06-23,purchase,23.2,6,Cash,None
+70138,11,2025-06-24,purchase,68.15,10,Card,None
+70291,55,2025-06-25,purchase,17.52,10,Digital Wallet,None
+70160,88,2025-06-26,refund,-19.95,10,Digital Wallet,Silver
+70287,42,2025-06-26,purchase,51.23,3,Cash,None
+70483,82,2025-06-26,purchase,86.5,2,Digital Wallet,None
+70839,70,2025-06-26,purchase,109.33,7,Card,Gold
+70947,17,2025-06-27,purchase,57.03,12,Cash,Silver
+70951,127,2025-06-27,purchase,89.76,5,Cash,None
+70175,48,2025-06-28,purchase,85.3,2,Cash,None
+70722,47,2025-06-28,purchase,99,10,Digital Wallet,None
+70079,2,2025-06-29,purchase,149.54,6,Card,Gold
+70296,21,2025-06-29,purchase,40.51,12,Card,Gold
+70479,75,2025-06-29,purchase,80.57,4,Card,None

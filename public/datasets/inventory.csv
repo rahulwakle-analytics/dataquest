@@ -1,0 +1,41 @@
+product_id,product_name,category,supplier,unit_cost,stock_on_hand,reorder_point,avg_daily_sales,lead_time_days,last_restock_date
+101,Wireless Mouse,Electronics,Linden & Co,11,3,6,0.16,14,2025-04-24
+102,Mechanical Keyboard,Electronics,Harbour Trading,41,2,4,0.17,5,2025-04-17
+103,USB-C Hub,Electronics,Kestrel Wholesale,17,21,6,0.11,21,2025-06-01
+104,Webcam HD,Electronics,Linden & Co,28,249,6,0.22,10,2025-04-30
+105,Noise-Cancelling Headset,Electronics,Linden & Co,70,3,6,0.15,14,2025-03-08
+106,Portable SSD 1TB,Electronics,Northfield Supply,61,13,2,0,5,2025-06-08
+107,Monitor 24in,Electronics,Harbour Trading,96,7,4,0.18,5,2025-04-17
+108,Laptop Stand,Electronics,Kestrel Wholesale,13,9,4,0.16,7,2025-05-05
+109,Bluetooth Speaker,Electronics,Harbour Trading,22,353,4,0.13,7,2025-05-25
+110,Smart Plug,Electronics,Kestrel Wholesale,8,4,5,0.19,10,2025-03-25
+111,Office Chair,Furniture,Linden & Co,105,13,4,0.13,10,2025-06-04
+112,Standing Desk,Furniture,Harbour Trading,210,9,4,0.12,7,2025-05-20
+113,Bookshelf,Furniture,Linden & Co,48,7,4,0.13,7,2025-04-08
+114,Filing Cabinet,Furniture,Kestrel Wholesale,66,6,3,0.12,5,2025-04-14
+115,Desk Lamp,Furniture,Atlas Distribution,12,205,4,0.12,7,2025-05-26
+116,Monitor Arm,Furniture,Linden & Co,30,200,4,0.12,10,2025-05-17
+117,Footrest,Furniture,Linden & Co,11,252,5,0.16,10,2025-04-13
+118,Whiteboard,Furniture,Harbour Trading,26,13,9,0.22,21,2025-05-31
+119,Notebook A5,Office Supplies,Northfield Supply,1.6,0,2,0,7,2025-05-05
+120,Gel Pens 10pk,Office Supplies,Harbour Trading,2.4,390,7,0.15,21,2025-04-15
+121,Printer Paper 500,Office Supplies,Northfield Supply,3.1,24,4,0.15,5,2025-04-11
+122,Sticky Notes,Office Supplies,Atlas Distribution,1,371,8,0.19,21,2025-06-12
+123,Stapler,Office Supplies,Atlas Distribution,4.2,16,5,0.14,14,2025-05-06
+124,Desk Organiser,Office Supplies,Linden & Co,6,157,5,0.13,14,2025-05-24
+125,Label Maker,Office Supplies,Harbour Trading,17,19,4,0.11,7,2025-05-10
+126,Highlighters 6pk,Office Supplies,Linden & Co,1.7,19,4,0.1,7,2025-03-11
+127,Ring Binder,Office Supplies,Kestrel Wholesale,1.5,3,5,0.1,14,2025-06-05
+128,Whiteboard Markers,Office Supplies,Northfield Supply,2.9,0,6,0.17,14,2025-04-28
+129,Coffee Machine,Kitchen,Atlas Distribution,47,197,6,0.12,21,2025-04-20
+130,Electric Kettle,Kitchen,Northfield Supply,13,8,7,0.21,14,2025-05-19
+131,Water Bottle,Kitchen,Northfield Supply,4.1,20,5,0.09,21,2025-05-11
+132,Lunch Box,Kitchen,Northfield Supply,6.2,13,2,0,21,2025-03-06
+133,Mug Set,Kitchen,Atlas Distribution,7.8,18,5,0.15,10,2025-06-08
+134,Mini Fridge,Kitchen,Atlas Distribution,92,355,5,0.16,10,2025-05-04
+135,Laptop Backpack,Accessories,Linden & Co,21,5,4,0.2,5,2025-03-31
+136,Phone Stand,Accessories,Linden & Co,3.5,26,6,0.15,14,2025-05-25
+137,Cable Organiser,Accessories,Kestrel Wholesale,2.6,2,7,0.13,21,2025-06-18
+138,Screen Cleaner Kit,Accessories,Harbour Trading,2.9,20,8,0.18,21,2025-05-13
+139,Laptop Sleeve,Accessories,Northfield Supply,9,347,5,0.11,14,2025-04-11
+140,Travel Adapter,Accessories,Harbour Trading,6.5,28,5,0.27,5,2025-06-08
