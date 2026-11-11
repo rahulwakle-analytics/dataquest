@@ -8,9 +8,17 @@ import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import { Progress } from "@/components/ui/progress";
 import type { RoadmapStage } from "@/content/career";
+import { projects } from "@/content/projects";
 import { useChecklist } from "@/lib/checklist";
 import { isComplete, useProgress } from "@/lib/progress";
 import { cn } from "@/lib/utils";
+
+const projectSlugFromHref = (href?: string) => href?.split("#")[1] ?? "";
+/** A project counts as done only once every one of its real, verifiable tasks is ticked on its own page — never from a click here. */
+const isProjectDone = (slug: string, ticks: Record<string, true>) => {
+  const p = projects.find((x) => x.slug === slug);
+  return Boolean(p) && p!.tasks.every((_, i) => ticks[`project-${slug}-task-${i}`]);
+};
 
 export type StageData = RoadmapStage & {
   /** Written lessons of the linked learning path. */
@@ -28,7 +36,9 @@ export function RoadmapView({ stages }: { stages: StageData[] }) {
     const total = s.lessons ? s.lessons.length : (s.items?.length ?? 0);
     const done = s.lessons
       ? s.lessons.filter((l) => isComplete(progress, l.id)).length
-      : (s.items ?? []).filter((_, i) => ticks[`roadmap:${s.id}:${i}`]).length;
+      : s.id === "projects"
+        ? (s.items ?? []).filter((item) => isProjectDone(projectSlugFromHref(item.href), ticks)).length
+        : (s.items ?? []).filter((_, i) => ticks[`roadmap:${s.id}:${i}`]).length;
     return { total, done, complete: total > 0 && done === total };
   });
   const completeCount = status.filter((s) => s.complete).length;
@@ -45,7 +55,8 @@ export function RoadmapView({ stages }: { stages: StageData[] }) {
         </div>
         <Progress value={(completeCount / stages.length) * 100} label="Roadmap progress" />
         <p className="mt-3 text-xs text-muted">
-          Tool stages complete when you pass the knowledge checks in their lessons. Other stages use tick lists you mark yourself. Everything is saved in this browser.
+          Tool stages complete when you pass the knowledge checks in their lessons. The projects stage completes from the tasks you tick on each project's own page. Remaining stages use tick lists you mark
+          yourself. Everything is saved in this browser.
         </p>
       </div>
 
@@ -147,6 +158,33 @@ export function RoadmapView({ stages }: { stages: StageData[] }) {
                           <p className="mt-2 text-xs text-muted">
                             Tracked automatically from the {s.pathName} lessons.
                             {s.planned ? ` ${s.planned} more ${s.pathName} topics are planned and not yet written.` : ""}
+                          </p>
+                        </>
+                      ) : s.id === "projects" ? (
+                        <>
+                          <ul className="mt-3 grid gap-2 sm:grid-cols-2">
+                            {(s.items ?? []).map((item) => {
+                              const slug = projectSlugFromHref(item.href);
+                              const p = projects.find((x) => x.slug === slug);
+                              const done = isProjectDone(slug, ticks);
+                              const doneCount = p?.tasks.filter((_, i) => ticks[`project-${slug}-task-${i}`]).length ?? 0;
+                              return (
+                                <li key={item.href}>
+                                  <Link href={item.href ?? "/projects"} className="flex items-center gap-3 rounded-lg border border-border px-3 py-2.5 text-sm transition-colors hover:border-primary/50 hover:bg-surface">
+                                    {done ? <CheckCircle2 className="size-4 shrink-0 text-success" aria-label="Complete" /> : <Circle className="size-4 shrink-0 text-muted" aria-label="Not complete" />}
+                                    <span className="flex-1">{item.label}</span>
+                                    {p && (
+                                      <span className="text-xs tabular-nums text-muted">
+                                        {doneCount}/{p.tasks.length}
+                                      </span>
+                                    )}
+                                  </Link>
+                                </li>
+                              );
+                            })}
+                          </ul>
+                          <p className="mt-2 text-xs text-muted">
+                            Tracked automatically from the tasks you tick off on each project's own page — not from clicking here.
                           </p>
                         </>
                       ) : (
