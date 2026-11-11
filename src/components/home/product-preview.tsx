@@ -74,7 +74,7 @@ ORDER BY revenue DESC;`,
 function Sql({ code }: { code: string }) {
   const cls = { kw: "text-primary font-medium", str: "text-success", num: "text-warning", com: "text-muted", fn: "text-violet", plain: "" };
   return (
-    <pre className="overflow-x-auto font-mono text-[13px] leading-relaxed">
+    <pre tabIndex={0} className="overflow-x-auto font-mono text-[13px] leading-relaxed">
       <code>
         {highlight(code, "sql").map((t, i) => (
           <span key={i} className={cls[t.kind]}>
@@ -89,7 +89,7 @@ function Sql({ code }: { code: string }) {
 function ResultTable({ rows }: { rows: Row[] }) {
   const cols = Object.keys(rows[0] ?? {});
   return (
-    <div className="overflow-x-auto rounded-lg border border-border">
+    <div tabIndex={0} role="region" aria-label="Table" className="overflow-x-auto rounded-lg border border-border focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary">
       <table className="w-full text-left font-mono text-[13px]">
         <thead className="bg-surface text-muted">
           <tr>

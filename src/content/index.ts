@@ -1,10 +1,11 @@
 import { tools } from "./paths";
 import { sqlCore } from "./lessons/sql-core";
 import { sqlAdvanced } from "./lessons/sql-advanced";
+import { excel } from "./lessons/excel";
 import { starters } from "./lessons/starters";
 import type { Lesson, Level, Tool, TopicRef } from "./types";
 
-export const lessons: Record<string, Lesson> = { ...sqlCore, ...sqlAdvanced, ...starters };
+export const lessons: Record<string, Lesson> = { ...sqlCore, ...sqlAdvanced, ...starters, ...excel };
 
 export const topicId = (tool: string, topic: string) => `${tool}/${topic}`;
 
@@ -36,7 +37,7 @@ export const featuredChallenges = [
   { id: "sql/case-when", index: 1 },
   { id: "sql/window-functions", index: 1 },
   { id: "sql/ranking", index: 0 },
-  { id: "excel/formulas-and-cell-references", index: 1 },
+  { id: "excel/formulas-and-cell-references", index: 4 },
 ].map(({ id, index }) => {
   const [toolSlug, topicSlug] = id.split("/");
   const tool = getTool(toolSlug)!;

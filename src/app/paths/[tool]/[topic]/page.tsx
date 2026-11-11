@@ -6,9 +6,13 @@ import { CodeBlock } from "@/components/learn/code-block";
 import { KnowledgeCheck } from "@/components/learn/knowledge-check";
 import { PracticeQuestion } from "@/components/learn/practice-question";
 import { TopicStatus } from "@/components/learn/topic-status";
+import { SheetExercise } from "@/components/practice/sheet-exercise";
+import { SheetPlayground } from "@/components/practice/sheet-playground";
+import { TableExercise } from "@/components/practice/table-exercise";
 import { Badge, difficultyVariant } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import { flatTopics, getTool, lessons, tools } from "@/content";
+import { FUNCTIONS } from "@/lib/sheet/engine";
 
 type Props = { params: Promise<{ tool: string; topic: string }> };
 
@@ -133,6 +137,8 @@ export default async function TopicPage({ params }: Props) {
     );
   }
 
+  const interactive = lesson.practice.some((q) => q.kind === "formula" || q.kind === "table");
+
   const jsonLd = {
     "@context": "https://schema.org",
     "@type": "LearningResource",
@@ -186,6 +192,15 @@ export default async function TopicPage({ params }: Props) {
               </div>
             </section>
 
+            {lesson.playground && (
+              <section aria-labelledby="try-it">
+                <H2 id="try-it">Try it</H2>
+                <div className="mt-4">
+                  <SheetPlayground playground={lesson.playground} />
+                </div>
+              </section>
+            )}
+
             <section aria-labelledby="scenario">
               <H2 id="scenario">Business scenario</H2>
               <div className="mt-4 rounded-2xl border border-primary/30 bg-primary/5 p-6">
@@ -215,11 +230,27 @@ export default async function TopicPage({ params }: Props) {
 
             <section aria-labelledby="practice">
               <H2 id="practice">Practice questions</H2>
-              <p className="mt-2 text-muted">Try each one before you open the hint or the solution.</p>
+              <p className="mt-2 text-muted">
+                {interactive
+                  ? "Your answers are calculated and checked against test cases. Hints come one at a time, and the solution stays hidden until you ask for it."
+                  : "Try each one before you open a hint or the solution."}
+              </p>
+              {lesson.practice.some((q) => q.kind === "formula") && (
+                <p className="mt-2 text-xs text-muted">
+                  Formulas run on DataQuest's own calculation engine, which supports a subset of Excel ({FUNCTIONS.length} functions, A1 and
+                  structured references). It does not open Excel workbooks.
+                </p>
+              )}
               <div className="mt-4 space-y-4">
-                {lesson.practice.map((q, i) => (
-                  <PracticeQuestion key={q.title} index={i} lang={tool.lang} question={q} />
-                ))}
+                {lesson.practice.map((q, i) =>
+                  q.kind === "formula" ? (
+                    <SheetExercise key={q.title} topicId={topic.id} index={i} question={q} />
+                  ) : q.kind === "table" ? (
+                    <TableExercise key={q.title} topicId={topic.id} index={i} question={q} />
+                  ) : (
+                    <PracticeQuestion key={q.title} index={i} lang={tool.lang} question={q} />
+                  ),
+                )}
               </div>
             </section>
 

@@ -20,5 +20,6 @@ export const site = {
     { label: "Learning Paths", href: "/paths" },
     { label: "Projects", href: "/projects" },
     { label: "Pricing", href: "/pricing" },
+    { label: "Dashboard", href: "/dashboard" },
   ],
 };

@@ -1,19 +1,19 @@
 "use client";
 
-import { Eye, Lightbulb } from "lucide-react";
 import { useState } from "react";
+import { hintsOf, SolutionToggle, useHints } from "@/components/practice/hints";
 import { Badge, difficultyVariant } from "@/components/ui/badge";
-import { Button } from "@/components/ui/button";
-import type { Lesson } from "@/content/types";
+import type { TextQuestion } from "@/content/types";
 import { CodeBlock } from "./code-block";
 
-type Props = { index: number; lang: string; question: Lesson["practice"][number] };
+type Props = { index: number; lang: string; question: TextQuestion };
 
+/** A question with a written answer: attempt it, then compare with the model solution. */
 export function PracticeQuestion({ index, lang, question }: Props) {
-  const [hint, setHint] = useState(false);
   const [solution, setSolution] = useState(false);
   const [draft, setDraft] = useState("");
-  const isCode = lang === "sql" || lang === "python" || lang === "excel";
+  const hints = useHints(hintsOf(question));
+  const isCode = (lang === "sql" || lang === "python");
   const id = `practice-${index}`;
 
   return (
@@ -37,31 +37,24 @@ export function PracticeQuestion({ index, lang, question }: Props) {
         className="mt-1.5 w-full resize-y rounded-lg border border-border bg-surface p-3 font-mono text-[13px] leading-relaxed placeholder:text-muted/70 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary"
       />
       <p className="mt-1.5 text-xs text-muted">
-        Drafts are not checked automatically yet. Compare your attempt with the solution when you are ready.
+        This question is not checked automatically. Compare your attempt with the solution when you are ready.
       </p>
 
       <div className="mt-4 flex flex-wrap gap-2">
-        <Button variant="secondary" size="sm" aria-expanded={hint} onClick={() => setHint((h) => !h)}>
-          <Lightbulb /> {hint ? "Hide hint" : "Show hint"}
-        </Button>
-        <Button variant="secondary" size="sm" aria-expanded={solution} onClick={() => setSolution((s) => !s)}>
-          <Eye /> {solution ? "Hide solution" : "Show solution"}
-        </Button>
+        {hints.button}
+        <SolutionToggle open={solution} onToggle={() => setSolution((s) => !s)} />
       </div>
-      {hint && (
-        <p className="mt-4 animate-fade-up rounded-lg border border-warning/30 bg-warning/10 p-3 text-sm">
-          <span className="font-medium">Hint: </span>
-          {question.hint}
-        </p>
+      {hints.list}
+      {solution && (
+        <div className="mt-4 animate-fade-up">
+          {isCode ? (
+            <CodeBlock code={question.solution} lang={lang} />
+          ) : (
+            <p className="rounded-lg border border-border bg-surface p-3 text-sm leading-relaxed">{question.solution}</p>
+          )}
+          {question.explanation && <p className="mt-2 text-sm leading-relaxed text-muted">{question.explanation}</p>}
+        </div>
       )}
-      {solution &&
-        (isCode ? (
-          <CodeBlock code={question.solution} lang={lang} className="mt-4 animate-fade-up" />
-        ) : (
-          <p className="mt-4 animate-fade-up rounded-lg border border-border bg-surface p-3 text-sm leading-relaxed">
-            {question.solution}
-          </p>
-        ))}
     </article>
   );
 }

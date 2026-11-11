@@ -38,20 +38,37 @@ Design tokens live in `src/app/globals.css` (CSS variables for light and dark) a
 Add an entry keyed `"<tool>/<topic-slug>"` to a file in `src/content/lessons` using the `Lesson` type. The topic page,
 path counts, sitemap and "In development" labels update from the data.
 
-## Phase 1 status
+## Status
 
 Working:
 - Homepage, navigation, light/dark theme, responsive layouts
-- Five learning paths with 65 outlined topics; 20 full lessons (all 16 SQL topics, plus the first lesson of each other path)
-- Knowledge checks validated in the browser; topic completion and path progress saved in `localStorage`
-- Practice questions with hint and solution revealed on request
-- Interactive homepage preview (sample data, three prepared queries evaluated in the browser)
+- Five learning paths with 65 outlined topics and 23 full lessons: all 16 SQL topics, the four Excel Fundamentals
+  topics, and the first lesson of Power BI, Python and Tableau
+- **Excel practice engine** (`src/lib/sheet`): a formula parser and evaluator written for this project. It supports
+  arithmetic, comparisons, text joining, relative/absolute/mixed references, ranges, table (structured) references
+  and about 30 functions. A learner's formula is calculated, copied across the fill range with references adjusted
+  as Excel would, and compared with the reference solution on the sample data and on extra test cases.
+  It is not Excel and does not open workbooks.
+- **Sort and filter exercises** (`src/lib/table-practice.ts`): the table the learner produces is compared with the goal view
+- Progressive hints, solutions on request, knowledge checks; one lesson template for every path
+- Dashboard at `/dashboard`: topics completed, exercises solved, learning history
+- Progress saved in `localStorage`
 - Per-page metadata, canonical URLs, JSON-LD, sitemap, robots.txt, Open Graph image
 
-Not built yet (later phases): accounts and synced progress (Supabase), SQL execution engine and Monaco editor, dataset
-library, XP/streaks/leaderboards, payments, admin dashboard, analytics. Nothing in the UI claims these are live.
+## Content checks
+
+```bash
+npm run verify
+```
+
+Runs engine unit tests and, for every interactive exercise, checks that the reference solution gives the hand-written
+expected values, passes its own test cases, and that each listed wrong answer is rejected.
+
+Not built yet: accounts and synced progress (Supabase), SQL execution engine and Monaco editor, dataset library,
+XP/streaks/leaderboards, payments, admin, analytics. Nothing in the UI claims these are live.
+
+Known limits: answers and solutions ship in the page bundle and are checked in the browser, and progress is per
+browser. Both move server-side with accounts. SQL, Power BI, Python and Tableau questions are self-checked
+against a model solution and have one hint each.
 
 Configuration left empty on purpose: Pro price and social links in `src/lib/site.ts`.
-
-Known limits of Phase 1: knowledge-check answers ship in the page bundle and progress is per browser. Both move
-server-side with Phase 2 and 3.

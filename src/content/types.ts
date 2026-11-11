@@ -1,4 +1,36 @@
+import type { FormulaTask } from "@/lib/sheet/check";
+import type { SheetSpec } from "@/lib/sheet/engine";
+import type { Dataset, View } from "@/lib/table-practice";
+
 export type Difficulty = "Easy" | "Medium" | "Hard";
+
+type QuestionBase = {
+  title: string;
+  prompt: string;
+  difficulty: Difficulty;
+  /** Progressive hints, from a nudge to nearly the answer. `hint` is the single-hint form. */
+  hints?: string[];
+  hint?: string;
+  /** Why the solution works. */
+  explanation?: string;
+};
+
+/** Read, attempt, then compare with a model answer. */
+export type TextQuestion = QuestionBase & { kind?: "text"; solution: string };
+/** Write a formula in a spreadsheet; checked by calculating it against test cases. */
+export type FormulaQuestion = QuestionBase & { kind: "formula" } & FormulaTask;
+/** Sort and filter a table; the resulting view is checked. */
+export type TableQuestion = QuestionBase & {
+  kind: "table";
+  dataset: Dataset;
+  goal: View;
+  /** Hand-checked row ids, in order. Used by the content verification script. */
+  expectIds: number[];
+  steps: string[];
+};
+export type PracticeItem = TextQuestion | FormulaQuestion | TableQuestion;
+
+export type Playground = { title: string; intro: string; sheet: SheetSpec; target: string; fill: string; initial: string; tryThese: string[] };
 
 export type Lesson = {
   /** One-sentence summary, also used for page metadata. */
@@ -6,9 +38,11 @@ export type Lesson = {
   explanation: string[];
   syntax: string;
   examples: { title: string; code: string; note: string }[];
+  /** Optional hands-on example shown after the worked examples. */
+  playground?: Playground;
   scenario: { title: string; body: string; code?: string };
   mistakes: { mistake: string; fix: string }[];
-  practice: { title: string; prompt: string; difficulty: Difficulty; hint: string; solution: string }[];
+  practice: PracticeItem[];
   checks: { q: string; options: string[]; answer: number; why: string }[];
 };
 

@@ -9,7 +9,12 @@ import { useSyncExternalStore } from "react";
  */
 const KEY = "dq:progress:v1";
 
-export type TopicProgress = { checks: Record<number, boolean>; completedAt?: string };
+export type TopicProgress = {
+  checks: Record<number, boolean>;
+  completedAt?: string;
+  /** Practice exercises that passed validation: exercise index → time first solved. */
+  exercises?: Record<number, string>;
+};
 export type ProgressState = Record<string, TopicProgress>;
 
 const EMPTY: ProgressState = {};
@@ -64,8 +69,20 @@ export function recordCheck(topicId: string, index: number, correct: boolean, to
   const allCorrect = Array.from({ length: total }, (_, i) => checks[i]).every(Boolean);
   write({
     ...state,
-    [topicId]: { checks, completedAt: prev.completedAt ?? (allCorrect ? new Date().toISOString() : undefined) },
+    [topicId]: { ...prev, checks, completedAt: prev.completedAt ?? (allCorrect ? new Date().toISOString() : undefined) },
   });
+}
+
+/** Record a practice exercise that passed its test cases. Only the first solve is stored. */
+export function recordExercise(topicId: string, index: number) {
+  const state = read();
+  const prev = state[topicId] ?? { checks: {} };
+  if (prev.exercises?.[index]) return;
+  write({ ...state, [topicId]: { ...prev, exercises: { ...prev.exercises, [index]: new Date().toISOString() } } });
+}
+
+export function isSolved(state: ProgressState, topicId: string, index: number) {
+  return Boolean(state[topicId]?.exercises?.[index]);
 }
 
 export function resetProgress() {

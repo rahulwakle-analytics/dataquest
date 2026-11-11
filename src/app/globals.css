@@ -10,12 +10,12 @@
     --border: 221 228 238;
     --fg: 11 18 32;
     --muted: 71 85 105;
-    --primary: 37 99 235;
+    --primary: 29 78 216;
     --primary-strong: 37 99 235;
-    --violet: 124 58 237;
-    --success: 21 128 61;
-    --warning: 180 83 9;
-    --danger: 220 38 38;
+    --violet: 109 40 217;
+    --success: 22 101 52;
+    --warning: 146 64 14;
+    --danger: 185 28 28;
     color-scheme: light;
   }
   .dark {
@@ -58,4 +58,13 @@
     animation-duration: 0.01ms !important;
     transition-duration: 0.01ms !important;
   }
+}
+
+/* The brand accents (#3B82F6, #8B5CF6) stay as fills and borders. As small text on dark
+   cards they fall below WCAG AA contrast, so text uses a lighter tint of the same hues. */
+.dark .text-primary {
+  color: rgb(96 165 250);
+}
+.dark .text-violet {
+  color: rgb(167 139 250);
 }

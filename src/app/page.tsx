@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { ArrowRight, BookOpen, CheckCircle2, Code2, Database, FolderKanban, Gauge, ListChecks, Save, Sparkles } from "lucide-react";
+import { ArrowRight, BookOpen, CheckCircle2, Code2, Database, FolderKanban, Gauge, ListChecks, Save, Sparkles, Table2 } from "lucide-react";
 import { Faq } from "@/components/home/faq";
 import { ProductPreview } from "@/components/home/product-preview";
 import { PricingTable } from "@/components/pricing-table";
@@ -22,6 +22,7 @@ const features = [
   { icon: Sparkles, title: "Business scenarios in every lesson", body: "Each concept is tied to a question a real team would ask.", live: true },
   { icon: CheckCircle2, title: "Validated knowledge checks", body: "Answers are checked, not self-marked, and solutions stay hidden until you ask.", live: true },
   { icon: Save, title: "Progress that persists", body: "Completed topics are saved in your browser today, and to your account once sign-in launches.", live: true },
+  { icon: Table2, title: "Interactive Excel practice", body: "Write formulas in a spreadsheet grid and sort and filter real tables. Answers are calculated and checked against test cases.", live: true },
   { icon: Database, title: "SQL practice engine", body: "Write queries in an editor and have them run on PostgreSQL and checked against test cases.", live: false },
   { icon: Gauge, title: "XP, streaks and leaderboards", body: "Earn XP for verified solutions and keep a daily streak going.", live: false },
   { icon: FolderKanban, title: "Dataset library and guided projects", body: "Downloadable datasets and step-by-step projects with completion tracking.", live: false },
@@ -30,12 +31,13 @@ const features = [
 export default function HomePage() {
   const stats = tools.map((t) => ({ tool: t, ...toolStats(t) }));
   const sql = stats.find((s) => s.tool.slug === "sql")!;
+  const excel = stats.find((s) => s.tool.slug === "excel")!;
   const totalLessons = stats.reduce((n, s) => n + s.lessons, 0);
 
   const faq = [
     {
       q: "Do I need an account to start?",
-      a: "No. Lessons, practice questions and knowledge checks are open, and your progress is saved in your browser. Accounts, which will sync progress across devices, are in development.",
+      a: "No. Lessons, practice exercises and knowledge checks are open, and your progress is saved in your browser and shown on your dashboard. Accounts, which will sync progress across devices, are in development.",
     },
     {
       q: "Is DataQuest free?",
@@ -43,15 +45,15 @@ export default function HomePage() {
     },
     {
       q: "Which tools can I learn?",
-      a: `There are paths for Excel, SQL, Power BI, Python and Tableau. The SQL path is the most complete, with ${sql.lessons} of its ${sql.topics} topics written. The other paths each have a full topic outline and a first lesson, and ${totalLessons} lessons are available in total.`,
+      a: `There are paths for Excel, SQL, Power BI, Python and Tableau. SQL has ${sql.lessons} of its ${sql.topics} topics written, and Excel has ${excel.lessons} of ${excel.topics}, including interactive spreadsheet exercises. Power BI, Python and Tableau each have a full topic outline and a first lesson. ${totalLessons} lessons are available in total.`,
     },
     {
       q: "How are my answers checked?",
-      a: "Knowledge checks are validated as soon as you answer. Practice questions show a hint and a model solution when you ask for them. Automatic checking of your own SQL against test cases is in development.",
+      a: "Excel exercises are checked for real: your formula is calculated by DataQuest's own formula engine and compared with the expected results across several test cases, including after it is copied to other cells. Sort and filter exercises check the table you produce. Knowledge checks are validated as soon as you answer. SQL practice questions currently show hints and a model solution; automatic checking of your own SQL is in development.",
     },
     {
       q: "Do I need to install anything?",
-      a: "Not for the lessons. Until the built-in SQL editor is released, you will need your own database or spreadsheet if you want to run your answers to the practice questions.",
+      a: "No. Excel exercises run in the browser on a built-in spreadsheet. Until the SQL editor is released, you will need your own database if you want to run your answers to the SQL practice questions.",
     },
     {
       q: "Who is DataQuest for?",

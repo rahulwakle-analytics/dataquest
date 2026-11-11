@@ -13,6 +13,7 @@ export function SiteFooter() {
         { label: "Learning Paths", href: "/paths" },
         { label: "Projects", href: "/projects" },
         { label: "Pricing", href: "/pricing" },
+        { label: "Dashboard", href: "/dashboard" },
         { label: "FAQ", href: "/#faq" },
       ],
     },
@@ -20,6 +21,7 @@ export function SiteFooter() {
       title: "Start here",
       links: [
         { label: "First SQL lesson", href: "/paths/sql/select" },
+        { label: "Excel formula practice", href: "/paths/excel/formulas-and-cell-references" },
         { label: "How it works", href: "/#how-it-works" },
         { label: "Featured challenges", href: "/#challenges" },
       ],

@@ -1,62 +1,7 @@
 import type { Lesson } from "../types";
 
-/** First lesson of each non-SQL path. The remaining topics are outlined in paths.ts and not yet written. */
+/** First lesson of the Power BI, Python and Tableau paths. The remaining topics are outlined in paths.ts and not yet written. */
 export const starters: Record<string, Lesson> = {
-  "excel/formulas-and-cell-references": {
-    summary: "Excel formulas refer to cells, and whether a reference is relative or absolute decides what happens when you copy the formula.",
-    explanation: [
-      "A formula starts with = and usually points at other cells. By default a reference is relative: copy =B2*C2 down one row and it becomes =B3*C3. That is what lets you write one formula and fill a whole column.",
-      "Sometimes one part must stay put, such as a tax rate in a single cell. A $ locks the part that follows it: $F$1 locks both column and row, F$1 locks only the row, and $F1 locks only the column. Press F4 while editing a reference to cycle through the options.",
-    ],
-    syntax: `=B2*C2        relative: both parts move when copied
-=B2*$F$1      absolute: F1 never moves
-=B2*F$1       mixed: row 1 is locked
-=$B2*C$1      mixed: column B and row 1 are locked`,
-    examples: [
-      { title: "Line total", code: `=B2*C2`, note: "Quantity in B, unit price in C. Fill down and each row uses its own cells." },
-      { title: "Apply one tax rate to every row", code: `=D2*(1+$F$1)`, note: "D2 moves as you fill down; $F$1 keeps pointing at the tax rate." },
-    ],
-    scenario: {
-      title: "Converting a price list to another currency",
-      body: "You have 200 product prices in column B and today's exchange rate in cell E1. Write the conversion once with the rate locked, fill it down, and tomorrow you change only E1.",
-      code: `=B2*$E$1`,
-    },
-    mistakes: [
-      { mistake: "Copying a formula that points at a single rate cell without locking it.", fix: "The reference drifts to empty cells and returns 0. Lock it with $ (press F4)." },
-      { mistake: "Typing a number such as 0.2 directly into many formulas.", fix: "Put the value in one labelled cell and reference it, so a change happens in one place." },
-    ],
-    practice: [
-      {
-        title: "Discounted price",
-        prompt: "Prices are in B2:B50 and a discount percentage is in H1. Write the formula for C2 that can be filled down to give each discounted price.",
-        difficulty: "Easy",
-        hint: "The price reference should move; the discount reference should not.",
-        solution: `=B2*(1-$H$1)`,
-      },
-      {
-        title: "Multiplication grid",
-        prompt: "Row 1 holds quantities in B1:F1 and column A holds prices in A2:A10. Write one formula for B2 that can be filled across and down to give price times quantity.",
-        difficulty: "Medium",
-        hint: "Lock the column for the price and the row for the quantity.",
-        solution: `=$A2*B$1`,
-      },
-    ],
-    checks: [
-      {
-        q: "You copy =A1*$B$1 from C1 down to C2. What does C2 contain?",
-        options: ["=A1*$B$1", "=A2*$B$1", "=A2*$B$2", "=B1*$B$1"],
-        answer: 1,
-        why: "A1 is relative and moves down a row; $B$1 is locked.",
-      },
-      {
-        q: "What does B$1 lock?",
-        options: ["Column B", "Row 1", "Both", "Neither"],
-        answer: 1,
-        why: "The $ sits in front of the row number, so only the row is fixed.",
-      },
-    ],
-  },
-
   "power-bi/connecting-to-data": {
     summary: "Every Power BI report starts with Get Data, and the storage mode you choose decides how fresh and how fast the report is.",
     explanation: [
