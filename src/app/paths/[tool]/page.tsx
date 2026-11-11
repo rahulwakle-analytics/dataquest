@@ -93,7 +93,7 @@ export default async function ToolPage({ params }: Props) {
           </h2>
           <p className="mt-2 max-w-2xl text-muted">
             Every SQL lesson and question uses the same four retail tables. You can{" "}
-            <Link href="/practice" className="font-medium text-primary underline-offset-4 hover:underline">
+            <Link href="/practice/sql" className="font-medium text-primary underline-offset-4 hover:underline">
               run queries against them in the SQL practice editor
             </Link>{" "}
             or{" "}

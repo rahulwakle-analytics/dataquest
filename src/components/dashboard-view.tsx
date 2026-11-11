@@ -20,7 +20,9 @@ type Event = { at: string; kind: "topic" | "exercise"; label: string; path: stri
 
 const fmtDate = (iso: string) => new Date(iso).toLocaleString(undefined, { day: "numeric", month: "short", hour: "2-digit", minute: "2-digit" });
 
-export function DashboardView({ paths, sql }: { paths: DashboardPath[]; sql: { id: string; xp: number }[] }) {
+type PracticeItem = { id: string; xp: number };
+
+export function DashboardView({ paths, sql, sheet, powerbi }: { paths: DashboardPath[]; sql: PracticeItem[]; sheet: PracticeItem[]; powerbi: PracticeItem[] }) {
   const progress = useProgress();
   const [confirmReset, setConfirmReset] = useState(false);
 
@@ -47,7 +49,9 @@ export function DashboardView({ paths, sql }: { paths: DashboardPath[]; sql: { i
   }
   events.sort((a, b) => b.at.localeCompare(a.at));
   const sqlSolved = sql.filter((c) => progress[c.id]?.exercises?.[0]);
-  const started = events.length > 0 || checksDone > 0 || sqlSolved.length > 0;
+  const sheetSolved = sheet.filter((c) => progress[c.id]?.exercises?.[0]);
+  const powerbiSolved = powerbi.filter((c) => progress[c.id]?.exercises?.[0]);
+  const started = events.length > 0 || checksDone > 0 || sqlSolved.length > 0 || sheetSolved.length > 0 || powerbiSolved.length > 0;
 
   const pathRows = paths.map((p) => {
     const done = p.topics.filter((t) => isComplete(progress, t.id)).length;
@@ -57,9 +61,11 @@ export function DashboardView({ paths, sql }: { paths: DashboardPath[]; sql: { i
   });
   const resume = pathRows.filter((p) => p.active && p.next);
 
-  const xp = sqlSolved.reduce((n, c) => n + c.xp, 0);
+  const practiceXp = sqlSolved.reduce((n, c) => n + c.xp, 0) + sheetSolved.reduce((n, c) => n + c.xp, 0) + powerbiSolved.reduce((n, c) => n + c.xp, 0);
+  const practiceSolvedCount = sqlSolved.length + sheetSolved.length + powerbiSolved.length;
+  const practiceTotalCount = sql.length + sheet.length + powerbi.length;
   const stats = [
-    { icon: Zap, label: `XP from ${sqlSolved.length} of ${sql.length} SQL challenges`, value: String(xp), tone: "text-warning" },
+    { icon: Zap, label: `XP from ${practiceSolvedCount} of ${practiceTotalCount} practice challenges`, value: String(practiceXp), tone: "text-warning" },
     { icon: BookOpenCheck, label: "Topics completed", value: String(topicsDone), tone: "text-success" },
     { icon: Target, label: "Exercises solved", value: `${exercisesDone} / ${exercisesTotal}`, tone: "text-primary" },
     { icon: ListChecks, label: "Knowledge checks correct", value: String(checksDone), tone: "text-violet" },

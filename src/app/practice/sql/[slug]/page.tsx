@@ -32,7 +32,7 @@ export default async function ChallengePage({ params }: Props) {
   return (
     <div className="mx-auto w-full max-w-[1500px] px-4 py-8 sm:px-6">
       <nav aria-label="Breadcrumb" className="mb-5 flex items-center gap-1.5 text-sm text-muted">
-        <Link href="/practice" className="hover:text-foreground">
+        <Link href="/practice/sql" className="hover:text-foreground">
           SQL practice
         </Link>
         <ChevronRight className="size-3.5" aria-hidden="true" />

@@ -1,36 +1,54 @@
 import type { Metadata } from "next";
 import Link from "next/link";
-import { ChallengeList } from "@/components/practice/challenge-list";
+import { ArrowRight, Sheet, Terminal } from "lucide-react";
 import { PageHeader } from "@/components/page-header";
-import { sqlChallenges } from "@/content/sql-challenges";
+import { sqlChallenges, XP as SQL_XP } from "@/content/sql-challenges";
+import { sheetChallenges, sortFilterChallenges, XP as SHEET_XP } from "@/content/sheet-challenges";
 
 export const metadata: Metadata = {
-  title: "SQL Practice: write and run real queries",
-  description: "Interactive SQL challenges that run in your browser on a real SQL engine and are checked against test cases. SELECT, joins, CTEs and window functions.",
+  title: "Practice Lab: real SQL, Excel and Power BI exercises",
+  description: "Hands-on practice that actually runs: SQL queries on a real browser database, an editable spreadsheet checked by calculation, and guided Power BI exercises.",
   alternates: { canonical: "/practice" },
 };
 
 export default function PracticePage() {
+  const sqlXp = sqlChallenges.reduce((n, c) => n + SQL_XP[c.difficulty], 0);
+  const sheetXp = sheetChallenges.reduce((n, c) => n + SHEET_XP[c.difficulty], 0);
+  const sortFilterCount = sortFilterChallenges.length;
+
   return (
     <div className="container py-14 sm:py-20">
       <PageHeader
-        eyebrow="SQL practice"
-        title="Write the query. Run it. Prove it."
-        lead="Each challenge gives you a business question and a retail database. Your query runs on a real SQL engine in your browser and is checked against test cases."
+        eyebrow="Practice lab"
+        title="Don't just read about it. Do it."
+        lead="Three hands-on tracks: a real SQL engine, an editable spreadsheet checked by calculation, and guided Power BI exercises. Everything here runs and is actually checked."
       />
-      <div className="mx-auto mt-10 max-w-3xl">
-        <ChallengeList challenges={sqlChallenges.map(({ slug, title, difficulty, topics, task }) => ({ slug, title, difficulty, topics, task }))} />
-        <p className="mt-8 text-sm text-muted">
-          New to SQL? Start with the{" "}
-          <Link href="/paths/sql" className="font-medium text-primary underline-offset-4 hover:underline">
-            SQL learning path
-          </Link>
-          . For spreadsheet practice, the{" "}
-          <Link href="/paths/excel" className="font-medium text-primary underline-offset-4 hover:underline">
-            Excel lessons
-          </Link>{" "}
-          have checked formula exercises.
-        </p>
+      <div className="mx-auto mt-10 grid max-w-4xl gap-5 sm:grid-cols-2">
+        <Link href="/practice/sql" className="group rounded-2xl border border-border bg-card p-6 transition-colors hover:border-primary">
+          <Terminal className="size-6 text-primary" />
+          <h2 className="mt-3 text-lg font-semibold">SQL Playground</h2>
+          <p className="mt-1.5 text-sm text-muted">{sqlChallenges.length} challenges, real execution on DuckDB in your browser. SELECT, JOINs, CTEs, window functions. {sqlXp} XP total.</p>
+          <span className="mt-4 inline-flex items-center gap-1.5 text-sm font-medium text-primary">
+            Open <ArrowRight className="size-4 transition-transform group-hover:translate-x-0.5" />
+          </span>
+        </Link>
+        <Link href="/practice/excel" className="group rounded-2xl border border-border bg-card p-6 transition-colors hover:border-primary">
+          <Sheet className="size-6 text-primary" />
+          <h2 className="mt-3 text-lg font-semibold">Excel Playground</h2>
+          <p className="mt-1.5 text-sm text-muted">
+            {sheetChallenges.length} formula challenges plus {sortFilterCount} sort-and-filter exercises on an editable grid, checked by calculated result. {sheetXp} XP total.
+          </p>
+          <span className="mt-4 inline-flex items-center gap-1.5 text-sm font-medium text-primary">
+            Open <ArrowRight className="size-4 transition-transform group-hover:translate-x-0.5" />
+          </span>
+        </Link>
+        <Link href="/practice/powerbi" className="group rounded-2xl border border-border bg-card p-6 transition-colors hover:border-primary sm:col-span-2">
+          <h2 className="text-lg font-semibold">Power BI Practice Lab</h2>
+          <p className="mt-1.5 text-sm text-muted">Guided, simulated exercises on data modelling, DAX, measures vs. calculated columns, and dashboard design — not a Power BI Desktop replica.</p>
+          <span className="mt-4 inline-flex items-center gap-1.5 text-sm font-medium text-primary">
+            Open <ArrowRight className="size-4 transition-transform group-hover:translate-x-0.5" />
+          </span>
+        </Link>
       </div>
     </div>
   );

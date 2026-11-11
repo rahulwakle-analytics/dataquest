@@ -2,7 +2,7 @@
 
 import dynamic from "next/dynamic";
 import Link from "next/link";
-import { ArrowRight, CheckCircle2, Loader2, Play, RotateCcw, Send, XCircle, Zap } from "lucide-react";
+import { ArrowRight, CheckCircle2, Check, Copy, Loader2, Play, RotateCcw, Send, Table2, XCircle, Zap } from "lucide-react";
 import { useCallback, useEffect, useRef, useState } from "react";
 import { CodeBlock } from "@/components/learn/code-block";
 import { SolutionToggle, useHints } from "@/components/practice/hints";
@@ -23,6 +23,27 @@ type Props = { challenge: SqlChallenge; tables: TablePreview[]; next?: { slug: s
 
 const fmt = (v: Cell) => (v === null ? "NULL" : typeof v === "number" && !Number.isInteger(v) ? String(Math.round(v * 100) / 100) : String(v));
 const panel = "rounded-2xl border border-border bg-card";
+
+/** Infers a display type per column from the sampled preview rows. Preview-only; not a schema fetch. */
+function inferColumnTypes(columns: string[], preview: Record<string, Cell>[]): Record<string, string> {
+  const out: Record<string, string> = {};
+  for (const c of columns) {
+    const sample = preview.find((r) => r[c] !== null && r[c] !== undefined)?.[c];
+    out[c] = typeof sample === "number" ? (Number.isInteger(sample) ? "integer" : "decimal") : typeof sample === "boolean" ? "boolean" : "text";
+  }
+  return out;
+}
+
+/** Generic template queries, filled in with the active table's name and first two columns. */
+function sampleQueriesFor(t: TablePreview): { label: string; sql: string }[] {
+  const [a, b] = t.columns;
+  return [
+    { label: "Preview rows", sql: `SELECT *\nFROM ${t.name}\nLIMIT 10;` },
+    { label: "Count rows", sql: `SELECT COUNT(*) AS row_count\nFROM ${t.name};` },
+    ...(a ? [{ label: `Distinct ${a}`, sql: `SELECT DISTINCT ${a}\nFROM ${t.name}\nORDER BY ${a};` }] : []),
+    ...(a && b ? [{ label: `Group by ${a}`, sql: `SELECT ${a}, COUNT(*) AS n\nFROM ${t.name}\nGROUP BY ${a}\nORDER BY n DESC;` }] : []),
+  ];
+}
 
 function DataTable({ columns, rows, label }: { columns: string[]; rows: Cell[][]; label: string }) {
   return (
@@ -69,6 +90,7 @@ export function SqlWorkspace({ challenge, tables, next }: Props) {
   const [check, setCheck] = useState<CheckResult | null>(null);
   const [table, setTable] = useState(0);
   const [showSolution, setShowSolution] = useState(false);
+  const [copied, setCopied] = useState(false);
   const hints = useHints(challenge.hints);
 
   useEffect(() => {
@@ -199,7 +221,33 @@ export function SqlWorkspace({ challenge, tables, next }: Props) {
           >
             <RotateCcw /> Reset
           </Button>
+          <Button
+            variant="ghost"
+            size="sm"
+            onClick={() => {
+              void navigator.clipboard.writeText(codeRef.current);
+              setCopied(true);
+              setTimeout(() => setCopied(false), 1500);
+            }}
+          >
+            {copied ? <Check /> : <Copy />} {copied ? "Copied" : "Copy SQL"}
+          </Button>
           <span className="ml-auto hidden text-xs text-muted sm:block">Ctrl or ⌘ + Enter to run</span>
+        </div>
+        <div className="mt-3">
+          <p className="mb-1.5 text-xs font-medium text-muted">Try a sample query on {active.name}</p>
+          <div className="flex flex-wrap gap-1.5">
+            {sampleQueriesFor(active).map((s) => (
+              <button
+                key={s.label}
+                type="button"
+                onClick={() => setCode(s.sql)}
+                className="rounded-md border border-border px-2.5 py-1 text-xs text-muted transition-colors hover:border-primary hover:text-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary"
+              >
+                {s.label}
+              </button>
+            ))}
+          </div>
         </div>
         <p className="mt-3 text-xs leading-relaxed text-muted">
           Runs in your browser on DuckDB, a real SQL engine with PostgreSQL-style syntax. Read-only, one statement at a time, stopped after {TIME_LIMIT_MS / 1000} seconds, first {ROW_LIMIT.toLocaleString("en-US")} rows shown.
@@ -210,7 +258,7 @@ export function SqlWorkspace({ challenge, tables, next }: Props) {
       <section aria-labelledby="data-h" className={cn(panel, "min-w-0 p-5")}>
         <div className="flex items-center justify-between gap-2">
           <h2 id="data-h" className="font-semibold">
-            Dataset
+            Database explorer
           </h2>
           <Link href="/datasets/retail-sales" className="text-xs font-medium text-primary underline-offset-4 hover:underline">
             Details and download
@@ -225,12 +273,20 @@ export function SqlWorkspace({ challenge, tables, next }: Props) {
               aria-selected={table === i}
               onClick={() => setTable(i)}
               className={cn(
-                "rounded-md border px-2.5 py-1 font-mono text-[12.5px] transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary",
+                "inline-flex items-center gap-1.5 rounded-md border px-2.5 py-1 font-mono text-[12.5px] transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary",
                 table === i ? "border-primary bg-primary/10 text-foreground" : "border-border text-muted hover:text-foreground",
               )}
             >
-              {t.name}
+              <Table2 className="size-3" /> {t.name}
             </button>
+          ))}
+        </div>
+        <div className="mt-3 flex flex-wrap gap-1 rounded-lg border border-dashed border-border p-2.5">
+          {active.columns.map((c) => (
+            <span key={c} className="inline-flex items-center gap-1 rounded border border-border bg-surface px-1.5 py-0.5 font-mono text-[11px] text-muted">
+              {c}
+              <span className="text-[10px] text-muted/70">{inferColumnTypes(active.columns, active.preview)[c]}</span>
+            </span>
           ))}
         </div>
         <p className="mb-2 mt-3 text-xs text-muted">

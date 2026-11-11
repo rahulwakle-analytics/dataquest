@@ -13,7 +13,7 @@ export function SiteFooter() {
         { label: "Explore Data Analytics", href: "/explore" },
         { label: "Career Roadmap", href: "/roadmap" },
         { label: "Learning Paths", href: "/paths" },
-        { label: "SQL Practice", href: "/practice" },
+        { label: "Practice Lab", href: "/practice" },
         { label: "Dataset Library", href: "/datasets" },
         { label: "Projects", href: "/projects" },
         { label: "Career Centre", href: "/career" },

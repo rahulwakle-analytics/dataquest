@@ -1,5 +1,7 @@
 import type { Metadata } from "next";
 import { XP, challengeId, sqlChallenges } from "@/content/sql-challenges";
+import { XP as SHEET_XP, challengeId as sheetChallengeId, sheetChallenges } from "@/content/sheet-challenges";
+import { XP as PBI_XP, challengeId as pbiChallengeId, powerbiExercises } from "@/content/powerbi-practice";
 import { DashboardView, type DashboardPath } from "@/components/dashboard-view";
 import { flatTopics, lessons, tools } from "@/content";
 
@@ -26,5 +28,12 @@ export default function DashboardPage() {
         })),
     };
   });
-  return <DashboardView paths={paths} sql={sqlChallenges.map((c) => ({ id: challengeId(c.slug), xp: XP[c.difficulty] }))} />;
+  return (
+    <DashboardView
+      paths={paths}
+      sql={sqlChallenges.map((c) => ({ id: challengeId(c.slug), xp: XP[c.difficulty] }))}
+      sheet={sheetChallenges.map((c) => ({ id: sheetChallengeId(c.slug), xp: SHEET_XP[c.difficulty] }))}
+      powerbi={powerbiExercises.map((c) => ({ id: pbiChallengeId(c.slug), xp: PBI_XP[c.difficulty] }))}
+    />
+  );
 }

@@ -137,7 +137,7 @@ export default function CareerPage() {
           </ul>
           <p className="mt-3 text-sm text-muted">
             These lesson questions are compared against a model solution. To have your query run and checked automatically, use the{" "}
-            <Link href="/practice" className="font-medium text-primary underline-offset-4 hover:underline">
+            <Link href="/practice/sql" className="font-medium text-primary underline-offset-4 hover:underline">
               SQL practice challenges
             </Link>
             .

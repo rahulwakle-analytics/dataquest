@@ -29,7 +29,7 @@ export const datasets: Dataset[] = [
       { file: "retail_order_items.csv", label: "order_items", columns: { order_item_id: "Unique line number", order_id: "Order the line belongs to (links to orders)", product_id: "Product sold (links to products)", quantity: "Units sold on this line", unit_price: "Price charged per unit" } },
     ],
     exercises: [
-      { label: "SQL practice challenges", href: "/practice" },
+      { label: "SQL practice challenges", href: "/practice/sql" },
       { label: "SQL lesson: INNER JOIN", href: "/paths/sql/inner-join" },
       { label: "SQL lesson: GROUP BY", href: "/paths/sql/group-by" },
     ],

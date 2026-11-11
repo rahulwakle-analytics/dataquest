@@ -327,8 +327,15 @@ function matcher(crit: Scalar): (v: Scalar) => boolean {
 
 export const FUNCTIONS = [
   "SUM", "AVERAGE", "MIN", "MAX", "COUNT", "COUNTA", "COUNTBLANK", "ROUND", "ROUNDUP", "ROUNDDOWN", "ABS", "INT",
-  "IF", "AND", "OR", "NOT", "IFERROR", "SUMIF", "COUNTIF", "AVERAGEIF", "LEN", "TRIM", "UPPER", "LOWER", "LEFT", "RIGHT",
+  "IF", "AND", "OR", "NOT", "IFERROR", "SUMIF", "COUNTIF", "AVERAGEIF", "SUMIFS", "COUNTIFS", "AVERAGEIFS",
+  "LEN", "TRIM", "UPPER", "LOWER", "LEFT", "RIGHT", "XLOOKUP",
 ];
+
+/** Exact-match equality for lookups (case-insensitive for text), distinct from the wildcard/operator matcher used by *IF(S). */
+function sameValue(a: Scalar, b: Scalar): boolean {
+  if (typeof a === "string" && typeof b === "string") return a.toLowerCase() === b.toLowerCase();
+  return a === b;
+}
 
 /* ---------- sheet ---------- */
 
@@ -574,6 +581,49 @@ export class Sheet {
         const total = xs.reduce((a, b) => a + b, 0);
         if (name === "SUMIF") return total;
         return xs.length ? total / xs.length : E("#DIV/0!");
+      }
+      case "SUMIFS":
+      case "COUNTIFS":
+      case "AVERAGEIFS": {
+        const isSum = name !== "COUNTIFS";
+        const offset = isSum ? 1 : 0;
+        if (args.length < offset + 2 || (args.length - offset) % 2 !== 0) return E("#VALUE!");
+        const target = isSum ? flat(this.ev(args[0], c, r)) : null;
+        const pairs: { range: Scalar[]; crit: Scalar }[] = [];
+        for (let i = offset; i < args.length; i += 2) {
+          const range = flat(this.ev(args[i], c, r));
+          const crit = s(i + 1);
+          if (isErr(crit)) return crit;
+          pairs.push({ range, crit });
+        }
+        const len = pairs[0]?.range.length ?? 0;
+        const matchers = pairs.map((p) => matcher(p.crit));
+        const xs: number[] = [];
+        let count = 0;
+        for (let i = 0; i < len; i++) {
+          if (!matchers.every((m, k) => m(pairs[k].range[i]))) continue;
+          count++;
+          if (isSum) {
+            const v = target![i] ?? null;
+            if (isErr(v)) return v;
+            if (typeof v === "number") xs.push(v);
+          }
+        }
+        if (name === "COUNTIFS") return count;
+        const total = xs.reduce((a, b) => a + b, 0);
+        if (name === "SUMIFS") return total;
+        return xs.length ? total / xs.length : E("#DIV/0!");
+      }
+      case "XLOOKUP": {
+        if (!need(3, 4)) return E("#VALUE!");
+        const lv = s(0);
+        if (isErr(lv)) return lv;
+        const lookupArr = flat(this.ev(args[1], c, r));
+        const returnArr = flat(this.ev(args[2], c, r));
+        if (lookupArr.length !== returnArr.length) return E("#VALUE!");
+        const idx = lookupArr.findIndex((v) => sameValue(v, lv));
+        if (idx < 0) return args[3] ? this.scalar(args[3], c, r) : E("#N/A");
+        return returnArr[idx] ?? null;
       }
       case "LEN":
       case "TRIM":
