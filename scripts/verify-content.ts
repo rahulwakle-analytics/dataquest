@@ -9,9 +9,11 @@
 import { lessons } from "../src/content";
 import { powerbiExercises } from "../src/content/powerbi-practice";
 import { sheetChallenges, sortFilterChallenges } from "../src/content/sheet-challenges";
+import { sqlChallenges } from "../src/content/sql-challenges";
 import { checkFormula, evaluateFill, fillFormulas } from "../src/lib/sheet/check";
 import { isErr, Sheet, shiftFormula, type Raw } from "../src/lib/sheet/engine";
 import { checkTargets } from "../src/lib/sheet/playground-check";
+import { DATABASES, TABLES_OF } from "../src/lib/sql/databases";
 import { applyView, checkView } from "../src/lib/table-practice";
 
 let failures = 0;
@@ -169,8 +171,27 @@ for (const e of powerbiExercises) {
 }
 ok(new Set(powerbiExercises.map((e) => e.slug)).size === powerbiExercises.length, "powerbiExercises: duplicate slugs");
 
+/* ---- SQL Playground challenges ----
+ * DuckDB-WASM only runs in a browser, so actual query execution is verified by the Playwright
+ * suite, not here. This checks the structural shape every challenge must have. */
+for (const c of sqlChallenges) {
+  const where = `practice-sql/${c.slug} "${c.title}"`;
+  const db = c.database ?? "retail";
+  ok(db in DATABASES, `${where}: unknown database "${db}"`);
+  ok(c.columns.length > 0, `${where}: needs at least one expected column`);
+  ok(c.topics.length > 0, `${where}: needs at least one topic`);
+  ok(c.hints.length >= 2, `${where}: needs at least two hints`);
+  ok(c.wrong.length >= 1, `${where}: needs at least one rejected ("wrong") query`);
+  ok(/^\s*(select|with)\b/i.test(c.solution), `${where}: reference solution must start with SELECT or WITH`);
+  ok(c.wrong.every((w) => w.trim() !== c.solution.trim()), `${where}: a "wrong" query is identical to the solution`);
+  const tables = TABLES_OF(db as keyof typeof DATABASES);
+  ok(tables.some((t) => c.solution.includes(t)), `${where}: reference solution does not mention any table in the "${db}" database`);
+}
+ok(new Set(sqlChallenges.map((c) => c.slug)).size === sqlChallenges.length, "sqlChallenges: duplicate slugs");
+
 console.log(
   `${checks - failures}/${checks} checks passed (${unit.length} engine cases, ${shifts.length} copy cases, ${formulaCount} formula exercises, ${tableCount} table exercises, ` +
-    `${Object.keys(lessons).length} lessons, ${sheetChallenges.length} Excel Playground challenges, ${sortFilterChallenges.length} sort/filter challenges, ${powerbiExercises.length} Power BI exercises)`,
+    `${Object.keys(lessons).length} lessons, ${sheetChallenges.length} Excel Playground challenges, ${sortFilterChallenges.length} sort/filter challenges, ${powerbiExercises.length} Power BI exercises, ` +
+    `${sqlChallenges.length} SQL challenges across ${Object.keys(DATABASES).length} databases)`,
 );
 process.exit(failures ? 1 : 0);

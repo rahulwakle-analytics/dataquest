@@ -11,8 +11,6 @@ import { DatabaseId, DATABASES, TABLES_OF } from "./databases";
 
 export const TIME_LIMIT_MS = 8000;
 export const ROW_LIMIT = 1000;
-/** @deprecated Use TABLES_OF("retail") from lib/sql/databases. Kept for existing imports. */
-export const TABLES = ["customers", "products", "orders", "order_items"] as const;
 export type Schema = "main" | "chk";
 
 export type Cell = string | number | boolean | null;

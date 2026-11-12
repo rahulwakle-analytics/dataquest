@@ -9,6 +9,7 @@ import { SolutionToggle, useHints } from "@/components/practice/hints";
 import { Badge, difficultyVariant } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import { XP, challengeId, type SqlChallenge } from "@/content/sql-challenges";
+import { recordView } from "@/lib/challenge-meta";
 import { isSolved, recordExercise, useProgress } from "@/lib/progress";
 import { DATABASES } from "@/lib/sql/databases";
 import { checkQuery, getEngine, ROW_LIMIT, runQuery, SqlError, TIME_LIMIT_MS, type Cell, type CheckResult, type QueryResult } from "@/lib/sql/engine";
@@ -94,6 +95,10 @@ export function SqlWorkspace({ challenge, tables, next }: Props) {
   const [showSolution, setShowSolution] = useState(false);
   const [copied, setCopied] = useState(false);
   const hints = useHints(challenge.hints);
+
+  useEffect(() => {
+    recordView(id);
+  }, [id]);
 
   useEffect(() => {
     let live = true;
@@ -288,7 +293,7 @@ export function SqlWorkspace({ challenge, tables, next }: Props) {
           {active.columns.map((c) => (
             <span key={c} className="inline-flex items-center gap-1 rounded border border-border bg-surface px-1.5 py-0.5 font-mono text-[11px] text-muted">
               {c}
-              <span className="text-[10px] text-muted/70">{inferColumnTypes(active.columns, active.preview)[c]}</span>
+              <span className="text-[10px] text-muted">{inferColumnTypes(active.columns, active.preview)[c]}</span>
             </span>
           ))}
         </div>

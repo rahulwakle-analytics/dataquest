@@ -16,7 +16,7 @@ export default function SqlPracticePage() {
       <PageHeader
         eyebrow="SQL practice"
         title="Write the query. Run it. Prove it."
-        lead="Each challenge gives you a business question and a retail database. Your query runs on a real SQL engine in your browser and is checked against test cases."
+        lead="Each challenge gives you a business question against a real relational database — a retail business or an HR system. Your query runs on a real SQL engine in your browser and is checked against hidden test cases."
       />
       <div className="mx-auto mt-10 max-w-3xl">
         <ChallengeList

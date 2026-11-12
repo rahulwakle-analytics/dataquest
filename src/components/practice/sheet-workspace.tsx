@@ -2,13 +2,14 @@
 
 import Link from "next/link";
 import { ArrowRight, CheckCircle2, RotateCcw, Send, XCircle, Zap } from "lucide-react";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { CodeBlock } from "@/components/learn/code-block";
 import { SolutionToggle, useHints } from "@/components/practice/hints";
 import { EditableGrid } from "@/components/practice/sheet-editor";
 import { Badge, difficultyVariant } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import { challengeId, XP, type SheetChallenge } from "@/content/sheet-challenges";
+import { recordView } from "@/lib/challenge-meta";
 import { checkTargets, type PlaygroundCheck } from "@/lib/sheet/playground-check";
 import { isSolved, recordExercise, useProgress } from "@/lib/progress";
 import { cn } from "@/lib/utils";
@@ -19,6 +20,9 @@ export function SheetWorkspace({ challenge, next }: { challenge: SheetChallenge;
   const progress = useProgress();
   const id = challengeId(challenge.slug);
   const solved = isSolved(progress, id, 0);
+  useEffect(() => {
+    recordView(id);
+  }, [id]);
 
   const [overrides, setOverrides] = useState<Map<string, string>>(new Map());
   const [result, setResult] = useState<PlaygroundCheck | null>(null);
