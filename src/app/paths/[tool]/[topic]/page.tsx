@@ -2,10 +2,13 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import { notFound } from "next/navigation";
 import { Reveal } from "@/components/career/reveal";
-import { AlertTriangle, GraduationCap, Target, ArrowLeft, ArrowRight, Briefcase, ChevronRight, Hammer } from "lucide-react";
+import { AlertTriangle, GraduationCap, Target, ArrowLeft, ArrowRight, Briefcase, ChevronRight, Hammer, Menu } from "lucide-react";
 import { CodeBlock } from "@/components/learn/code-block";
 import { KnowledgeCheck } from "@/components/learn/knowledge-check";
+import { LessonSidebar, type SidebarLevel } from "@/components/learn/lesson-sidebar";
 import { PracticeQuestion } from "@/components/learn/practice-question";
+import { SqlLessonExercise } from "@/components/learn/sql-lesson-exercise";
+import { SqlTryIt } from "@/components/learn/sql-try-it";
 import { TopicStatus } from "@/components/learn/topic-status";
 import { SheetExercise } from "@/components/practice/sheet-exercise";
 import { SheetPlayground } from "@/components/practice/sheet-playground";
@@ -48,17 +51,6 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   };
 }
 
-const sections = [
-  { id: "explanation", label: "Explanation" },
-  { id: "syntax", label: "Syntax" },
-  { id: "examples", label: "Examples" },
-  { id: "scenario", label: "Business scenario" },
-  { id: "mistakes", label: "Common mistakes" },
-  { id: "practice", label: "Practice questions" },
-  { id: "interview", label: "Interview questions" },
-  { id: "checks", label: "Knowledge check" },
-];
-
 function H2({ id, children }: { id: string; children: React.ReactNode }) {
   return (
     <h2 id={id} className="scroll-mt-24 text-2xl font-semibold tracking-tight">
@@ -72,6 +64,29 @@ export default async function TopicPage({ params }: Props) {
   if (!data) notFound();
   const { tool, topic, prev, next, lesson, all } = data;
   const nextLesson = all.slice(all.findIndex((t) => t.id === topic.id) + 1).find((t) => t.hasLesson);
+  const isSql = tool.lang === "sql";
+
+  const sidebarLevels: SidebarLevel[] = tool.levels.map((l) => ({
+    name: l.name,
+    level: l.level,
+    topics: l.topics.map((t) => {
+      const ft = all.find((x) => x.slug === t.slug)!;
+      return { id: ft.id, href: `/paths/${ft.id}`, title: t.title, hasLesson: ft.hasLesson };
+    }),
+  }));
+  const sidebar = (
+    <details className="group rounded-xl border border-border bg-card lg:hidden">
+      <summary className="flex cursor-pointer list-none items-center justify-between gap-2 px-4 py-3 font-medium focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary">
+        <span className="flex items-center gap-2">
+          <Menu className="size-4" aria-hidden="true" /> {tool.name} topics
+        </span>
+        <ChevronRight className="size-4 text-muted transition-transform group-open:rotate-90" aria-hidden="true" />
+      </summary>
+      <div className="border-t border-border p-3">
+        <LessonSidebar levels={sidebarLevels} currentId={topic.id} />
+      </div>
+    </details>
+  );
 
   const crumbs = (
     <nav aria-label="Breadcrumb" className="mb-8 flex flex-wrap items-center gap-1.5 text-sm text-muted">
@@ -113,34 +128,44 @@ export default async function TopicPage({ params }: Props) {
   if (!lesson) {
     const available = all.filter((t) => t.hasLesson);
     return (
-      <div className="container max-w-3xl py-10 sm:py-14">
+      <div className="container py-10 sm:py-14">
         {crumbs}
-        <Badge variant={difficultyVariant(topic.level.level)}>{topic.level.name}</Badge>
-        <h1 className="mt-4 text-4xl font-semibold tracking-tight">{topic.title}</h1>
-        <p className="mt-3 text-lg text-muted">{topic.blurb}</p>
-        <div className="mt-10 rounded-2xl border border-dashed border-border bg-surface p-8 text-center">
-          <Hammer className="mx-auto size-8 text-muted" aria-hidden="true" />
-          <h2 className="mt-4 text-xl font-semibold">This lesson has not been written yet</h2>
-          <p className="mx-auto mt-2 max-w-md text-muted">
-            It is part of the {tool.name} outline and is in development. These {tool.name} lessons are ready now:
-          </p>
-          <div className="mt-6 flex flex-wrap justify-center gap-2">
-            {available.map((t) => (
-              <Button key={t.id} asChild variant="secondary" size="sm">
-                <Link href={`/paths/${t.id}`}>{t.title}</Link>
-              </Button>
-            ))}
-            <Button asChild size="sm">
-              <Link href="/paths/sql">Go to the SQL path</Link>
-            </Button>
+        {sidebar}
+        <div className="mt-6 grid gap-10 lg:mt-0 lg:grid-cols-[240px_minmax(0,1fr)]">
+          <aside className="hidden lg:block">
+            <div className="sticky top-24">
+              <LessonSidebar levels={sidebarLevels} currentId={topic.id} />
+            </div>
+          </aside>
+          <div className="max-w-3xl">
+            <Badge variant={difficultyVariant(topic.level.level)}>{topic.level.name}</Badge>
+            <h1 className="mt-4 text-4xl font-semibold tracking-tight">{topic.title}</h1>
+            <p className="mt-3 text-lg text-muted">{topic.blurb}</p>
+            <div className="mt-10 rounded-2xl border border-dashed border-border bg-surface p-8 text-center">
+              <Hammer className="mx-auto size-8 text-muted" aria-hidden="true" />
+              <h2 className="mt-4 text-xl font-semibold">This lesson has not been written yet</h2>
+              <p className="mx-auto mt-2 max-w-md text-muted">
+                It is part of the {tool.name} outline and is in development. These {tool.name} lessons are ready now:
+              </p>
+              <div className="mt-6 flex flex-wrap justify-center gap-2">
+                {available.map((t) => (
+                  <Button key={t.id} asChild variant="secondary" size="sm">
+                    <Link href={`/paths/${t.id}`}>{t.title}</Link>
+                  </Button>
+                ))}
+                <Button asChild size="sm">
+                  <Link href="/paths/sql">Go to the SQL path</Link>
+                </Button>
+              </div>
+            </div>
+            {pager}
           </div>
         </div>
-        {pager}
       </div>
     );
   }
 
-  const interactive = lesson.practice.some((q) => q.kind === "formula" || q.kind === "table");
+  const interactive = lesson.practice.some((q) => q.kind === "formula" || q.kind === "table" || q.kind === "sql");
 
   const jsonLd = {
     "@context": "https://schema.org",
@@ -156,7 +181,13 @@ export default async function TopicPage({ params }: Props) {
     <div className="container py-10 sm:py-14">
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }} />
       {crumbs}
-      <div className="grid gap-12 lg:grid-cols-[minmax(0,1fr)_220px]">
+      {sidebar}
+      <div className="mt-6 grid gap-10 lg:mt-0 lg:grid-cols-[240px_minmax(0,1fr)]">
+        <aside className="hidden lg:block">
+          <div className="sticky top-24">
+            <LessonSidebar levels={sidebarLevels} currentId={topic.id} />
+          </div>
+        </aside>
         <article className="min-w-0 max-w-3xl">
           <header>
             <div className="flex flex-wrap items-center gap-3">
@@ -206,6 +237,7 @@ export default async function TopicPage({ params }: Props) {
                     <h3 className="font-semibold">{ex.title}</h3>
                     <CodeBlock code={ex.code} lang={tool.lang} className="mt-2" />
                     <p className="mt-2 text-muted">{ex.note}</p>
+                    {isSql && <SqlTryIt code={ex.code} />}
                   </div>
                 ))}
               </div>
@@ -228,7 +260,12 @@ export default async function TopicPage({ params }: Props) {
                   {lesson.scenario.title}
                 </h3>
                 <p className="mt-2 leading-relaxed text-muted">{lesson.scenario.body}</p>
-                {lesson.scenario.code && <CodeBlock code={lesson.scenario.code} lang={tool.lang} className="mt-4 bg-card" />}
+                {lesson.scenario.code && (
+                  <>
+                    <CodeBlock code={lesson.scenario.code} lang={tool.lang} className="mt-4 bg-card" />
+                    {isSql && <SqlTryIt code={lesson.scenario.code} />}
+                  </>
+                )}
               </div>
             </section>
 
@@ -248,10 +285,10 @@ export default async function TopicPage({ params }: Props) {
             </section>
 
             <section aria-labelledby="practice">
-              <H2 id="practice">Practice questions</H2>
+              <H2 id="practice">Practice your skills</H2>
               <p className="mt-2 text-muted">
                 {interactive
-                  ? "Your answers are calculated and checked against test cases. Hints come one at a time, and the solution stays hidden until you ask for it."
+                  ? "Your answers are run for real and checked against test cases, never by matching keywords. Hints come one at a time, and the solution stays hidden until you ask for it."
                   : "Try each one before you open a hint or the solution."}
               </p>
               {lesson.practice.some((q) => q.kind === "formula") && (
@@ -266,6 +303,8 @@ export default async function TopicPage({ params }: Props) {
                     <SheetExercise key={q.title} topicId={topic.id} index={i} question={q} />
                   ) : q.kind === "table" ? (
                     <TableExercise key={q.title} topicId={topic.id} index={i} question={q} />
+                  ) : q.kind === "sql" ? (
+                    <SqlLessonExercise key={q.title} topicId={topic.id} index={i} question={q} />
                   ) : (
                     <PracticeQuestion key={q.title} index={i} lang={tool.lang} question={q} />
                   ),
@@ -330,21 +369,6 @@ export default async function TopicPage({ params }: Props) {
 
           {pager}
         </article>
-
-        <aside className="hidden lg:block">
-          <nav aria-label="On this page" className="sticky top-24 text-sm">
-            <p className="mb-3 font-semibold">On this page</p>
-            <ul className="space-y-2 border-l border-border">
-              {sections.map((s) => (
-                <li key={s.id}>
-                  <a href={`#${s.id}`} className="-ml-px block border-l border-transparent pl-4 text-muted transition-colors hover:border-primary hover:text-foreground">
-                    {s.label}
-                  </a>
-                </li>
-              ))}
-            </ul>
-          </nav>
-        </aside>
       </div>
     </div>
   );

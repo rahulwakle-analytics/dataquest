@@ -23,7 +23,7 @@ const SqlEditor = dynamic(() => import("./sql-editor"), {
 export type TablePreview = { name: string; rows: number; columns: string[]; preview: Record<string, Cell>[] };
 type Props = { challenge: SqlChallenge; tables: TablePreview[]; next?: { slug: string; title: string } };
 
-const fmt = (v: Cell) => (v === null ? "NULL" : typeof v === "number" && !Number.isInteger(v) ? String(Math.round(v * 100) / 100) : String(v));
+export const fmt = (v: Cell) => (v === null ? "NULL" : typeof v === "number" && !Number.isInteger(v) ? String(Math.round(v * 100) / 100) : String(v));
 const panel = "rounded-2xl border border-border bg-card";
 
 /** Infers a display type per column from the sampled preview rows. Preview-only; not a schema fetch. */
@@ -47,7 +47,7 @@ function sampleQueriesFor(t: TablePreview): { label: string; sql: string }[] {
   ];
 }
 
-function DataTable({ columns, rows, label }: { columns: string[]; rows: Cell[][]; label: string }) {
+export function DataTable({ columns, rows, label }: { columns: string[]; rows: Cell[][]; label: string }) {
   return (
     <div tabIndex={0} role="region" aria-label={label} className="max-h-[320px] overflow-auto rounded-lg border border-border focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary">
       <table className="w-full border-collapse text-left font-mono text-[12.5px]">

@@ -1,6 +1,7 @@
 import type { FormulaTask } from "@/lib/sheet/check";
 import type { SheetSpec } from "@/lib/sheet/engine";
 import type { Dataset, View } from "@/lib/table-practice";
+import type { DatabaseId } from "@/lib/sql/databases";
 
 export type Difficulty = "Easy" | "Medium" | "Hard";
 
@@ -28,7 +29,24 @@ export type TableQuestion = QuestionBase & {
   expectIds: number[];
   steps: string[];
 };
-export type PracticeItem = TextQuestion | FormulaQuestion | TableQuestion;
+/**
+ * A SQL question embedded directly in a lesson, checked the same way the SQL Playground checks
+ * challenges: the learner's query and the reference solution are both run for real against
+ * DuckDB (on two differently-sized datasets, to catch a hardcoded answer) and their results
+ * compared. Never checked by matching keywords in the query text.
+ */
+export type SqlLessonQuestion = QuestionBase & {
+  kind: "sql";
+  database?: DatabaseId;
+  columns: string[];
+  /** Whether row order is part of the answer. */
+  ordered: boolean;
+  solution: string;
+  /** Queries that must be rejected. Used by the content verification script. */
+  wrong?: string[];
+  starter?: string;
+};
+export type PracticeItem = TextQuestion | FormulaQuestion | TableQuestion | SqlLessonQuestion;
 
 export type Playground = { title: string; intro: string; sheet: SheetSpec; target: string; fill: string; initial: string; tryThese: string[] };
 

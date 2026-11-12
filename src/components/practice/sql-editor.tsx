@@ -7,9 +7,9 @@ import CodeMirror from "@uiw/react-codemirror";
 import { useTheme } from "next-themes";
 import { useMemo } from "react";
 
-type Props = { value: string; onChange: (v: string) => void; onRun: () => void; schema: Record<string, string[]> };
+type Props = { value: string; onChange: (v: string) => void; onRun: () => void; schema: Record<string, string[]>; height?: string };
 
-export default function SqlEditor({ value, onChange, onRun, schema }: Props) {
+export default function SqlEditor({ value, onChange, onRun, schema, height = "260px" }: Props) {
   const { resolvedTheme } = useTheme();
   const extensions = useMemo(
     () => [
@@ -26,7 +26,7 @@ export default function SqlEditor({ value, onChange, onRun, schema }: Props) {
       onChange={onChange}
       extensions={extensions}
       theme={resolvedTheme === "light" ? "light" : "dark"}
-      height="260px"
+      height={height}
       basicSetup={{ foldGutter: false, highlightActiveLine: false }}
       className="overflow-hidden rounded-lg border border-border text-[13px] [&_.cm-editor]:bg-surface [&_.cm-gutters]:bg-surface [&_.cm-focused]:outline-none"
     />

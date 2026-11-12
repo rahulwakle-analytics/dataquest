@@ -125,6 +125,7 @@ ok(fillFormulas("=B2*F$1", "C2", "C2:D3").get("D3") === "=C3*G$1", "fillFormulas
 /* ---- exercises ---- */
 let formulaCount = 0;
 let tableCount = 0;
+let sqlLessonCount = 0;
 for (const [id, lesson] of Object.entries(lessons)) {
   lesson.practice.forEach((q, i) => {
     const where = `${id} #${i + 1} “${q.title}”`;
@@ -146,6 +147,16 @@ for (const [id, lesson] of Object.entries(lessons)) {
       ok(!checkView(q.dataset, q.goal, { filters: [], sort: [{ col: q.dataset.idKey, dir: "asc" }] }).pass || (q.goal.filters.length === 0 && q.goal.sort.length === 0), `${where}: the untouched table was accepted`);
       if (q.goal.sort.length) ok(!checkView(q.dataset, q.goal, { ...q.goal, sort: q.goal.sort.map((s) => ({ ...s, dir: s.dir === "asc" ? "desc" : "asc" })) }).pass, `${where}: reversed sort was accepted`);
       if (q.goal.filters.length) ok(!checkView(q.dataset, q.goal, { ...q.goal, filters: [] }).pass, `${where}: unfiltered view was accepted`);
+    } else if (q.kind === "sql") {
+      sqlLessonCount++;
+      const db = q.database ?? "retail";
+      ok(db in DATABASES, `${where}: unknown database "${db}"`);
+      ok(q.columns.length > 0, `${where}: needs at least one expected column`);
+      ok((q.hints?.length ?? 0) >= 1, `${where}: needs at least one hint`);
+      ok(/^\s*(select|with)\b/i.test(q.solution), `${where}: reference solution must start with SELECT or WITH`);
+      const tables = TABLES_OF(db as keyof typeof DATABASES);
+      ok(tables.some((t) => q.solution.includes(t)), `${where}: reference solution does not mention any table in the "${db}" database`);
+      if (q.wrong) ok(q.wrong.every((w) => w.trim() !== q.solution.trim()), `${where}: a "wrong" query is identical to the solution`);
     }
     ok(q.kind === "table" ? q.steps.length > 0 : Boolean(q.solution), `${where}: missing solution`);
   });
@@ -245,7 +256,7 @@ async function verifyPythonChallenges() {
 
 void verifyPythonChallenges().then(() => {
   console.log(
-    `${checks - failures}/${checks} checks passed (${unit.length} engine cases, ${shifts.length} copy cases, ${formulaCount} formula exercises, ${tableCount} table exercises, ` +
+    `${checks - failures}/${checks} checks passed (${unit.length} engine cases, ${shifts.length} copy cases, ${formulaCount} formula exercises, ${tableCount} table exercises, ${sqlLessonCount} SQL lesson exercises, ` +
       `${Object.keys(lessons).length} lessons, ${sheetChallenges.length} Excel Playground challenges, ${sortFilterChallenges.length} sort/filter challenges, ${powerbiExercises.length} Power BI exercises, ` +
       `${sqlChallenges.length} SQL challenges across ${Object.keys(DATABASES).length} databases, ${pythonChallenges.length} Python challenges executed on a real interpreter)`,
   );

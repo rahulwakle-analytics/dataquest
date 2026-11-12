@@ -112,3 +112,7 @@ export const DATABASES: Record<DatabaseId, DatabaseInfo> = {
 
 export const DATABASE_LIST = Object.values(DATABASES);
 export const TABLES_OF = (db: DatabaseId) => DATABASES[db].tables.map((t) => t.name);
+
+/** Table name -> column names, for the SQL editor's autocomplete/highlighting. */
+export const schemaFor = (db: DatabaseId): Record<string, string[]> =>
+  Object.fromEntries(DATABASES[db].tables.map((t) => [t.name, t.columns.map((c) => c.name)]));
