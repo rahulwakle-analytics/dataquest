@@ -22,7 +22,7 @@ export function PowerBiExerciseCard({ exercise: q }: { exercise: PowerBiExercise
   };
 
   return (
-    <article className="rounded-2xl border border-border bg-card p-5">
+    <article id={q.slug} className="scroll-mt-20 rounded-2xl border border-border bg-card p-5">
       <div className="flex flex-wrap items-center justify-between gap-2">
         <Badge variant="violet">{q.category}</Badge>
         <div className="flex items-center gap-2">

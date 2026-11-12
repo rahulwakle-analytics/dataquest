@@ -2,6 +2,8 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import { ArrowRight, Code2, Sheet, Terminal } from "lucide-react";
 import { PageHeader } from "@/components/page-header";
+import { UnifiedPracticeTable } from "@/components/practice/unified-practice-table";
+import { practiceCatalog } from "@/lib/practice-catalog";
 import { sqlChallenges, XP as SQL_XP } from "@/content/sql-challenges";
 import { sheetChallenges, sortFilterChallenges, XP as SHEET_XP } from "@/content/sheet-challenges";
 import { pythonChallenges, XP as PYTHON_XP } from "@/content/python-challenges";
@@ -23,7 +25,7 @@ export default function PracticePage() {
       <PageHeader
         eyebrow="Practice lab"
         title="Don't just read about it. Do it."
-        lead="Four hands-on tracks: a real SQL engine, an editable spreadsheet checked by calculation, a real Python interpreter with pandas, and guided Power BI exercises. Everything here runs and is actually checked."
+        lead="Four hands-on tracks: a real SQL engine, an editable spreadsheet checked by calculation, a real Python interpreter with pandas, and guided Power BI exercises. Everything here runs and is actually checked. Jump into any problem directly — no lesson required first."
       />
       <div className="mx-auto mt-10 grid max-w-4xl gap-5 sm:grid-cols-2">
         <Link href="/practice/sql" className="group rounded-2xl border border-border bg-card p-6 transition-colors hover:border-primary">
@@ -59,6 +61,14 @@ export default function PracticePage() {
             Open <ArrowRight className="size-4 transition-transform group-hover:translate-x-0.5" />
           </span>
         </Link>
+      </div>
+
+      <div className="mx-auto mt-16 max-w-5xl">
+        <h2 className="text-xl font-semibold">All problems</h2>
+        <p className="mt-1 text-sm text-muted">Every SQL, Excel, Python and Power BI problem in one searchable, filterable list.</p>
+        <div className="mt-5">
+          <UnifiedPracticeTable items={practiceCatalog} />
+        </div>
       </div>
     </div>
   );
