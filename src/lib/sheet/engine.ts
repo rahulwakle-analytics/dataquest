@@ -328,7 +328,9 @@ function matcher(crit: Scalar): (v: Scalar) => boolean {
 export const FUNCTIONS = [
   "SUM", "AVERAGE", "MIN", "MAX", "COUNT", "COUNTA", "COUNTBLANK", "ROUND", "ROUNDUP", "ROUNDDOWN", "ABS", "INT",
   "IF", "AND", "OR", "NOT", "IFERROR", "SUMIF", "COUNTIF", "AVERAGEIF", "SUMIFS", "COUNTIFS", "AVERAGEIFS",
-  "LEN", "TRIM", "UPPER", "LOWER", "LEFT", "RIGHT", "XLOOKUP",
+  "LEN", "TRIM", "UPPER", "LOWER", "PROPER", "LEFT", "RIGHT", "MID", "CONCAT", "CONCATENATE",
+  "XLOOKUP", "INDEX", "MATCH",
+  "DATE", "YEAR", "MONTH", "DAY", "EDATE", "DATEDIF",
 ];
 
 /** Exact-match equality for lookups (case-insensitive for text), distinct from the wildcard/operator matcher used by *IF(S). */
@@ -642,6 +644,135 @@ export class Sheet {
         if (isErr(t)) return t;
         if (isErr(k)) return k;
         return name === "LEFT" ? t.slice(0, k) : k === 0 ? "" : t.slice(-k);
+      }
+      case "MID": {
+        if (!need(3)) return E("#VALUE!");
+        const t = text(s(0));
+        const start = num(s(1));
+        const chars = num(s(2));
+        if (isErr(t)) return t;
+        if (isErr(start)) return start;
+        if (isErr(chars)) return chars;
+        if (start < 1 || chars < 0) return E("#VALUE!");
+        return t.slice(start - 1, start - 1 + chars);
+      }
+      case "CONCAT":
+      case "CONCATENATE": {
+        if (!args.length) return E("#VALUE!");
+        const parts: string[] = [];
+        for (const v of vals())
+          for (const cell of flat(v)) {
+            if (isErr(cell)) return cell;
+            const t = text(cell);
+            if (isErr(t)) return t;
+            parts.push(t);
+          }
+        return parts.join("");
+      }
+      case "PROPER": {
+        if (!need(1)) return E("#VALUE!");
+        const t = text(s(0));
+        if (isErr(t)) return t;
+        return t.replace(/\w\S*/g, (w) => w[0].toUpperCase() + w.slice(1).toLowerCase());
+      }
+      case "INDEX": {
+        if (!need(2, 3)) return E("#VALUE!");
+        const v = this.ev(args[0], c, r);
+        const rows: Scalar[][] = isRng(v) ? v.range : [[v]];
+        const rowN = num(s(1));
+        if (isErr(rowN)) return rowN;
+        let rowIdx: number;
+        let colIdx: number;
+        if (args[2]) {
+          const colN = num(s(2));
+          if (isErr(colN)) return colN;
+          rowIdx = rowN;
+          colIdx = colN;
+        } else if (rows.length === 1) {
+          // One-argument form on a single row: the number indexes along that row, Excel-style.
+          rowIdx = 1;
+          colIdx = rowN;
+        } else {
+          rowIdx = rowN;
+          colIdx = 1;
+        }
+        const rr = rows[Math.trunc(rowIdx) - 1];
+        const cell = rr ? rr[Math.trunc(colIdx) - 1] : undefined;
+        return cell === undefined ? E("#REF!") : cell;
+      }
+      case "MATCH": {
+        // Exact match only (match_type 0), the form almost every INDEX-MATCH lookup uses.
+        if (!need(2, 3)) return E("#VALUE!");
+        const lv = s(0);
+        if (isErr(lv)) return lv;
+        const arr = flat(this.ev(args[1], c, r));
+        const idx = arr.findIndex((v) => sameValue(v, lv));
+        return idx < 0 ? E("#N/A") : idx + 1;
+      }
+      case "DATE": {
+        if (!need(3)) return E("#VALUE!");
+        const y = num(s(0));
+        const m = num(s(1));
+        const d = num(s(2));
+        if (isErr(y)) return y;
+        if (isErr(m)) return m;
+        if (isErr(d)) return d;
+        return new Date(Date.UTC(y, m - 1, d)).toISOString().slice(0, 10);
+      }
+      case "YEAR":
+      case "MONTH":
+      case "DAY": {
+        if (!need(1)) return E("#VALUE!");
+        const t = text(s(0));
+        if (isErr(t)) return t;
+        const m = /^(\d{4})-(\d{2})-(\d{2})/.exec(t);
+        if (!m) return E("#VALUE!");
+        return name === "YEAR" ? Number(m[1]) : name === "MONTH" ? Number(m[2]) : Number(m[3]);
+      }
+      case "EDATE": {
+        if (!need(2)) return E("#VALUE!");
+        const t = text(s(0));
+        const months = num(s(1));
+        if (isErr(t)) return t;
+        if (isErr(months)) return months;
+        const m = /^(\d{4})-(\d{2})-(\d{2})/.exec(t);
+        if (!m) return E("#VALUE!");
+        // Like Excel's EDATE, clamp to the last day of the target month rather than overflowing
+        // into the next one (e.g. 31 Jan + 1 month lands on 29 Feb in a leap year, not 2 Mar).
+        const total = Number(m[2]) - 1 + Math.trunc(months);
+        const y = Number(m[1]) + Math.floor(total / 12);
+        const mi = ((total % 12) + 12) % 12;
+        const lastDay = new Date(Date.UTC(y, mi + 1, 0)).getUTCDate();
+        const d = Math.min(Number(m[3]), lastDay);
+        return new Date(Date.UTC(y, mi, d)).toISOString().slice(0, 10);
+      }
+      case "DATEDIF": {
+        if (!need(3)) return E("#VALUE!");
+        const a = text(s(0));
+        const b = text(s(1));
+        const unit = text(s(2));
+        if (isErr(a)) return a;
+        if (isErr(b)) return b;
+        if (isErr(unit)) return unit;
+        const ma = /^(\d{4})-(\d{2})-(\d{2})/.exec(a);
+        const mb = /^(\d{4})-(\d{2})-(\d{2})/.exec(b);
+        if (!ma || !mb) return E("#VALUE!");
+        const da = Date.UTC(+ma[1], +ma[2] - 1, +ma[3]);
+        const db = Date.UTC(+mb[1], +mb[2] - 1, +mb[3]);
+        if (db < da) return E("#NUM!");
+        const u = unit.toLowerCase();
+        if (u === "d") return Math.round((db - da) / 86400000);
+        if (u === "y") {
+          let years = Number(mb[1]) - Number(ma[1]);
+          if (Number(mb[2]) < Number(ma[2]) || (Number(mb[2]) === Number(ma[2]) && Number(mb[3]) < Number(ma[3]))) years--;
+          return years;
+        }
+        if (u === "m") {
+          let months = (Number(mb[1]) - Number(ma[1])) * 12 + (Number(mb[2]) - Number(ma[2]));
+          if (Number(mb[3]) < Number(ma[3])) months--;
+          return months;
+        }
+        return E("#NUM!");
       }
       default:
         return E("#NAME?");

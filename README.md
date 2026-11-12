@@ -69,10 +69,12 @@ Working:
     daily challenge, a random-challenge button and a recently-viewed strip (`src/lib/challenge-meta.ts`).
   - **Excel Playground** (`/practice/excel`): a fully editable, click-any-cell spreadsheet grid
     (`src/components/practice/sheet-editor.tsx`) built on the same formula engine as the lesson exercises, now
-    extended with `SUMIFS`, `COUNTIFS`, `AVERAGEIFS` and `XLOOKUP`. 10 challenges (`src/content/sheet-challenges.ts`)
-    including a pivot-style multi-cell summary, each checked by computed value against a reference formula
-    (`src/lib/sheet/playground-check.ts`), never by string match — plus 2 sort-and-filter exercises on the existing
-    table-practice engine.
+    extended with `SUMIFS`, `COUNTIFS`, `AVERAGEIFS`, `XLOOKUP`, `INDEX`, `MATCH`, `MID`, `CONCAT`/`CONCATENATE`,
+    `PROPER`, `DATE`, `YEAR`, `MONTH`, `DAY`, `EDATE` and `DATEDIF`. 23 challenges
+    (`src/content/sheet-challenges.ts`), spanning lookup, date, and text functions, data cleaning, a pivot-style
+    multi-cell summary, and date-filtered business-analytics questions, each checked by computed value against a
+    reference formula (`src/lib/sheet/playground-check.ts`), never by string match — plus 2 sort-and-filter
+    exercises on the existing table-practice engine.
   - **Power BI Practice Lab** (`/practice/powerbi`): 14 auto-checked, multiple-choice exercises
     (`src/content/powerbi-practice.ts`) across data modelling, relationships, DAX, measures vs. calculated columns,
     KPI calculation, dashboard design and report interpretation — clearly labelled as simulated practice, not a
@@ -108,14 +110,28 @@ Interview Prep, Job Readiness). Nothing in the UI claims these are live.
 
 **DataQuest V5 (in progress).** The brief asks for ~500 challenges across SQL/Excel/Power BI/Python/Statistics, a
 browser-based Python/pandas environment, a much larger dataset library, study plans, and a unified learner
-profile with achievement badges — explicitly in milestones, each reported on before the next starts. Milestone 1
-(challenge engine + SQL expansion) is what's in this build: the second SQL database above, 20 new individually
+profile with achievement badges — explicitly in milestones, each reported on before the next starts.
+
+Milestone 1 (challenge engine + SQL expansion): the second SQL database above, 20 new individually
 Playwright-validated SQL challenges (35 total, up from 15), and the search/filter/bookmark/daily/random
-challenge-browsing UI. Still to come, in order: Excel practice expansion, a Pyodide-based Python notebook
-environment, the Power BI interactive lab upgrade, further dataset/project expansion, study plans and the unified
-profile/badges, then a final QA and performance pass. 35 and 10 SQL/Excel challenges are real, individually
-authored and validated questions, not padding toward the brief's 500 — hitting that count with the same bar will
-take several more milestones.
+challenge-browsing UI.
+
+Milestone 2 (Excel practice expansion) is what's newly in this build: the formula engine gained `INDEX`, `MATCH`,
+`MID`, `CONCAT`/`CONCATENATE`, `PROPER`, `DATE`, `YEAR`, `MONTH`, `DAY`, `EDATE` (with real Excel month-end
+clamping), and `DATEDIF`, and the shared practice sheet gained order-date, ship-date, a messy-name column, and a
+SKU column to support them. 13 new challenges were added (23 Excel Playground challenges total, up from 10),
+covering lookup functions, date functions, text functions, data cleaning, a COUNTIF-based pivot-style summary,
+and two date-filtered SUMIFS/AVERAGEIFS business-analytics questions. Because this formula engine runs natively
+in Node (unlike DuckDB-WASM), every one of these 13 reference solutions is directly executed and checked by
+`npm run verify`, not just structurally validated — a stronger guarantee than the SQL challenges get. **Not**
+attempted this milestone: conditional formatting, dynamic arrays, and Power Query transformation simulations —
+these are UI/visual features rather than formula-engine additions, and were deliberately left out rather than
+faked.
+
+Still to come, in order: a Pyodide-based Python notebook environment, the Power BI interactive lab upgrade,
+further dataset/project expansion, study plans and the unified profile/badges, then a final QA and performance
+pass. 35 and 23 SQL/Excel challenges are real, individually authored and validated questions, not padding toward
+the brief's 500 — hitting that count with the same bar will take several more milestones.
 
 Known limits: answers and solutions ship in the page bundle and are checked in the browser (SQL on a real DuckDB
 engine, Excel on this project's own formula engine, Power BI against one correct option), and progress is per
