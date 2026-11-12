@@ -6,10 +6,14 @@
  *  - every listed wrong answer is rejected,
  * and it runs a set of formula-engine unit tests.
  */
+import path from "node:path";
+import { fileURLToPath } from "node:url";
 import { lessons } from "../src/content";
 import { powerbiExercises } from "../src/content/powerbi-practice";
+import { pythonChallenges } from "../src/content/python-challenges";
 import { sheetChallenges, sortFilterChallenges } from "../src/content/sheet-challenges";
 import { sqlChallenges } from "../src/content/sql-challenges";
+import { runAndCheck, sameResult } from "../src/lib/python/engine";
 import { checkFormula, evaluateFill, fillFormulas } from "../src/lib/sheet/check";
 import { isErr, Sheet, shiftFormula, type Raw } from "../src/lib/sheet/engine";
 import { checkTargets } from "../src/lib/sheet/playground-check";
@@ -207,9 +211,43 @@ for (const c of sqlChallenges) {
 }
 ok(new Set(sqlChallenges.map((c) => c.slug)).size === sqlChallenges.length, "sqlChallenges: duplicate slugs");
 
-console.log(
-  `${checks - failures}/${checks} checks passed (${unit.length} engine cases, ${shifts.length} copy cases, ${formulaCount} formula exercises, ${tableCount} table exercises, ` +
-    `${Object.keys(lessons).length} lessons, ${sheetChallenges.length} Excel Playground challenges, ${sortFilterChallenges.length} sort/filter challenges, ${powerbiExercises.length} Power BI exercises, ` +
-    `${sqlChallenges.length} SQL challenges across ${Object.keys(DATABASES).length} databases)`,
-);
-process.exit(failures ? 1 : 0);
+/* ---- Python Playground challenges ----
+ * Unlike DuckDB-WASM, Pyodide also runs in Node, so every reference solution here is actually
+ * executed (against the self-hosted runtime in public/pyodide, no network needed) rather than
+ * only structurally checked — the same strength of guarantee the Excel formula engine gets. */
+async function verifyPythonChallenges() {
+  const __dirname = path.dirname(fileURLToPath(import.meta.url));
+  const pyodide = await (await import("pyodide")).loadPyodide({ indexURL: path.resolve(__dirname, "../public/pyodide/") });
+  await pyodide.loadPackage(["numpy", "pandas"]);
+
+  for (const c of pythonChallenges) {
+    const where = `practice-python/${c.slug} "${c.title}"`;
+    ok(c.topics.length > 0, `${where}: needs at least one topic`);
+    ok(c.hints.length >= 2, `${where}: needs at least two hints`);
+    ok(c.wrong.length >= 1, `${where}: needs at least one rejected ("wrong") snippet`);
+    ok(c.wrong.every((w) => w.trim() !== c.solution.trim()), `${where}: a "wrong" snippet is identical to the solution`);
+
+    const wantMain = await runAndCheck(pyodide, c.setupMain, c.solution, c.checkExpr);
+    const wantCheck = await runAndCheck(pyodide, c.setupCheck, c.solution, c.checkExpr);
+    ok(wantMain.ok, `${where}: reference solution failed on the main dataset` + (wantMain.ok ? "" : `: ${wantMain.error}`));
+    ok(wantCheck.ok, `${where}: reference solution failed on the check dataset` + (wantCheck.ok ? "" : `: ${wantCheck.error}`));
+
+    for (const [i, w] of c.wrong.entries()) {
+      const gotMain = await runAndCheck(pyodide, c.setupMain, w, c.checkExpr);
+      const gotCheck = await runAndCheck(pyodide, c.setupCheck, w, c.checkExpr);
+      const matchesMain = wantMain.ok && gotMain.ok && sameResult(gotMain.value, wantMain.value);
+      const matchesCheck = wantCheck.ok && gotCheck.ok && sameResult(gotCheck.value, wantCheck.value);
+      ok(!(matchesMain && matchesCheck), `${where}: wrong[${i}] was not rejected by either dataset`);
+    }
+  }
+  ok(new Set(pythonChallenges.map((c) => c.slug)).size === pythonChallenges.length, "pythonChallenges: duplicate slugs");
+}
+
+void verifyPythonChallenges().then(() => {
+  console.log(
+    `${checks - failures}/${checks} checks passed (${unit.length} engine cases, ${shifts.length} copy cases, ${formulaCount} formula exercises, ${tableCount} table exercises, ` +
+      `${Object.keys(lessons).length} lessons, ${sheetChallenges.length} Excel Playground challenges, ${sortFilterChallenges.length} sort/filter challenges, ${powerbiExercises.length} Power BI exercises, ` +
+      `${sqlChallenges.length} SQL challenges across ${Object.keys(DATABASES).length} databases, ${pythonChallenges.length} Python challenges executed on a real interpreter)`,
+  );
+  process.exit(failures ? 1 : 0);
+});

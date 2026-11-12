@@ -56,7 +56,7 @@ Working:
   (nine stages with completion tracking) and `/career` (resume, portfolio and LinkedIn checklists, interview
   question bank, self-assessed mock interview, case studies, role profiles). Content lives in `src/content/career.ts`.
   Salary figures carry their source and the date checked; update them there.
-- **Practice Lab** (`/practice`): a hub linking to three playgrounds —
+- **Practice Lab** (`/practice`): a hub linking to four playgrounds —
   - **SQL Playground** (`/practice/sql`): 35 challenges across **two realistic relational databases** — a retail
     business (customers/products/orders/order_items) and an HR system (departments/employees, with a
     self-referencing manager_id) — run on DuckDB WebAssembly in the browser (`src/lib/sql/engine.ts`, one
@@ -75,6 +75,17 @@ Working:
     multi-cell summary, and date-filtered business-analytics questions, each checked by computed value against a
     reference formula (`src/lib/sheet/playground-check.ts`), never by string match — plus 2 sort-and-filter
     exercises on the existing table-practice engine.
+  - **Python Playground** (`/practice/python`): 19 challenges (`src/content/python-challenges.ts`) spanning
+    plain Python (variables, strings, dicts, control flow, functions, list comprehensions) and pandas
+    (DataFrames, filtering, sorting, groupby aggregation, merging, missing values, duplicates), run on Pyodide —
+    a real CPython interpreter compiled to WebAssembly, with numpy and pandas — entirely in the browser
+    (`src/lib/python/engine.ts`). The runtime and the numpy/pandas wheels these challenges need are self-hosted
+    under `public/pyodide` rather than fetched from a third-party CDN; loaded via a `<script>` tag rather than an
+    npm import, since Pyodide's own dynamic-import-based browser loader doesn't survive webpack bundling
+    reliably. Checking is value-based: a setup script builds the input data, the learner's code runs against it,
+    and a check expression's result is compared with the reference solution's — on two differently-sized
+    datasets per challenge, the same anti-hardcoding double-check the SQL and Excel playgrounds use
+    (`src/lib/python/check.ts`).
   - **Power BI Practice Lab** (`/practice/powerbi`): 14 auto-checked, multiple-choice exercises
     (`src/content/powerbi-practice.ts`) across data modelling, relationships, DAX, measures vs. calculated columns,
     KPI calculation, dashboard design and report interpretation — clearly labelled as simulated practice, not a
@@ -102,7 +113,10 @@ reference solution gives the hand-written expected values, passes its own test c
 answer is rejected. SQL Playground challenges get a structural check here (unique slugs, a valid database,
 hints, a rejected-answer case, a solution that mentions a real table) rather than an execution check, since
 DuckDB-WASM only runs in a browser; their actual correctness is verified by Playwright against the live engine
-(see `test_v5_sql_hr.py`-style scripts used during development, not part of this repo).
+(see `test_v5_sql_hr.py`-style scripts used during development, not part of this repo). Python Playground
+challenges get the strong check: unlike DuckDB-WASM, Pyodide also runs in Node, so every reference solution is
+actually executed here too (against the self-hosted runtime in `public/pyodide`, no network needed) and every
+listed wrong snippet is confirmed rejected on at least one of its two datasets.
 
 Not built yet: accounts and synced progress (Supabase), payments, admin CMS, analytics, XP streaks/leaderboards,
 and stronger roadmap completion rules for non-lesson stages that have no gradable content yet (Statistics,
@@ -128,14 +142,28 @@ attempted this milestone: conditional formatting, dynamic arrays, and Power Quer
 these are UI/visual features rather than formula-engine additions, and were deliberately left out rather than
 faked.
 
-Still to come, in order: a Pyodide-based Python notebook environment, the Power BI interactive lab upgrade,
-further dataset/project expansion, study plans and the unified profile/badges, then a final QA and performance
-pass. 35 and 23 SQL/Excel challenges are real, individually authored and validated questions, not padding toward
-the brief's 500 — hitting that count with the same bar will take several more milestones.
+Milestone 3 (Python execution environment) is what's newly in this build: a browser-based Python environment on
+Pyodide (CPython + numpy + pandas via WebAssembly), self-hosted under `public/pyodide` (no third-party CDN
+dependency), with 19 new, individually-validated challenges across plain Python and pandas — see the Python
+Playground entry above. Every reference solution is actually executed by `npm run verify`, the same strength of
+guarantee the Excel formula engine gets, because Pyodide (unlike DuckDB-WASM) also runs under Node. **Not**
+attempted this milestone: a notebook-style multi-cell UI (the brief's exercises are short enough that a single
+editor plus Run/Submit, matching the SQL and Excel playgrounds, covers them), and `matplotlib` visualization
+challenges — plotting correctness isn't naturally value-checkable the way a DataFrame or scalar result is, and
+doing it honestly needs more thought than this milestone's budget. Statistics (the V5 brief's fifth tool) hasn't
+been started.
+
+Still to come, in order: the Power BI interactive lab upgrade, further dataset/project expansion, study plans and
+the unified profile/badges, then a final QA and performance pass. 35, 23 and 19 SQL/Excel/Python challenges are
+real, individually authored and validated questions, not padding toward the brief's 500 — hitting that count
+with the same bar will take several more milestones.
 
 Known limits: answers and solutions ship in the page bundle and are checked in the browser (SQL on a real DuckDB
-engine, Excel on this project's own formula engine, Power BI against one correct option), and progress is per
-browser. Both move server-side with accounts. Power BI exercises are multiple-choice by design — nothing here
-executes live DAX or opens Power BI Desktop.
+engine, Excel on this project's own formula engine, Python on a real Pyodide/CPython interpreter, Power BI
+against one correct option), and progress is per browser. Both move server-side with accounts. Power BI
+exercises are multiple-choice by design — nothing here executes live DAX or opens Power BI Desktop. Python code
+has no hard execution timeout (Pyodide can't preempt synchronous CPU-bound code the way the SQL engine's time
+limit does); this is fine for the short challenges here but would need attention before letting learners run
+arbitrary long-running code.
 
 Configuration left empty on purpose: Pro price and social links in `src/lib/site.ts`.

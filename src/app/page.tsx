@@ -29,6 +29,7 @@ const features = [
     live: true,
   },
   { icon: Database, title: "SQL Playground", body: "Write queries in an editor and run them on DuckDB, a real SQL engine, in your browser. Answers are checked against test cases on two datasets.", live: true },
+  { icon: Code2, title: "Python Playground", body: "Write Python and pandas in an editor and run it on a real CPython interpreter (Pyodide) in your browser. Answers are checked against two datasets, not pattern-matched.", live: true },
   { icon: Gauge, title: "Power BI Practice Lab", body: "Guided data-modelling, DAX and dashboard-design exercises, clearly marked as simulated rather than a Power BI Desktop replica.", live: true },
   { icon: FolderKanban, title: "Dataset library", body: "Eight sample datasets with column descriptions, previews and CSV downloads.", live: true },
   { icon: Gauge, title: "XP, streaks and leaderboards", body: "Earn XP for verified solutions and keep a daily streak going.", live: false },

@@ -22,7 +22,7 @@ const fmtDate = (iso: string) => new Date(iso).toLocaleString(undefined, { day: 
 
 type PracticeItem = { id: string; xp: number };
 
-export function DashboardView({ paths, sql, sheet, powerbi }: { paths: DashboardPath[]; sql: PracticeItem[]; sheet: PracticeItem[]; powerbi: PracticeItem[] }) {
+export function DashboardView({ paths, sql, sheet, powerbi, python }: { paths: DashboardPath[]; sql: PracticeItem[]; sheet: PracticeItem[]; powerbi: PracticeItem[]; python: PracticeItem[] }) {
   const progress = useProgress();
   const [confirmReset, setConfirmReset] = useState(false);
 
@@ -51,7 +51,8 @@ export function DashboardView({ paths, sql, sheet, powerbi }: { paths: Dashboard
   const sqlSolved = sql.filter((c) => progress[c.id]?.exercises?.[0]);
   const sheetSolved = sheet.filter((c) => progress[c.id]?.exercises?.[0]);
   const powerbiSolved = powerbi.filter((c) => progress[c.id]?.exercises?.[0]);
-  const started = events.length > 0 || checksDone > 0 || sqlSolved.length > 0 || sheetSolved.length > 0 || powerbiSolved.length > 0;
+  const pythonSolved = python.filter((c) => progress[c.id]?.exercises?.[0]);
+  const started = events.length > 0 || checksDone > 0 || sqlSolved.length > 0 || sheetSolved.length > 0 || powerbiSolved.length > 0 || pythonSolved.length > 0;
 
   const pathRows = paths.map((p) => {
     const done = p.topics.filter((t) => isComplete(progress, t.id)).length;
@@ -61,9 +62,10 @@ export function DashboardView({ paths, sql, sheet, powerbi }: { paths: Dashboard
   });
   const resume = pathRows.filter((p) => p.active && p.next);
 
-  const practiceXp = sqlSolved.reduce((n, c) => n + c.xp, 0) + sheetSolved.reduce((n, c) => n + c.xp, 0) + powerbiSolved.reduce((n, c) => n + c.xp, 0);
-  const practiceSolvedCount = sqlSolved.length + sheetSolved.length + powerbiSolved.length;
-  const practiceTotalCount = sql.length + sheet.length + powerbi.length;
+  const practiceXp =
+    sqlSolved.reduce((n, c) => n + c.xp, 0) + sheetSolved.reduce((n, c) => n + c.xp, 0) + powerbiSolved.reduce((n, c) => n + c.xp, 0) + pythonSolved.reduce((n, c) => n + c.xp, 0);
+  const practiceSolvedCount = sqlSolved.length + sheetSolved.length + powerbiSolved.length + pythonSolved.length;
+  const practiceTotalCount = sql.length + sheet.length + powerbi.length + python.length;
   const stats = [
     { icon: Zap, label: `XP from ${practiceSolvedCount} of ${practiceTotalCount} practice challenges`, value: String(practiceXp), tone: "text-warning" },
     { icon: BookOpenCheck, label: "Topics completed", value: String(topicsDone), tone: "text-success" },

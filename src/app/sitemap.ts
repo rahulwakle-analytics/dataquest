@@ -3,6 +3,7 @@ import { flatTopics, tools } from "@/content";
 import { datasets } from "@/content/datasets";
 import { sqlChallenges } from "@/content/sql-challenges";
 import { sheetChallenges } from "@/content/sheet-challenges";
+import { pythonChallenges } from "@/content/python-challenges";
 import { site } from "@/lib/site";
 
 export default function sitemap(): MetadataRoute.Sitemap {
@@ -14,6 +15,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     "/practice",
     "/practice/sql",
     "/practice/excel",
+    "/practice/python",
     "/practice/powerbi",
     "/datasets",
     "/projects",
@@ -29,6 +31,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
   );
   const sqlPages = sqlChallenges.map((c) => ({ url: `${site.url}/practice/sql/${c.slug}`, priority: 0.6 }));
   const sheetPages = sheetChallenges.map((c) => ({ url: `${site.url}/practice/excel/${c.slug}`, priority: 0.6 }));
+  const pythonPages = pythonChallenges.map((c) => ({ url: `${site.url}/practice/python/${c.slug}`, priority: 0.6 }));
   const datasetPages = datasets.map((d) => ({ url: `${site.url}/datasets/${d.slug}`, priority: 0.6 }));
-  return [...sqlPages, ...sheetPages, ...datasetPages, ...fixed, ...toolPages, ...topicPages];
+  return [...sqlPages, ...sheetPages, ...pythonPages, ...datasetPages, ...fixed, ...toolPages, ...topicPages];
 }
