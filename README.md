@@ -57,11 +57,16 @@ Working:
   question bank, self-assessed mock interview, case studies, role profiles). Content lives in `src/content/career.ts`.
   Salary figures carry their source and the date checked; update them there.
 - **Practice Lab** (`/practice`): a hub linking to three playgrounds —
-  - **SQL Playground** (`/practice/sql`): 15 challenges run on DuckDB WebAssembly in the browser
-    (`src/lib/sql/engine.ts`). Read-only, one statement, 8 second limit, 1,000 row cap. A submission is compared
-    with the reference query on two datasets. A schema/type explorer, a Copy SQL button and sample query chips
-    sit alongside the editor. The engine files are copied from node_modules to `public/duckdb` by
-    `scripts/copy-duckdb.mjs` before dev and build.
+  - **SQL Playground** (`/practice/sql`): 35 challenges across **two realistic relational databases** — a retail
+    business (customers/products/orders/order_items) and an HR system (departments/employees, with a
+    self-referencing manager_id) — run on DuckDB WebAssembly in the browser (`src/lib/sql/engine.ts`, one
+    cached DuckDB instance per database, see `src/lib/sql/databases.ts` for the schema/foreign-key registry).
+    Read-only, one statement, 8 second limit, 1,000 row cap. A submission is compared with the reference query
+    on two differently-sized datasets per database, so a hardcoded or overfit answer fails the hidden one. A
+    schema/foreign-key explorer, a Copy SQL button and sample query chips sit alongside the editor. The engine
+    files are copied from node_modules to `public/duckdb` by `scripts/copy-duckdb.mjs` before dev and build.
+    The practice list (shared with Excel) has search, a topic filter, a solved/unsolved/bookmarked filter, a
+    daily challenge, a random-challenge button and a recently-viewed strip (`src/lib/challenge-meta.ts`).
   - **Excel Playground** (`/practice/excel`): a fully editable, click-any-cell spreadsheet grid
     (`src/components/practice/sheet-editor.tsx`) built on the same formula engine as the lesson exercises, now
     extended with `SUMIFS`, `COUNTIFS`, `AVERAGEIFS` and `XLOOKUP`. 10 challenges (`src/content/sheet-challenges.ts`)
@@ -92,11 +97,25 @@ npm run verify
 Runs engine unit tests (including SUMIFS/COUNTIFS/AVERAGEIFS/XLOOKUP) and, for every interactive exercise —
 lesson practice, Excel Playground challenge, sort/filter challenge and Power BI exercise — checks that the
 reference solution gives the hand-written expected values, passes its own test cases, and that each listed wrong
-answer is rejected.
+answer is rejected. SQL Playground challenges get a structural check here (unique slugs, a valid database,
+hints, a rejected-answer case, a solution that mentions a real table) rather than an execution check, since
+DuckDB-WASM only runs in a browser; their actual correctness is verified by Playwright against the live engine
+(see `test_v5_sql_hr.py`-style scripts used during development, not part of this repo).
 
 Not built yet: accounts and synced progress (Supabase), payments, admin CMS, analytics, XP streaks/leaderboards,
 and stronger roadmap completion rules for non-lesson stages that have no gradable content yet (Statistics,
 Interview Prep, Job Readiness). Nothing in the UI claims these are live.
+
+**DataQuest V5 (in progress).** The brief asks for ~500 challenges across SQL/Excel/Power BI/Python/Statistics, a
+browser-based Python/pandas environment, a much larger dataset library, study plans, and a unified learner
+profile with achievement badges — explicitly in milestones, each reported on before the next starts. Milestone 1
+(challenge engine + SQL expansion) is what's in this build: the second SQL database above, 20 new individually
+Playwright-validated SQL challenges (35 total, up from 15), and the search/filter/bookmark/daily/random
+challenge-browsing UI. Still to come, in order: Excel practice expansion, a Pyodide-based Python notebook
+environment, the Power BI interactive lab upgrade, further dataset/project expansion, study plans and the unified
+profile/badges, then a final QA and performance pass. 35 and 10 SQL/Excel challenges are real, individually
+authored and validated questions, not padding toward the brief's 500 — hitting that count with the same bar will
+take several more milestones.
 
 Known limits: answers and solutions ship in the page bundle and are checked in the browser (SQL on a real DuckDB
 engine, Excel on this project's own formula engine, Power BI against one correct option), and progress is per
