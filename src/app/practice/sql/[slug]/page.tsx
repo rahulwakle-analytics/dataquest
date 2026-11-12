@@ -5,7 +5,7 @@ import { ChevronRight } from "lucide-react";
 import { SqlWorkspace, type TablePreview } from "@/components/practice/sql-workspace";
 import generated from "@/content/datasets.generated.json";
 import { sqlChallenges } from "@/content/sql-challenges";
-import { TABLES } from "@/lib/sql/engine";
+import { DATABASES, TABLES_OF } from "@/lib/sql/databases";
 
 type Props = { params: Promise<{ slug: string }> };
 type Manifest = Record<string, { rows: number; columns: string[]; preview: Record<string, string | number | null>[] }>;
@@ -28,7 +28,9 @@ export default async function ChallengePage({ params }: Props) {
   if (i < 0) notFound();
   const next = sqlChallenges[i + 1];
   const manifest = generated as Manifest;
-  const tables: TablePreview[] = TABLES.map((t) => ({ name: t, ...manifest[`retail_${t}.csv`] }));
+  const database = sqlChallenges[i].database ?? "retail";
+  const prefix = DATABASES[database].prefix;
+  const tables: TablePreview[] = TABLES_OF(database).map((t) => ({ name: t, ...manifest[`${prefix}_${t}.csv`] }));
   return (
     <div className="mx-auto w-full max-w-[1500px] px-4 py-8 sm:px-6">
       <nav aria-label="Breadcrumb" className="mb-5 flex items-center gap-1.5 text-sm text-muted">

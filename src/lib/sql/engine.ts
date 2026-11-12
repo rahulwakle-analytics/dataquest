@@ -3,9 +3,15 @@
  * learner's own browser. Nothing is sent to a server and no application database is involved.
  *
  * Limits: one read-only statement per run, a time limit, and a cap on returned rows.
+ *
+ * The playground supports more than one database (see lib/sql/databases.ts). Each database gets
+ * its own DuckDB instance, booted lazily and cached, so switching databases never mixes tables.
  */
+import { DatabaseId, DATABASES, TABLES_OF } from "./databases";
+
 export const TIME_LIMIT_MS = 8000;
 export const ROW_LIMIT = 1000;
+/** @deprecated Use TABLES_OF("retail") from lib/sql/databases. Kept for existing imports. */
 export const TABLES = ["customers", "products", "orders", "order_items"] as const;
 export type Schema = "main" | "chk";
 
@@ -22,9 +28,9 @@ export class SqlError extends Error {
 
 /* eslint-disable @typescript-eslint/no-explicit-any */
 type Engine = { db: any; conn: any };
-let enginePromise: Promise<Engine> | null = null;
+const enginePromises = new Map<DatabaseId, Promise<Engine>>();
 
-async function boot(): Promise<Engine> {
+async function boot(database: DatabaseId): Promise<Engine> {
   const duckdb = await import("@duckdb/duckdb-wasm");
   const base = window.location.origin + "/duckdb/";
   const bundle = await duckdb.selectBundle({
@@ -37,11 +43,13 @@ async function boot(): Promise<Engine> {
   await db.open({ query: { castBigIntToDouble: true, castDecimalToDouble: true } });
   const conn = await db.connect();
   await conn.query("CREATE SCHEMA chk");
+  const prefix = DATABASES[database].prefix;
+  const tables = TABLES_OF(database);
   for (const schema of ["main", "chk"] as const) {
-    for (const t of TABLES) {
-      const res = await fetch(`/datasets/${schema === "chk" ? "check/" : ""}retail_${t}.csv`);
+    for (const t of tables) {
+      const res = await fetch(`/datasets/${schema === "chk" ? "check/" : ""}${prefix}_${t}.csv`);
       if (!res.ok) throw new Error(`Could not load the ${t} table.`);
-      const file = `${schema}_${t}.csv`;
+      const file = `${database}_${schema}_${t}.csv`;
       await db.registerFileText(file, await res.text());
       await conn.query(`CREATE TABLE ${schema}.${t} AS SELECT * FROM read_csv_auto('${file}', header = true)`);
     }
@@ -49,14 +57,16 @@ async function boot(): Promise<Engine> {
   return { db, conn };
 }
 
-export function getEngine(): Promise<Engine> {
-  if (!enginePromise) {
-    enginePromise = boot().catch((e) => {
-      enginePromise = null;
+export function getEngine(database: DatabaseId = "retail"): Promise<Engine> {
+  let p = enginePromises.get(database);
+  if (!p) {
+    p = boot(database).catch((e) => {
+      enginePromises.delete(database);
       throw e;
     });
+    enginePromises.set(database, p);
   }
-  return enginePromise;
+  return p;
 }
 
 const FORBIDDEN = /\b(insert|update|delete|drop|create|alter|attach|detach|copy|pragma|install|load|set|reset|export|import|call|truncate|grant|vacuum|checkpoint)\b/i;
@@ -74,10 +84,10 @@ export function prepare(input: string): string {
   return sql;
 }
 
-function explain(message: string): string | undefined {
+function explain(message: string, tables: readonly string[]): string | undefined {
   if (/must appear in the GROUP BY clause/i.test(message)) return "Every column in SELECT must either be listed in GROUP BY or sit inside an aggregate such as SUM or COUNT.";
   if (/Referenced column .* not found|column .* does not exist/i.test(message)) return "Check the column name against the dataset panel. Column names use underscores, for example order_date.";
-  if (/Table with name .* does not exist/i.test(message)) return `The available tables are ${TABLES.join(", ")}.`;
+  if (/Table with name .* does not exist/i.test(message)) return `The available tables are ${tables.join(", ")}.`;
   if (/syntax error/i.test(message)) return "Look just before the position mentioned: a missing comma, an extra comma before FROM, or an unclosed bracket are the usual causes.";
   if (/Ambiguous reference/i.test(message)) return "The column exists in more than one table. Prefix it with the table name or alias, for example o.customer_id.";
   if (/WHERE clause cannot contain aggregates/i.test(message)) return "WHERE runs before grouping. Filter on an aggregate with HAVING instead.";
@@ -96,9 +106,9 @@ function convert(v: unknown, type: string): Cell {
   return String(v);
 }
 
-export async function runQuery(input: string, schema: Schema = "main"): Promise<QueryResult> {
+export async function runQuery(input: string, database: DatabaseId = "retail", schema: Schema = "main"): Promise<QueryResult> {
   const sql = prepare(input);
-  const engine = await getEngine();
+  const engine = await getEngine(database);
   const started = performance.now();
   let timer: ReturnType<typeof setTimeout> | undefined;
 
@@ -129,7 +139,7 @@ export async function runQuery(input: string, schema: Schema = "main"): Promise<
 
   const timeout = new Promise<never>((_, reject) => {
     timer = setTimeout(async () => {
-      enginePromise = null;
+      enginePromises.delete(database);
       try {
         await engine.db.terminate();
       } catch {
@@ -144,7 +154,7 @@ export async function runQuery(input: string, schema: Schema = "main"): Promise<
   } catch (e) {
     if (e instanceof SqlError) throw e;
     const message = (e instanceof Error ? e.message : String(e)).split("\n").filter((l) => l.trim()).slice(0, 4).join("\n");
-    throw new SqlError(message, explain(message));
+    throw new SqlError(message, explain(message, TABLES_OF(database)));
   } finally {
     clearTimeout(timer);
   }
@@ -170,7 +180,7 @@ function compare(got: QueryResult, want: QueryResult, ordered: boolean): string 
 }
 
 /** Runs the learner's query and the reference query on two datasets and compares the results. */
-export async function checkQuery(input: string, solution: string, ordered: boolean): Promise<CheckResult> {
+export async function checkQuery(input: string, solution: string, ordered: boolean, database: DatabaseId = "retail"): Promise<CheckResult> {
   const cases: { name: string; schema: Schema }[] = [
     { name: "Practice database", schema: "main" },
     { name: "Second database with different data", schema: "chk" },
@@ -179,8 +189,8 @@ export async function checkQuery(input: string, solution: string, ordered: boole
   let feedback = "";
   let first: QueryResult | null = null;
   for (const c of cases) {
-    const got = await runQuery(input, c.schema);
-    const want = await runQuery(solution, c.schema);
+    const got = await runQuery(input, database, c.schema);
+    const want = await runQuery(solution, database, c.schema);
     first ??= got;
     const problem = compare(got, want, ordered);
     tests.push({ name: c.name, pass: !problem });

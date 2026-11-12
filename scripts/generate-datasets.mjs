@@ -231,5 +231,53 @@ write("retail_order_items.csv", alt.items, "check");
   }
   write("store_performance.csv", rows);
 }
+function hrDatabase(seed, nDepartments, nEmployees) {
+  const { r, int, pick, weighted } = mk(seed);
+  const deptNames = ["Engineering", "Sales", "Marketing", "Customer Support", "Finance", "Human Resources", "Operations", "Product", "Legal", "IT"];
+  const locations = ["London", "Manchester", "Remote", "Dublin", "Berlin"];
+  const departments = [];
+  for (let i = 1; i <= nDepartments; i++) {
+    departments.push({ department_id: i, department_name: deptNames[i - 1], location: pick(locations), annual_budget: int(180, 950) * 1000 });
+  }
+  const employees = [];
+  const managers = [];
+  for (let i = 1; i <= nEmployees; i++) {
+    const department_id = int(1, nDepartments);
+    const job_level = weighted([["Junior", 34], ["Mid", 36], ["Senior", 20], ["Lead", 7], ["Manager", 3]]);
+    const hire_date = addDays(D("2018-01-01"), int(0, 2800));
+    const tenureYears = daysBetween(hire_date, D("2025-09-30")) / 365;
+    const baseSalary = { Junior: 32000, Mid: 44000, Senior: 61000, Lead: 76000, Manager: 92000 }[job_level];
+    const salary = Math.round((baseSalary * (0.9 + r() * 0.3) * (1 + Math.min(tenureYears, 6) * 0.015)) / 100) * 100;
+    const performance_rating = weighted([[1, 4], [2, 10], [3, 42], [4, 32], [5, 12]]);
+    const resigned = r() < (performance_rating <= 2 ? 0.22 : 0.07);
+    const status = resigned ? "Resigned" : "Active";
+    const termination_date = resigned ? iso(addDays(hire_date, int(Math.floor(tenureYears * 200), Math.floor(tenureYears * 360) + 30))) : "";
+    employees.push({ employee_id: 2000 + i, full_name: `${pick(FIRST)} ${pick(LAST)}`, department_id, job_title: `${job_level} Analyst`, job_level, manager_id: "", hire_date: iso(hire_date), salary, performance_rating, status, termination_date });
+    if (job_level === "Manager" || job_level === "Lead") managers.push(2000 + i);
+  }
+  // The company's most senior manager (lowest employee_id among Managers) sits at the top of the
+  // chain and reports to no one, so `manager_id` is genuinely NULL for at least one real row.
+  const managerLevelIds = employees.filter((e) => e.job_level === "Manager").map((e) => e.employee_id);
+  const ceoId = managerLevelIds.length ? Math.min(...managerLevelIds) : managers.length ? Math.min(...managers) : employees[0].employee_id;
+  for (const e of employees) {
+    if (e.employee_id === ceoId) {
+      e.manager_id = "";
+      continue;
+    }
+    const sameDept = employees.filter((m) => m.department_id === e.department_id && managers.includes(m.employee_id) && m.employee_id !== e.employee_id).map((m) => m.employee_id);
+    const pool = sameDept.length ? sameDept : managers.filter((m) => m !== e.employee_id);
+    e.manager_id = pool.length ? pick(pool) : "";
+  }
+  employees.sort((a, b) => a.employee_id - b.employee_id);
+  return { departments, employees };
+}
+
+const hrMain = hrDatabase(91, 7, 140);
+write("hr_departments.csv", hrMain.departments);
+write("hr_employees.csv", hrMain.employees);
+const hrAlt = hrDatabase(97, 5, 60); // second, differently-sized data set used only to test learners' queries
+write("hr_departments.csv", hrAlt.departments, "check");
+write("hr_employees.csv", hrAlt.employees, "check");
+
 writeFileSync(join(root, "src/content/datasets.generated.json"), JSON.stringify(manifest, null, 1) + "\n");
 console.log(Object.entries(manifest).map(([k, v]) => `${k}: ${v.rows} rows`).join("\n"));

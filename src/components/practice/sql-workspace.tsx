@@ -10,6 +10,7 @@ import { Badge, difficultyVariant } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import { XP, challengeId, type SqlChallenge } from "@/content/sql-challenges";
 import { isSolved, recordExercise, useProgress } from "@/lib/progress";
+import { DATABASES } from "@/lib/sql/databases";
 import { checkQuery, getEngine, ROW_LIMIT, runQuery, SqlError, TIME_LIMIT_MS, type Cell, type CheckResult, type QueryResult } from "@/lib/sql/engine";
 import { cn } from "@/lib/utils";
 
@@ -79,6 +80,7 @@ export function SqlWorkspace({ challenge, tables, next }: Props) {
   const id = challengeId(challenge.slug);
   const solved = isSolved(progress, id, 0);
   const starter = challenge.starter ?? "SELECT\n  \nFROM ";
+  const database = challenge.database ?? "retail";
 
   const [code, setCode] = useState(starter);
   const codeRef = useRef(code);
@@ -95,14 +97,15 @@ export function SqlWorkspace({ challenge, tables, next }: Props) {
 
   useEffect(() => {
     let live = true;
-    getEngine().then(
+    setEngine("loading");
+    getEngine(database).then(
       () => live && setEngine("ready"),
       () => live && setEngine("failed"),
     );
     return () => {
       live = false;
     };
-  }, []);
+  }, [database]);
 
   const execute = useCallback(
     async (mode: "run" | "submit") => {
@@ -112,9 +115,9 @@ export function SqlWorkspace({ challenge, tables, next }: Props) {
       setCheck(null);
       try {
         if (mode === "run") {
-          setResult(await runQuery(codeRef.current));
+          setResult(await runQuery(codeRef.current, database));
         } else {
-          const outcome = await checkQuery(codeRef.current, challenge.solution, challenge.ordered);
+          const outcome = await checkQuery(codeRef.current, challenge.solution, challenge.ordered, database);
           setResult(outcome.result);
           setCheck(outcome);
           if (outcome.pass) recordExercise(id, 0); // stored once, so XP cannot be earned twice
@@ -127,7 +130,7 @@ export function SqlWorkspace({ challenge, tables, next }: Props) {
         setBusy(null);
       }
     },
-    [busy, challenge.solution, challenge.ordered, id],
+    [busy, challenge.solution, challenge.ordered, id, database],
   );
   const run = useCallback(() => void execute("run"), [execute]);
 
@@ -260,7 +263,7 @@ export function SqlWorkspace({ challenge, tables, next }: Props) {
           <h2 id="data-h" className="font-semibold">
             Database explorer
           </h2>
-          <Link href="/datasets/retail-sales" className="text-xs font-medium text-primary underline-offset-4 hover:underline">
+          <Link href={database === "hr" ? "/datasets/employee-information" : "/datasets/retail-sales"} className="text-xs font-medium text-primary underline-offset-4 hover:underline">
             Details and download
           </Link>
         </div>
@@ -293,6 +296,16 @@ export function SqlWorkspace({ challenge, tables, next }: Props) {
           {active.rows.toLocaleString("en-US")} rows. First {active.preview.length} shown.
         </p>
         <DataTable label={`${active.name} preview`} columns={active.columns} rows={active.preview.map((r) => active.columns.map((c) => r[c] ?? null))} />
+        {DATABASES[database].relationships.length > 0 && (
+          <div className="mt-3 rounded-lg border border-dashed border-border p-2.5">
+            <p className="mb-1 text-xs font-medium text-muted">Relationships (foreign keys)</p>
+            <ul className="space-y-0.5 font-mono text-[11px] text-muted">
+              {DATABASES[database].relationships.map((r) => (
+                <li key={r}>{r}</li>
+              ))}
+            </ul>
+          </div>
+        )}
       </section>
 
       {/* Bottom: output */}

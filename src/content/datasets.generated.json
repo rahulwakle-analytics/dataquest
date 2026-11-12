@@ -837,5 +837,148 @@
     "revenue_target": 130400
    }
   ]
+ },
+ "hr_departments.csv": {
+  "rows": 7,
+  "columns": [
+   "department_id",
+   "department_name",
+   "location",
+   "annual_budget"
+  ],
+  "preview": [
+   {
+    "department_id": 1,
+    "department_name": "Engineering",
+    "location": "Dublin",
+    "annual_budget": 201000
+   },
+   {
+    "department_id": 2,
+    "department_name": "Sales",
+    "location": "Berlin",
+    "annual_budget": 513000
+   },
+   {
+    "department_id": 3,
+    "department_name": "Marketing",
+    "location": "Manchester",
+    "annual_budget": 780000
+   },
+   {
+    "department_id": 4,
+    "department_name": "Customer Support",
+    "location": "Remote",
+    "annual_budget": 307000
+   },
+   {
+    "department_id": 5,
+    "department_name": "Finance",
+    "location": "Remote",
+    "annual_budget": 401000
+   },
+   {
+    "department_id": 6,
+    "department_name": "Human Resources",
+    "location": "Berlin",
+    "annual_budget": 347000
+   }
+  ]
+ },
+ "hr_employees.csv": {
+  "rows": 140,
+  "columns": [
+   "employee_id",
+   "full_name",
+   "department_id",
+   "job_title",
+   "job_level",
+   "manager_id",
+   "hire_date",
+   "salary",
+   "performance_rating",
+   "status",
+   "termination_date"
+  ],
+  "preview": [
+   {
+    "employee_id": 2001,
+    "full_name": "Hannah Sharma",
+    "department_id": 4,
+    "job_title": "Senior Analyst",
+    "job_level": "Senior",
+    "manager_id": 2082,
+    "hire_date": "2018-04-22",
+    "salary": 67000,
+    "performance_rating": 4,
+    "status": "Active",
+    "termination_date": ""
+   },
+   {
+    "employee_id": 2002,
+    "full_name": "Greta Dubois",
+    "department_id": 4,
+    "job_title": "Junior Analyst",
+    "job_level": "Junior",
+    "manager_id": 2082,
+    "hire_date": "2021-11-30",
+    "salary": 38800,
+    "performance_rating": 2,
+    "status": "Active",
+    "termination_date": ""
+   },
+   {
+    "employee_id": 2003,
+    "full_name": "Ravi Kim",
+    "department_id": 1,
+    "job_title": "Mid Analyst",
+    "job_level": "Mid",
+    "manager_id": 2109,
+    "hire_date": "2022-11-16",
+    "salary": 55000,
+    "performance_rating": 4,
+    "status": "Active",
+    "termination_date": ""
+   },
+   {
+    "employee_id": 2004,
+    "full_name": "Kofi Petrov",
+    "department_id": 2,
+    "job_title": "Lead Analyst",
+    "job_level": "Lead",
+    "manager_id": 2031,
+    "hire_date": "2024-09-01",
+    "salary": 79600,
+    "performance_rating": 4,
+    "status": "Active",
+    "termination_date": ""
+   },
+   {
+    "employee_id": 2005,
+    "full_name": "Mei Abara",
+    "department_id": 3,
+    "job_title": "Senior Analyst",
+    "job_level": "Senior",
+    "manager_id": 2129,
+    "hire_date": "2022-08-06",
+    "salary": 75900,
+    "performance_rating": 4,
+    "status": "Active",
+    "termination_date": ""
+   },
+   {
+    "employee_id": 2006,
+    "full_name": "Chloe Sharma",
+    "department_id": 5,
+    "job_title": "Junior Analyst",
+    "job_level": "Junior",
+    "manager_id": 2015,
+    "hire_date": "2019-07-04",
+    "salary": 40400,
+    "performance_rating": 2,
+    "status": "Active",
+    "termination_date": ""
+   }
+  ]
  }
 }

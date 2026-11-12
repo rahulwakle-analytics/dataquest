@@ -1,9 +1,13 @@
+import type { DatabaseId } from "@/lib/sql/databases";
+import { hrSqlChallenges } from "./sql-challenges-hr";
 import type { Difficulty } from "./types";
 
 export type SqlChallenge = {
   slug: string;
   title: string;
   difficulty: Difficulty;
+  /** Which SQL Playground database this challenge runs against. Defaults to "retail". */
+  database?: DatabaseId;
   topics: string[];
   scenario: string;
   task: string;
@@ -301,4 +305,5 @@ GROUP BY customer_id;`,
     explanation: "The query groups first, then the window function ranks the grouped rows. DENSE_RANK gives tied customers the same rank and continues with the next number.",
     wrong: ["SELECT customer_id, SUM(amount) AS total_spent, DENSE_RANK() OVER (ORDER BY SUM(amount)) AS spend_rank FROM orders WHERE status = 'completed' GROUP BY customer_id", "SELECT customer_id, SUM(amount) AS total_spent, DENSE_RANK() OVER (ORDER BY SUM(amount) DESC) AS spend_rank FROM orders GROUP BY customer_id"],
   },
+  ...hrSqlChallenges,
 ];
